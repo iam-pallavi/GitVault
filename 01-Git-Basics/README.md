@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="../assets/git-basics-animated.svg" width="100%" alt="Animated Git Basics"/>
+<img src="../assets/banner.svg" width="100%" alt="Animated Git Basics"/>
 
 # Git Basics
 
