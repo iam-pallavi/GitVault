@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="../assets/banner.png" width="100%" alt="Git Basics"/>
+<img src="../assets/git-basics.png" width="100%" alt="Git Basics"/>
 
 # Git Basics
 
