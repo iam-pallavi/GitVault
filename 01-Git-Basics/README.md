@@ -14,12 +14,6 @@
 
 This section contains my practical notes for the **core Git concepts and commands** I am learning before moving to branches, merge, rebase, undo, internals, and GitHub workflows.
 
-### ⚡ Git Workflow — See How Changes Move
-
-<img src="../assets/git-workflow-animated.svg" width="100%" alt="Animated Git workflow: Working Directory to Staging Area to Local Repository to GitHub"/>
-
-> The glowing flow represents how changes move through the Git workflow: **check → stage → commit → push**.
-
 ### Learning Path
 
 ```text
@@ -72,8 +66,6 @@ Without version control, managing multiple changes manually can become difficult
 ---
 
 ## 2. 🔄 Git vs GitHub
-
-<img src="../assets/git-vs-github-animated.svg" width="100%" alt="Animated Git versus GitHub comparison"/>
 
 | Git | GitHub |
 |---|---|
@@ -153,10 +145,6 @@ git init
 
 Git creates a hidden `.git` directory that stores repository metadata and history.
 
-### Visual
-
-<img src="../assets/git-init-animated.svg" width="100%" alt="Animated git init flow"/>
-
 > `git init` creates a local repository. It does **not** automatically connect the project to GitHub.
 
 ---
@@ -176,10 +164,6 @@ It can show information such as:
 - Untracked files
 - Staged changes
 - Changes that are not yet staged
-
-### Visual
-
-<img src="../assets/git-status-animated.svg" width="100%" alt="Animated git status flow"/>
 
 `git status` is one of the safest and most useful commands to run frequently.
 
@@ -201,10 +185,6 @@ git add index.html
 git add .
 ```
 
-### Visual
-
-<img src="../assets/git-stage-animated.svg" width="100%" alt="Animated git add staging flow"/>
-
 > Staging lets me choose which changes should be included in the next commit.
 
 ---
@@ -218,10 +198,6 @@ git commit -m "Add index.html"
 ```
 
 A good commit message should briefly describe what was changed.
-
-### Visual
-
-<img src="../assets/git-commit-animated.svg" width="100%" alt="Animated git commit flow"/>
 
 ---
 
@@ -238,10 +214,6 @@ For a compact history:
 ```bash
 git log --oneline
 ```
-
-### Visual
-
-<img src="../assets/git-log-animated.svg" width="100%" alt="Animated Git commit history"/>
 
 The history helps me understand how the project changed over time.
 
@@ -262,10 +234,6 @@ Common symbols:
 - Removed line
 ```
 
-### Visual
-
-<img src="../assets/git-diff-animated.svg" width="100%" alt="Animated git diff comparison"/>
-
 For staged changes, a commonly used form is:
 
 ```bash
@@ -283,10 +251,6 @@ git diff --staged
 ```bash
 git restore README.md
 ```
-
-### Visual
-
-<img src="../assets/git-restore-rm-animated.svg" width="100%" alt="Animated git restore and git rm visual"/>
 
 ⚠️ **Be careful:** discarded changes may not be easily recoverable.
 
@@ -320,7 +284,23 @@ git rm --cached filename
 
 The basic workflow I want to remember is:
 
-<img src="../assets/git-workflow-animated.svg" width="100%" alt="Animated basic Git workflow"/>
+```text
+Working Directory
+       ↓
+   git status
+       ↓
+    git add
+       ↓
+  Staging Area
+       ↓
+   git commit
+       ↓
+ Local Repository
+       ↓
+    git push
+       ↓
+     GitHub
+```
 
 ### 🧠 Easy Memory Trick
 
@@ -410,9 +390,11 @@ git log --oneline
 
 ### 🎯 Practice Goal
 
-After completing this exercise, I should be able to explain:
+After completing this exercise, I should be able to explain the complete Git cycle:
 
-<img src="../assets/git-workflow-animated.svg" width="100%" alt="Animated Git practice workflow"/>
+```text
+Modify → Check → Stage → Commit → Check History
+```
 
 ---
 
