@@ -1,110 +1,119 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560">
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050713"/><stop offset=".52" stop-color="#0a1026"/><stop offset="1" stop-color="#170c2b"/></linearGradient>
-  <linearGradient id="line" x1="0" x2="1"><stop stop-color="#55e6c1"/><stop offset=".5" stop-color="#5be7ff"/><stop offset="1" stop-color="#b889ff"/></linearGradient>
-  <linearGradient id="terminal" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#111a31"/><stop offset="1" stop-color="#060a15"/></linearGradient>
-  <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
-  <clipPath id="termClip"><rect x="70" y="150" width="330" height="245" rx="18"/></clipPath>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#040610"/><stop offset=".45" stop-color="#0a0d20"/><stop offset="1" stop-color="#160a27"/></linearGradient>
+ <linearGradient id="neon" x1="0" x2="1"><stop stop-color="#59f0c5"/><stop offset=".5" stop-color="#63e6ff"/><stop offset="1" stop-color="#b98aff"/></linearGradient>
+ <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7f5cff"/><stop offset="1" stop-color="#d08cff"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <filter id="bigGlow"><feGaussianBlur stdDeviation="25"/></filter>
+ <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#bcd0ff" opacity=".035"/></pattern>
 </defs>
 <rect width="1200" height="560" rx="30" fill="url(#bg)"/>
-<circle cx="260" cy="280" r="190" fill="#48ddff" opacity=".05" filter="url(#blur)"/>
-<circle cx="965" cy="275" r="210" fill="#a66cff" opacity=".055" filter="url(#blur)"/>
-<path d="M35 115H1165M35 445H1165" stroke="#dbe6ff" opacity=".035"/>
+<rect x="22" y="22" width="1156" height="516" rx="26" fill="url(#grid)"/>
+<circle cx="310" cy="275" r="185" fill="#4ee7ff" opacity=".045" filter="url(#bigGlow)"/>
+<circle cx="925" cy="270" r="200" fill="#a96cff" opacity=".055" filter="url(#bigGlow)"/>
 
-<text x="600" y="48" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="29" font-weight="850">GIT  →  GITHUB</text>
-<text x="600" y="72" text-anchor="middle" fill="#8391ad" font-family="system-ui,sans-serif" font-size="12">One works locally. The other connects your repository to the world.</text>
+<!-- header -->
+<text x="600" y="48" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="30" font-weight="900">GIT <tspan fill="#7cecff">×</tspan> GITHUB</text>
+<text x="600" y="72" text-anchor="middle" fill="#8290aa" font-family="system-ui,sans-serif" font-size="12">from a change on your laptop to a shared repository</text>
 
-<!-- local terminal -->
+<!-- LOCAL / code window -->
 <g>
- <rect x="58" y="138" width="354" height="270" rx="22" fill="#080d19" stroke="#273653"/>
- <rect x="70" y="150" width="330" height="245" rx="18" fill="url(#terminal)"/>
- <circle cx="91" cy="171" r="4" fill="#ff6680"/><circle cx="105" cy="171" r="4" fill="#ffd166"/><circle cx="119" cy="171" r="4" fill="#55e6c1"/>
- <text x="88" y="202" fill="#55e6c1" font-family="monospace" font-size="12">pallavi@laptop ~/GitVault</text>
- <text x="88" y="226" fill="#dfe7f5" font-family="monospace" font-size="12">$ git status</text>
- <text x="88" y="248" fill="#ff7896" font-family="monospace" font-size="11">modified: README.md</text>
- <text x="88" y="271" fill="#dfe7f5" font-family="monospace" font-size="12">$ git add README.md</text>
- <text x="88" y="294" fill="#dfe7f5" font-family="monospace" font-size="12">$ git commit -m "save changes"</text>
- <text x="88" y="317" fill="#55e6c1" font-family="monospace" font-size="11">✓ changes saved in Git history</text>
- <text x="88" y="340" fill="#7e8da9" font-family="monospace" font-size="11">$ git push</text>
- <path d="M88 365H365" stroke="#1d2941"/>
- <text x="241" y="383" text-anchor="middle" fill="#7585a2" font-family="system-ui,sans-serif" font-size="10">YOUR LOCAL MACHINE</text>
+ <rect x="55" y="125" width="300" height="285" rx="22" fill="#080b15" stroke="#26334f"/>
+ <rect x="67" y="137" width="276" height="261" rx="17" fill="#070b13" stroke="#17233a"/>
+ <circle cx="88" cy="158" r="4" fill="#ff6680"/><circle cx="102" cy="158" r="4" fill="#ffd166"/><circle cx="116" cy="158" r="4" fill="#59f0c5"/>
+ <text x="84" y="187" fill="#687894" font-family="monospace" font-size="10">~/GitVault</text>
+ <text x="84" y="211" fill="#5fe8ff" font-family="monospace" font-size="11">$ git status</text>
+ <text x="84" y="232" fill="#ff7898" font-family="monospace" font-size="10">modified: README.md</text>
+ <text x="84" y="256" fill="#e6edff" font-family="monospace" font-size="11">$ git add README.md</text>
+ <text x="84" y="280" fill="#e6edff" font-family="monospace" font-size="11">$ git commit -m</text>
+ <text x="84" y="299" fill="#59f0c5" font-family="monospace" font-size="10">"save changes"</text>
+ <text x="84" y="324" fill="#e6edff" font-family="monospace" font-size="11">$ git push</text>
+ <rect x="84" y="342" width="230" height="28" rx="8" fill="#0d1727" stroke="#20314d"/>
+ <circle cx="99" cy="356" r="4" fill="#59f0c5"><animate attributeName="r" values="4;7;4" dur="1.4s" repeatCount="indefinite"/></circle>
+ <text x="110" y="360" fill="#91a1be" font-family="system-ui,sans-serif" font-size="9">LOCAL MACHINE • Git installed</text>
+ <text x="205" y="430" text-anchor="middle" fill="#d5e0f5" font-family="system-ui,sans-serif" font-size="12" font-weight="800">YOUR CODE</text>
+ <text x="205" y="447" text-anchor="middle" fill="#667792" font-family="system-ui,sans-serif" font-size="9">Git runs here</text>
 </g>
 
-<!-- moving file/change -->
+<!-- files leaving terminal -->
 <g>
- <rect x="424" y="250" width="76" height="46" rx="12" fill="#0d1729" stroke="#55e6c1"/>
- <text x="462" y="269" text-anchor="middle" fill="#55e6c1" font-family="monospace" font-size="10">README.md</text>
- <text x="462" y="284" text-anchor="middle" fill="#70819f" font-family="system-ui,sans-serif" font-size="8">changed file</text>
- <animateMotion dur="3.8s" repeatCount="indefinite" path="M0 0 C55 -70 90 -70 145 0"/>
+ <rect x="365" y="205" width="66" height="39" rx="10" fill="#0d1727" stroke="#59f0c5"/>
+ <text x="398" y="221" text-anchor="middle" fill="#59f0c5" font-family="monospace" font-size="9">README.md</text>
+ <text x="398" y="234" text-anchor="middle" fill="#6f809d" font-family="system-ui,sans-serif" font-size="7">change</text>
+ <animateMotion dur="3.4s" repeatCount="indefinite" path="M0 0 C55 55 72 10 118 0"/>
 </g>
 
-<!-- git core / version history -->
+<!-- GIT core, no card -->
 <g>
- <circle cx="585" cy="268" r="91" fill="#070d1a" stroke="#55e6c1" stroke-width="2"/>
- <circle cx="585" cy="268" r="68" fill="none" stroke="#263955" stroke-width="2" stroke-dasharray="3 9">
-   <animateTransform attributeName="transform" type="rotate" from="0 585 268" to="360 585 268" dur="8s" repeatCount="indefinite"/>
+ <circle cx="540" cy="270" r="101" fill="#050a14" stroke="#263956"/>
+ <circle cx="540" cy="270" r="82" fill="none" stroke="url(#neon)" stroke-width="1.5" stroke-dasharray="2 11" opacity=".9">
+  <animateTransform attributeName="transform" type="rotate" from="0 540 270" to="360 540 270" dur="10s" repeatCount="indefinite"/>
  </circle>
- <path d="M553 268L585 236L617 268L585 300Z" fill="none" stroke="#55e6c1" stroke-width="6" transform="rotate(45 585 268)"/>
- <circle cx="585" cy="268" r="13" fill="#07101c" stroke="#5be7ff" stroke-width="3"/>
- <text x="585" y="205" text-anchor="middle" fill="#5be7ff" font-family="system-ui,sans-serif" font-size="23" font-weight="900">GIT</text>
- <text x="585" y="334" text-anchor="middle" fill="#cbd6eb" font-family="system-ui,sans-serif" font-size="11" font-weight="700">VERSION CONTROL</text>
- <text x="585" y="350" text-anchor="middle" fill="#6f809e" font-family="system-ui,sans-serif" font-size="9">track • stage • commit • branch</text>
+ <circle cx="540" cy="270" r="62" fill="none" stroke="#1c2c46" stroke-width="2"/>
+ <path d="M510 270L540 240L570 270L540 300Z" fill="none" stroke="#62e8ff" stroke-width="5" transform="rotate(45 540 270)"/>
+ <circle cx="540" cy="270" r="13" fill="#050b13" stroke="#59f0c5" stroke-width="3" filter="url(#glow)"/>
+ <text x="540" y="190" text-anchor="middle" fill="#62e8ff" font-family="system-ui,sans-serif" font-size="25" font-weight="950">GIT</text>
+ <text x="540" y="351" text-anchor="middle" fill="#d8e4f8" font-family="system-ui,sans-serif" font-size="11" font-weight="800">VERSION CONTROL</text>
+ <text x="540" y="368" text-anchor="middle" fill="#6d7e9b" font-family="system-ui,sans-serif" font-size="9">track • stage • commit • branch</text>
 </g>
 
-<!-- commit history trail -->
+<!-- version timeline -->
 <g>
- <path d="M640 190 C690 170 728 180 748 214 C768 248 755 284 790 304" fill="none" stroke="#263752" stroke-width="3"/>
- <circle cx="650" cy="187" r="7" fill="#55e6c1"/>
- <circle cx="716" cy="188" r="7" fill="#5be7ff"/>
- <circle cx="764" cy="250" r="7" fill="#b889ff"/>
- <circle cx="790" cy="304" r="7" fill="#fff"/>
- <text x="650" y="171" fill="#7e8eaa" font-family="system-ui,sans-serif" font-size="9">Previous</text>
- <text x="704" y="175" fill="#7e8eaa" font-family="system-ui,sans-serif" font-size="9">Saved</text>
- <text x="750" y="269" fill="#7e8eaa" font-family="system-ui,sans-serif" font-size="9">New commit</text>
+ <path d="M615 184 C670 160 713 178 730 215 C746 249 728 286 772 313" fill="none" stroke="#273752" stroke-width="4"/>
+ <circle cx="615" cy="184" r="7" fill="#59f0c5"/>
+ <circle cx="689" cy="183" r="7" fill="#62e8ff"/>
+ <circle cx="739" cy="249" r="7" fill="#b98aff"/>
+ <circle cx="772" cy="313" r="8" fill="#ffffff" filter="url(#glow)"/>
+ <text x="615" y="166" fill="#7384a1" font-family="system-ui,sans-serif" font-size="9">Previous version</text>
+ <text x="677" y="164" fill="#7384a1" font-family="system-ui,sans-serif" font-size="9">Saved change</text>
+ <text x="730" y="269" fill="#9a8ab8" font-family="system-ui,sans-serif" font-size="9">New commit</text>
+ <text x="780" y="332" fill="#dbe6fb" font-family="system-ui,sans-serif" font-size="9" font-weight="700">Current version</text>
+ <circle r="5" fill="#59f0c5"><animateMotion dur="3s" repeatCount="indefinite" path="M615 184 C670 160 713 178 730 215 C746 249 728 286 772 313"/></circle>
 </g>
 
-<!-- push beam -->
-<path d="M795 304 C850 304 855 250 900 250" fill="none" stroke="#1e2d48" stroke-width="16" stroke-linecap="round"/>
-<path d="M795 304 C850 304 855 250 900 250" fill="none" stroke="url(#line)" stroke-width="3" stroke-dasharray="12 10">
- <animate attributeName="stroke-dashoffset" from="0" to="-44" dur=".7s" repeatCount="indefinite"/>
+<!-- push tunnel -->
+<path d="M770 313 C820 325 830 260 885 260" fill="none" stroke="#18263e" stroke-width="18" stroke-linecap="round"/>
+<path d="M770 313 C820 325 830 260 885 260" fill="none" stroke="url(#neon)" stroke-width="3" stroke-dasharray="10 9">
+ <animate attributeName="stroke-dashoffset" from="0" to="-38" dur=".65s" repeatCount="indefinite"/>
 </path>
-<circle r="7" fill="#55e6c1" filter="url(#glow)"><animateMotion dur="2s" repeatCount="indefinite" path="M795 304 C850 304 855 250 900 250"/></circle>
-<text x="846" y="291" text-anchor="middle" fill="#e6edff" font-family="monospace" font-size="11">git push</text>
+<circle r="8" fill="#59f0c5" filter="url(#glow)"><animateMotion dur="1.8s" repeatCount="indefinite" path="M770 313 C820 325 830 260 885 260"/></circle>
+<text x="825" y="290" text-anchor="middle" fill="#eef4ff" font-family="monospace" font-size="11" font-weight="700">git push</text>
+<text x="825" y="307" text-anchor="middle" fill="#6f809c" font-family="system-ui,sans-serif" font-size="8">local → remote</text>
 
-<!-- github repository window -->
+<!-- GITHUB floating repository -->
 <g>
- <rect x="900" y="138" width="244" height="270" rx="22" fill="#080c18" stroke="#9d73ff" stroke-width="2"/>
- <text x="926" y="174" fill="#c39cff" font-family="system-ui,sans-serif" font-size="21" font-weight="900">GitHub</text>
- <text x="926" y="195" fill="#72819f" font-family="system-ui,sans-serif" font-size="9">REMOTE REPOSITORY</text>
- <path d="M925 211H1118" stroke="#202e49"/>
- <text x="926" y="237" fill="#dfe7f5" font-family="monospace" font-size="11">iam-pallavi / GitVault</text>
- <rect x="926" y="252" width="192" height="43" rx="10" fill="#10172a" stroke="#273752"/>
- <circle cx="942" cy="273" r="5" fill="#55e6c1"/>
- <text x="954" y="277" fill="#dfe7f5" font-family="monospace" font-size="10">main</text>
- <text x="990" y="277" fill="#7e8eaa" font-family="system-ui,sans-serif" font-size="9">latest changes</text>
- <path d="M926 311H1118" stroke="#202e49"/>
- <text x="926" y="333" fill="#8f9db8" font-family="system-ui,sans-serif" font-size="10">Pull Requests</text>
- <text x="926" y="351" fill="#8f9db8" font-family="system-ui,sans-serif" font-size="10">Code Review</text>
- <text x="926" y="369" fill="#8f9db8" font-family="system-ui,sans-serif" font-size="10">Issues • Actions • Team</text>
- <circle cx="1110" cy="170" r="4" fill="#b889ff"><animate attributeName="r" values="4;8;4" dur="1.8s" repeatCount="indefinite"/></circle>
+ <rect x="885" y="125" width="260" height="285" rx="23" fill="#070a13" stroke="#7656b9"/>
+ <rect x="898" y="138" width="234" height="36" rx="13" fill="#0d1120"/>
+ <circle cx="918" cy="156" r="7" fill="#b98aff"/>
+ <text x="935" y="161" fill="#e7dcff" font-family="system-ui,sans-serif" font-size="17" font-weight="900">GitHub</text>
+ <text x="916" y="194" fill="#6f809c" font-family="system-ui,sans-serif" font-size="8">REMOTE REPOSITORY</text>
+ <text x="916" y="220" fill="#e5ecfb" font-family="monospace" font-size="11">iam-pallavi / GitVault</text>
+ <path d="M916 235H1114" stroke="#202d46"/>
+ <g>
+  <rect x="916" y="248" width="198" height="42" rx="10" fill="#0e1628" stroke="#263752"/>
+  <circle cx="932" cy="269" r="5" fill="#59f0c5"><animate attributeName="opacity" values=".3;1;.3" dur="1.5s" repeatCount="indefinite"/></circle>
+  <text x="945" y="273" fill="#e3ebfb" font-family="monospace" font-size="10">main</text>
+  <text x="982" y="273" fill="#7586a3" font-family="system-ui,sans-serif" font-size="8">latest version</text>
+ </g>
+ <text x="916" y="317" fill="#9caac2" font-family="system-ui,sans-serif" font-size="10">Pull Requests</text>
+ <text x="916" y="337" fill="#9caac2" font-family="system-ui,sans-serif" font-size="10">Code Review</text>
+ <text x="916" y="357" fill="#9caac2" font-family="system-ui,sans-serif" font-size="10">Actions • Issues • Team</text>
+ <path d="M916 376H1114" stroke="#202d46"/>
+ <text x="916" y="394" fill="#c39cff" font-family="system-ui,sans-serif" font-size="9" font-weight="700">SHARED WITH YOUR TEAM</text>
 </g>
 
-<!-- collaboration wave -->
-<g>
- <path d="M930 445 C975 420 1020 470 1065 445 C1090 431 1110 433 1130 445" fill="none" stroke="#394966" stroke-width="2"/>
- <circle cx="930" cy="445" r="6" fill="#55e6c1"><animate attributeName="cy" values="445;438;445" dur="1.6s" repeatCount="indefinite"/></circle>
- <circle cx="1065" cy="445" r="6" fill="#b889ff"><animate attributeName="cy" values="445;452;445" dur="1.9s" repeatCount="indefinite"/></circle>
- <text x="1030" y="476" text-anchor="middle" fill="#d9e4fb" font-family="system-ui,sans-serif" font-size="11" font-weight="700">COLLABORATION</text>
+<!-- collaboration network -->
+<g opacity=".95">
+ <path d="M920 466 C970 430 1010 492 1052 457 C1080 435 1105 448 1135 466" fill="none" stroke="#35445f" stroke-width="2"/>
+ <circle cx="920" cy="466" r="6" fill="#59f0c5"/><circle cx="1052" cy="457" r="6" fill="#b98aff"/><circle cx="1135" cy="466" r="6" fill="#62e8ff"/>
+ <circle cx="1052" cy="457" r="14" fill="none" stroke="#b98aff" opacity=".35"><animate attributeName="r" values="8;18;8" dur="2s" repeatCount="indefinite"/></circle>
+ <text x="1028" y="493" text-anchor="middle" fill="#d9e5fa" font-family="system-ui,sans-serif" font-size="10" font-weight="800">COLLABORATION</text>
 </g>
 
-<!-- central labels -->
-<g>
- <text x="235" y="438" text-anchor="middle" fill="#aab8d1" font-family="system-ui,sans-serif" font-size="11">Git works on your machine</text>
- <text x="585" y="438" text-anchor="middle" fill="#aab8d1" font-family="system-ui,sans-serif" font-size="11">Git remembers versions</text>
- <text x="1020" y="438" text-anchor="middle" fill="#aab8d1" font-family="system-ui,sans-serif" font-size="11">GitHub shares the repository</text>
-</g>
-
-<rect x="150" y="500" width="900" height="38" rx="19" fill="#080d19" stroke="#263651"/>
-<text x="600" y="524" text-anchor="middle" fill="#e0e8fa" font-family="system-ui,sans-serif" font-size="11" font-weight="700">GIT = version control  •  GITHUB = remote hosting + collaboration</text>
+<!-- bottom key -->
+<rect x="125" y="510" width="950" height="34" rx="17" fill="#070b14" stroke="#23324d"/>
+<circle cx="160" cy="527" r="4" fill="#59f0c5"/><text x="172" y="531" fill="#9ba9c1" font-family="system-ui,sans-serif" font-size="9">Git: controls versions</text>
+<circle cx="400" cy="527" r="4" fill="#62e8ff"/><text x="412" y="531" fill="#9ba9c1" font-family="system-ui,sans-serif" font-size="9">GitHub: hosts repositories</text>
+<circle cx="665" cy="527" r="4" fill="#b98aff"/><text x="677" y="531" fill="#9ba9c1" font-family="system-ui,sans-serif" font-size="9">Push: sends commits to remote</text>
+<circle cx="965" cy="527" r="4" fill="#fff"/><text x="977" y="531" fill="#9ba9c1" font-family="system-ui,sans-serif" font-size="9">Collaboration: team workflow</text>
 </svg>
