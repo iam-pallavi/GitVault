@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="../assets/git-basics.png" width="100%" alt="Git Basics"/>
+<img src="../assets/git-basics-animated.svg" width="100%" alt="Animated Git Basics"/>
 
 # Git Basics
 
@@ -72,6 +72,8 @@ Without version control, managing multiple changes manually can become difficult
 ---
 
 ## 2. 🔄 Git vs GitHub
+
+<img src="../assets/git-vs-github-animated.svg" width="100%" alt="Animated Git versus GitHub comparison"/>
 
 | Git | GitHub |
 |---|---|
@@ -153,12 +155,7 @@ Git creates a hidden `.git` directory that stores repository metadata and histor
 
 ### Visual
 
-```mermaid
-flowchart LR
-    A[Project Folder] --> B[git init]
-    B --> C[.git Directory]
-    C --> D[Git Repository]
-```
+<img src="../assets/git-init-animated.svg" width="100%" alt="Animated git init flow"/>
 
 > `git init` creates a local repository. It does **not** automatically connect the project to GitHub.
 
@@ -182,14 +179,7 @@ It can show information such as:
 
 ### Visual
 
-```mermaid
-flowchart TD
-    A[Working Directory] --> B[git status]
-    B --> C{What changed?}
-    C --> D[Untracked Files]
-    C --> E[Modified Files]
-    C --> F[Staged Changes]
-```
+<img src="../assets/git-status-animated.svg" width="100%" alt="Animated git status flow"/>
 
 `git status` is one of the safest and most useful commands to run frequently.
 
@@ -213,10 +203,7 @@ git add .
 
 ### Visual
 
-```mermaid
-flowchart LR
-    A[Working Directory] -->|git add| B[Staging Area]
-```
+<img src="../assets/git-stage-animated.svg" width="100%" alt="Animated git add staging flow"/>
 
 > Staging lets me choose which changes should be included in the next commit.
 
@@ -234,11 +221,7 @@ A good commit message should briefly describe what was changed.
 
 ### Visual
 
-```mermaid
-flowchart LR
-    A[Staging Area] -->|git commit| B[Git Repository]
-    B --> C[Commit History]
-```
+<img src="../assets/git-commit-animated.svg" width="100%" alt="Animated git commit flow"/>
 
 ---
 
@@ -258,13 +241,7 @@ git log --oneline
 
 ### Visual
 
-```text
-Commit 3  →  Update README
-    ↓
-Commit 2  →  Add Git commands
-    ↓
-Commit 1  →  Initial commit
-```
+<img src="../assets/git-log-animated.svg" width="100%" alt="Animated Git commit history"/>
 
 The history helps me understand how the project changed over time.
 
@@ -287,12 +264,7 @@ Common symbols:
 
 ### Visual
 
-```mermaid
-flowchart LR
-    A[Last Staged Version] --> C[git diff]
-    B[Current Working Version] --> C
-    C --> D[Show Unstaged Differences]
-```
+<img src="../assets/git-diff-animated.svg" width="100%" alt="Animated git diff comparison"/>
 
 For staged changes, a commonly used form is:
 
@@ -314,10 +286,7 @@ git restore README.md
 
 ### Visual
 
-```mermaid
-flowchart LR
-    A[Unstaged Changes] -->|git restore| B[Restore from Index]
-```
+<img src="../assets/git-restore-rm-animated.svg" width="100%" alt="Animated git restore and git rm visual"/>
 
 ⚠️ **Be careful:** discarded changes may not be easily recoverable.
 
@@ -351,15 +320,7 @@ git rm --cached filename
 
 The basic workflow I want to remember is:
 
-```mermaid
-flowchart LR
-    A[Modify File] --> B[git status]
-    B --> C[git diff]
-    C --> D[git add]
-    D --> E[git status]
-    E --> F[git commit]
-    F --> G[git log]
-```
+<img src="../assets/git-workflow-animated.svg" width="100%" alt="Animated basic Git workflow"/>
 
 ### 🧠 Easy Memory Trick
 
@@ -451,23 +412,7 @@ git log --oneline
 
 After completing this exercise, I should be able to explain:
 
-```text
-Working Directory
-       ↓
-git status
-       ↓
-git diff
-       ↓
-git add
-       ↓
-Staging Area
-       ↓
-git commit
-       ↓
-Local Repository
-       ↓
-git log
-```
+<img src="../assets/git-workflow-animated.svg" width="100%" alt="Animated Git practice workflow"/>
 
 ---
 
