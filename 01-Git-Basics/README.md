@@ -14,6 +14,12 @@
 
 This section contains my practical notes for the **core Git concepts and commands** I am learning before moving to branches, merge, rebase, undo, internals, and GitHub workflows.
 
+### ⚡ Git Workflow — See How Changes Move
+
+<img src="../assets/git-workflow-animated.svg" width="100%" alt="Animated Git workflow: Working Directory to Staging Area to Local Repository to GitHub"/>
+
+> The glowing flow represents how changes move through the Git workflow: **check → stage → commit → push**.
+
 ### Learning Path
 
 ```text
