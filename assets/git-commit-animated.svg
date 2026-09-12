@@ -1,1 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520"><defs><linearGradient id="b" x2="1" y2="1"><stop stop-color="#040713"/><stop offset=".55" stop-color="#0e1429"/><stop offset="1" stop-color="#1b0c35"/></linearGradient><linearGradient id="a"><stop stop-color="#4ce9c0"/><stop offset=".5" stop-color="#4bdcff"/><stop offset="1" stop-color="#aa7cff"/></linearGradient><filter id="g"><feGaussianBlur stdDeviation="6" result="x"/><feMerge><feMergeNode in="x"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="1200" height="520" rx="30" fill="url(#b)"/><g opacity=".07" stroke="#aab5d4"><path d="M40 90H1160M40 140H1160M40 190H1160M40 240H1160M40 290H1160M40 340H1160M40 390H1160M40 440H1160"/><path d="M100 70V470M200 70V470M300 70V470M400 70V470M500 70V470M600 70V470M700 70V470M800 70V470M900 70V470M1000 70V470M1100 70V470"/></g><text x="600" y="45" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="31" font-weight="800">git commit</text><text x="600" y="72" text-anchor="middle" fill="#9da9c7" font-family="system-ui" font-size="13">Freeze the staged snapshot into a permanent Git commit object</text><rect x="50" y="110" width="310" height="250" rx="20" fill="#0a1020" stroke="#34405e"/><text x="78" y="140" fill="#7e8cac" font-family="monospace" font-size="10">INDEX / STAGING AREA</text><g font-family="monospace" font-size="12"><text x="78" y="180" fill="#dce3f2">app.py</text><text x="78" y="207" fill="#dce3f2">README.md</text><text x="78" y="234" fill="#65e6b1">ready for commit</text></g><rect x="410" y="110" width="380" height="250" rx="20" fill="#071321" stroke="#45e4ff"/><circle cx="600" cy="225" r="70" fill="#0e1d30" stroke="url(#a)" stroke-width="2"/><circle cx="600" cy="225" r="47" fill="none" stroke="#45e4ff" opacity=".5"><animateTransform attributeName="transform" type="rotate" from="0 600 225" to="360 600 225" dur="5s" repeatCount="indefinite"/></circle><text x="600" y="216" text-anchor="middle" fill="#f0f4ff" font-family="monospace" font-size="14" font-weight="800">7c91e4a</text><text x="600" y="239" text-anchor="middle" fill="#7e8cac" font-family="monospace" font-size="10">COMMIT OBJECT</text><circle r="6" fill="#55eaff" filter="url(#g)"><animateMotion dur="1.8s" repeatCount="indefinite" path="M360 235 C390 235 390 235 410 235"/></circle><path d="M360 235H410" stroke="#293650" stroke-width="8"/><path d="M360 235H410" stroke="url(#a)" stroke-width="2" stroke-dasharray="8 8"><animate attributeName="stroke-dashoffset" from="0" to="-32" dur=".6s" repeatCount="indefinite"/></path><rect x="840" y="110" width="310" height="250" rx="20" fill="#0a1020" stroke="#34405e"/><text x="868" y="140" fill="#7e8cac" font-family="monospace" font-size="10">LOCAL HISTORY</text><circle cx="900" cy="205" r="7" fill="#4ce9c0"/><circle cx="900" cy="260" r="7" fill="#4bdcff"/><path d="M900 205V260" stroke="#34415f" stroke-width="3"/><text x="925" y="210" fill="#dce3f2" font-family="monospace" font-size="11">a18d2f1  previous</text><text x="925" y="265" fill="#fff" font-family="monospace" font-size="11">7c91e4a  new commit</text><circle cx="900" cy="260" r="18" fill="none" stroke="#4ce9c0" opacity="0"><animate attributeName="r" values="10;30;10" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.6;0" dur="2s" repeatCount="indefinite"/></circle><rect x="275" y="402" width="650" height="43" rx="21" fill="#070b16" stroke="#465276"/><text x="600" y="429" text-anchor="middle" fill="#c8d0e2" font-family="monospace" font-size="12">git commit -m "save changes"  →  snapshot + metadata + parent</text><text x="600" y="485" text-anchor="middle" fill="#687596" font-family="system-ui" font-size="11">A commit records a snapshot, author, message, timestamp and parent history.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520">
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#03050d"/><stop offset=".5" stop-color="#0b1224"/><stop offset="1" stop-color="#21103d"/></linearGradient>
+ <linearGradient id="flow"><stop stop-color="#54e6c0"/><stop offset=".5" stop-color="#55dfff"/><stop offset="1" stop-color="#b184ff"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <filter id="blur"><feGaussianBlur stdDeviation="24"/></filter>
+</defs>
+<rect width="1200" height="520" rx="30" fill="url(#bg)"/>
+<circle cx="930" cy="190" r="145" fill="#8c5cff" opacity=".08" filter="url(#blur)"/><circle cx="270" cy="360" r="120" fill="#36e8d0" opacity=".05" filter="url(#blur)"/>
+<g opacity=".08" stroke="#aab6d5"><path d="M40 100H1160M40 150H1160M40 200H1160M40 250H1160M40 300H1160M40 350H1160M40 400H1160M40 450H1160"/><path d="M100 80V470M200 80V470M300 80V470M400 80V470M500 80V470M600 80V470M700 80V470M800 80V470M900 80V470M1000 80V470M1100 80V470"/></g>
+<text x="600" y="44" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="31" font-weight="800">git commit</text>
+<text x="600" y="70" text-anchor="middle" fill="#a5afd0" font-family="system-ui" font-size="13">Turn the staged files into a saved point in Git history</text>
+<!-- terminal -->
+<rect x="48" y="108" width="330" height="250" rx="18" fill="#060a14" stroke="#34415f"/>
+<rect x="48" y="108" width="330" height="38" rx="18" fill="#10182b"/>
+<circle cx="75" cy="127" r="5" fill="#ff657f"/><circle cx="93" cy="127" r="5" fill="#ffc75f"/><circle cx="111" cy="127" r="5" fill="#5ce1b0"/>
+<text x="135" y="131" fill="#8491af" font-family="monospace" font-size="10">terminal • GitVault</text>
+<g font-family="monospace" font-size="12"><text x="72" y="182" fill="#e0e6f6">$ git commit -m</text><text x="72" y="205" fill="#e0e6f6">  "save changes"</text><text x="72" y="244" fill="#55e5b5">[main saved]</text><text x="72" y="268" fill="#9ca8c4">2 files changed</text><text x="72" y="290" fill="#9ca8c4">new commit created</text></g>
+<rect x="72" y="313" width="0" height="3" rx="2" fill="#55dfff"><animate attributeName="width" values="0;245;0" dur="2.8s" repeatCount="indefinite"/></rect>
+<!-- commit object -->
+<path d="M378 232H420" stroke="#33405e" stroke-width="8"/><path d="M378 232H420" stroke="url(#flow)" stroke-width="2" stroke-dasharray="8 8"><animate attributeName="stroke-dashoffset" from="0" to="-32" dur=".6s" repeatCount="indefinite"/></path>
+<circle r="6" fill="#55eaff" filter="url(#glow)"><animateMotion dur="1.4s" repeatCount="indefinite" path="M378 232H420"/></circle>
+<g>
+ <circle cx="590" cy="232" r="92" fill="#071524" stroke="#45e4ff" stroke-width="1.5"/>
+ <circle cx="590" cy="232" r="72" fill="none" stroke="url(#flow)" stroke-width="2" stroke-dasharray="5 10"><animateTransform attributeName="transform" type="rotate" from="0 590 232" to="360 590 232" dur="6s" repeatCount="indefinite"/></circle>
+ <circle cx="590" cy="232" r="52" fill="#0d1b2e" stroke="#55e5ff" opacity=".9"/>
+ <text x="590" y="214" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="12" font-weight="800">NEW COMMIT</text>
+ <text x="590" y="238" text-anchor="middle" fill="#55e5ff" font-family="monospace" font-size="12">Commit ID</text>
+ <text x="590" y="259" text-anchor="middle" fill="#cbd3e7" font-family="monospace" font-size="11">abc1234</text>
+ <circle cx="590" cy="232" r="105" fill="none" stroke="#55e5ff" opacity="0"><animate attributeName="r" values="92;120;92" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.5;0" dur="2.4s" repeatCount="indefinite"/></circle>
+</g>
+<!-- history -->
+<path d="M682 232H735" stroke="#33405e" stroke-width="8"/><path d="M682 232H735" stroke="url(#flow)" stroke-width="2" stroke-dasharray="8 8"><animate attributeName="stroke-dashoffset" from="0" to="-32" dur=".6s" repeatCount="indefinite"/></path>
+<circle r="6" fill="#55eaff" filter="url(#glow)"><animateMotion dur="1.6s" repeatCount="indefinite" path="M682 232H735"/></circle>
+<rect x="735" y="108" width="417" height="250" rx="18" fill="#060b17" stroke="#34415f"/>
+<text x="765" y="140" fill="#8b98b7" font-family="system-ui" font-size="11" font-weight="800">GIT HISTORY</text>
+<path d="M790 182V305" stroke="#33415e" stroke-width="3"/>
+<circle cx="790" cy="195" r="8" fill="#4ce9c0"/><circle cx="790" cy="260" r="8" fill="#55dfff"/><circle cx="790" cy="315" r="8" fill="#7a87a8"/>
+<text x="815" y="190" fill="#b9c3da" font-family="system-ui" font-size="12">Previous commit</text><text x="815" y="207" fill="#73809e" font-family="monospace" font-size="10">older saved point</text>
+<text x="815" y="255" fill="#fff" font-family="system-ui" font-size="12" font-weight="700">New commit</text><text x="815" y="272" fill="#55dfff" font-family="monospace" font-size="10">Commit ID: abc1234</text>
+<text x="815" y="310" fill="#73809e" font-family="system-ui" font-size="10">message: "save changes"</text>
+<circle cx="790" cy="260" r="18" fill="none" stroke="#4ce9c0" opacity="0"><animate attributeName="r" values="10;31;10" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.7;0" dur="2s" repeatCount="indefinite"/></circle>
+<!-- bottom -->
+<rect x="260" y="397" width="680" height="44" rx="22" fill="#070b16" stroke="#465276"/>
+<text x="600" y="425" text-anchor="middle" fill="#c7d0e3" font-family="monospace" font-size="12">staged files → commit → saved in history</text>
+<text x="600" y="482" text-anchor="middle" fill="#71809f" font-family="system-ui" font-size="11">A commit stores the snapshot plus message, author, time and links to previous history.</text>
+</svg>
