@@ -44,6 +44,8 @@ git diff
 git restore / git rm
       ↓
 Basic Git Workflow
+      ↓
+Hands-on Practice
 ```
 
 ---
@@ -365,7 +367,111 @@ flowchart LR
 
 ---
 
-## 14. 📝 Practice / Q&A
+## 14. 🧪 Hands-on Practice
+
+The best way to learn Git is to perform the complete cycle on a small practice folder.
+
+### Step 1 — Create a practice folder
+
+```bash
+mkdir git-practice
+cd git-practice
+```
+
+### Step 2 — Initialize Git
+
+```bash
+git init
+```
+
+### Step 3 — Create a file
+
+```bash
+echo "Hello Git" > hello.txt
+```
+
+### Step 4 — Check the status
+
+```bash
+git status
+```
+
+### Step 5 — Stage the file
+
+```bash
+git add hello.txt
+```
+
+### Step 6 — Check the status again
+
+```bash
+git status
+```
+
+The file should now appear under **Changes to be committed**.
+
+### Step 7 — Commit the change
+
+```bash
+git commit -m "Add hello.txt"
+```
+
+### Step 8 — View the history
+
+```bash
+git log --oneline
+```
+
+### Step 9 — Modify the file
+
+```bash
+echo "Learning Git step by step" >> hello.txt
+```
+
+### Step 10 — Inspect the change
+
+```bash
+git diff
+```
+
+### Step 11 — Stage and commit again
+
+```bash
+git add hello.txt
+git commit -m "Update hello.txt"
+```
+
+### Step 12 — Check the history
+
+```bash
+git log --oneline
+```
+
+### 🎯 Practice Goal
+
+After completing this exercise, I should be able to explain:
+
+```text
+Working Directory
+       ↓
+git status
+       ↓
+git diff
+       ↓
+git add
+       ↓
+Staging Area
+       ↓
+git commit
+       ↓
+Local Repository
+       ↓
+git log
+```
+
+---
+
+## 15. 📝 Practice / Interview Q&A
 
 ### Q1. What is Git?
 
@@ -411,17 +517,24 @@ Modify → Check → Review → Stage → Commit → Check History
 
 ---
 
-## 🚀 Next Topics
+## ✅ Git Basics Completion Checklist
 
-The next GitVault sections will go deeper into:
+- [x] Understand what Git is
+- [x] Understand Git vs GitHub
+- [x] Verify Git installation
+- [x] Configure Git identity
+- [x] Initialize a repository with `git init`
+- [x] Check repository state with `git status`
+- [x] Stage changes with `git add`
+- [x] Create commits with `git commit`
+- [x] View history with `git log`
+- [x] Inspect changes with `git diff`
+- [x] Discard unstaged changes with `git restore`
+- [x] Remove files with `git rm`
+- [x] Understand the basic Git workflow
+- [x] Practice the complete local Git cycle
 
-- 🌿 Git Branches
-- 🔀 Git Merge
-- 🧬 Git Rebase
-- ↩️ Git Undo
-- 🔎 Git Diff
-- ⚙️ Git Internals
-- 🐙 GitHub
+> **Folder status: 🟢 Git Basics complete**
 
 ---
 
