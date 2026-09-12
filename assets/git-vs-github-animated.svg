@@ -1,33 +1,99 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560">
 <defs>
-<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#040713"/><stop offset=".55" stop-color="#0b1024"/><stop offset="1" stop-color="#21103a"/></linearGradient>
-<linearGradient id="flow"><stop stop-color="#4ce9c0"/><stop offset=".5" stop-color="#4bdfff"/><stop offset="1" stop-color="#aa7cff"/></linearGradient>
-<filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#050817"/><stop offset=".55" stop-color="#0b1230"/><stop offset="1" stop-color="#1d1038"/></linearGradient>
+  <linearGradient id="route"><stop stop-color="#55e6c1"/><stop offset=".48" stop-color="#54dfff"/><stop offset="1" stop-color="#b083ff"/></linearGradient>
+  <linearGradient id="screen" x2="0" y2="1"><stop stop-color="#111a32"/><stop offset="1" stop-color="#070b18"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
 </defs>
-<rect width="1200" height="560" rx="32" fill="url(#bg)"/>
-<g opacity=".07" stroke="#b9c4df"><path d="M40 100H1160M40 160H1160M40 220H1160M40 280H1160M40 340H1160M40 400H1160M40 460H1160"/><path d="M100 70V500M200 70V500M300 70V500M400 70V500M500 70V500M600 70V500M700 70V500M800 70V500M900 70V500M1000 70V500M1100 70V500"/></g>
-<text x="600" y="48" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="32" font-weight="800">Git vs GitHub</text>
-<text x="600" y="75" text-anchor="middle" fill="#9da9c7" font-family="system-ui" font-size="13">One manages your version history locally. The other hosts it online.</text>
-<!-- Git side -->
-<rect x="48" y="112" width="472" height="310" rx="26" fill="#080d1b" stroke="#49dfff" stroke-width="1.5"/>
-<circle cx="88" cy="148" r="15" fill="#49dfff" opacity=".15"/><circle cx="88" cy="148" r="6" fill="#49dfff" filter="url(#glow)"/>
-<text x="116" y="154" fill="#49dfff" font-family="system-ui" font-size="18" font-weight="800">GIT</text><text x="116" y="174" fill="#71809f" font-family="system-ui" font-size="11">Local version control</text>
-<rect x="78" y="198" width="410" height="174" rx="18" fill="#050912" stroke="#263552"/>
-<g font-family="monospace" font-size="13"><text x="102" y="228" fill="#dfe5f4">$ git commit -m "save changes"</text><text x="102" y="258" fill="#65e6b1">[main abc1234] save changes</text><text x="102" y="286" fill="#9aa7c3">1 file changed</text><text x="102" y="318" fill="#71809f">Commit ID: abc1234</text><text x="102" y="346" fill="#71809f">Saved in Local History</text></g>
-<!-- GitHub side -->
-<rect x="680" y="112" width="472" height="310" rx="26" fill="#080d1b" stroke="#aa7cff" stroke-width="1.5"/>
-<circle cx="720" cy="148" r="15" fill="#aa7cff" opacity=".15"/><circle cx="720" cy="148" r="6" fill="#aa7cff" filter="url(#glow)"/>
-<text x="748" y="154" fill="#aa7cff" font-family="system-ui" font-size="18" font-weight="800">GITHUB</text><text x="748" y="174" fill="#71809f" font-family="system-ui" font-size="11">Remote collaboration platform</text>
-<rect x="710" y="198" width="410" height="174" rx="18" fill="#080c17" stroke="#3a3158"/>
-<g font-family="monospace" font-size="13"><text x="734" y="228" fill="#dfe5f4">Repository: GitVault</text><text x="734" y="258" fill="#65dfff">main → Remote Repository</text><text x="734" y="286" fill="#9aa7c3">Pull Requests • Code Review</text><text x="734" y="318" fill="#9aa7c3">Issues • Actions • Collaboration</text><text x="734" y="346" fill="#71809f">Commit ID: abc1234</text></g>
-<!-- bridge -->
-<path d="M520 270H680" stroke="#273451" stroke-width="12" stroke-linecap="round"/>
-<path d="M520 270H680" stroke="url(#flow)" stroke-width="3" stroke-dasharray="10 10"><animate attributeName="stroke-dashoffset" from="0" to="-40" dur=".6s" repeatCount="indefinite"/></path>
-<circle r="8" fill="#55eaff" filter="url(#glow)"><animateMotion dur="2s" repeatCount="indefinite" path="M520 270H680"/></circle>
-<text x="600" y="238" text-anchor="middle" fill="#dce4f3" font-family="monospace" font-size="12">git push origin main</text>
-<text x="600" y="302" text-anchor="middle" fill="#7e8ca9" font-family="system-ui" font-size="10">Local → Remote</text>
-<!-- bottom learning strip -->
-<rect x="190" y="450" width="820" height="60" rx="30" fill="#090e1d" stroke="#293754"/>
-<text x="600" y="475" text-anchor="middle" fill="#dfe7f5" font-family="system-ui" font-size="13" font-weight="700">Git = version control engine  •  GitHub = online collaboration</text>
-<text x="600" y="496" text-anchor="middle" fill="#71809f" font-family="system-ui" font-size="11">Git works on your machine. GitHub stores and shares Git repositories.</text>
+<rect width="1200" height="560" rx="30" fill="url(#bg)"/>
+<circle cx="220" cy="285" r="170" fill="#4bdfff" opacity=".055" filter="url(#soft)"/>
+<circle cx="980" cy="285" r="180" fill="#aa7cff" opacity=".055" filter="url(#soft)"/>
+<g opacity=".055" stroke="#d9e2ff"><path d="M40 100H1160M40 160H1160M40 220H1160M40 280H1160M40 340H1160M40 400H1160M40 460H1160"/><path d="M100 70V500M200 70V500M300 70V500M400 70V500M500 70V500M600 70V500M700 70V500M800 70V500M900 70V500M1000 70V500M1100 70V500"/></g>
+<text x="600" y="45" text-anchor="middle" fill="#ffffff" font-family="system-ui" font-size="30" font-weight="800">Git vs GitHub</text>
+<text x="600" y="69" text-anchor="middle" fill="#9da9c7" font-family="system-ui" font-size="13">Watch what actually happens when you save and share your code</text>
+
+<!-- laptop / local machine -->
+<g>
+  <rect x="55" y="145" width="310" height="215" rx="18" fill="#0a1020" stroke="#344464"/>
+  <rect x="72" y="162" width="276" height="166" rx="11" fill="url(#screen)" stroke="#243452"/>
+  <circle cx="91" cy="181" r="4" fill="#ff6b81"/><circle cx="105" cy="181" r="4" fill="#ffd166"/><circle cx="119" cy="181" r="4" fill="#55e6c1"/>
+  <text x="90" y="210" fill="#55e6c1" font-family="monospace" font-size="12">~/GitVault</text>
+  <text x="90" y="235" fill="#dfe7f5" font-family="monospace" font-size="12">$ edit README.md</text>
+  <text x="90" y="260" fill="#ff7b9c" font-family="monospace" font-size="12">+ new Git content</text>
+  <text x="90" y="285" fill="#7f8da9" font-family="monospace" font-size="12">Modified file</text>
+  <text x="90" y="308" fill="#54dfff" font-family="monospace" font-size="12">$ git add README.md</text>
+  <path d="M120 360H300" stroke="#566783" stroke-width="8" stroke-linecap="round"/>
+  <path d="M95 372H325" stroke="#344464" stroke-width="8" stroke-linecap="round"/>
+  <text x="210" y="405" text-anchor="middle" fill="#9aa8c4" font-family="system-ui" font-size="12" font-weight="700">YOUR LAPTOP</text>
+</g>
+
+<!-- Git engine -->
+<g>
+  <circle cx="520" cy="250" r="92" fill="#080e1e" stroke="#4bdfff" stroke-width="2"/>
+  <circle cx="520" cy="250" r="68" fill="none" stroke="#263957" stroke-width="2" stroke-dasharray="5 8">
+    <animateTransform attributeName="transform" type="rotate" from="0 520 250" to="360 520 250" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  <path d="M483 238L520 201L557 238L520 275Z" fill="#55e6c1" opacity=".9" transform="rotate(45 520 238)"/>
+  <circle cx="520" cy="250" r="13" fill="#07101c" stroke="#55e6c1" stroke-width="4"/>
+  <text x="520" y="190" text-anchor="middle" fill="#54dfff" font-family="system-ui" font-size="21" font-weight="900">GIT</text>
+  <text x="520" y="305" text-anchor="middle" fill="#cbd6eb" font-family="system-ui" font-size="12">version control</text>
+  <text x="520" y="323" text-anchor="middle" fill="#71809f" font-family="system-ui" font-size="10">tracks • stages • commits</text>
+</g>
+
+<!-- animated change packet -->
+<g>
+  <rect x="370" y="222" width="48" height="34" rx="8" fill="#101b31" stroke="#55e6c1"/>
+  <text x="394" y="244" text-anchor="middle" fill="#55e6c1" font-family="monospace" font-size="10">FILE</text>
+  <animateTransform attributeName="transform" type="translate" values="0 0;125 0;0 0" dur="4s" repeatCount="indefinite"/>
+</g>
+
+<!-- commit snapshot -->
+<g>
+  <rect x="610" y="176" width="190" height="150" rx="18" fill="#0a1020" stroke="#9c7cff"/>
+  <text x="705" y="204" text-anchor="middle" fill="#b083ff" font-family="system-ui" font-size="16" font-weight="800">COMMIT</text>
+  <path d="M642 228H768" stroke="#273552"/>
+  <circle cx="650" cy="250" r="7" fill="#55e6c1"/><circle cx="705" cy="250" r="7" fill="#54dfff"/><circle cx="760" cy="250" r="7" fill="#b083ff"/>
+  <path d="M650 250H760" stroke="#52627e" stroke-width="2"/>
+  <text x="705" y="279" text-anchor="middle" fill="#dfe7f5" font-family="monospace" font-size="11">Commit ID: abc1234</text>
+  <text x="705" y="298" text-anchor="middle" fill="#71809f" font-family="system-ui" font-size="10">Saved snapshot</text>
+  <text x="705" y="315" text-anchor="middle" fill="#71809f" font-family="system-ui" font-size="10">"save changes"</text>
+</g>
+
+<!-- push route -->
+<path d="M800 250H900" stroke="#263552" stroke-width="13" stroke-linecap="round"/>
+<path d="M800 250H900" stroke="url(#route)" stroke-width="3" stroke-dasharray="11 9">
+  <animate attributeName="stroke-dashoffset" from="0" to="-40" dur=".7s" repeatCount="indefinite"/>
+</path>
+<circle r="8" fill="#55e6c1" filter="url(#glow)"><animateMotion dur="2.2s" repeatCount="indefinite" path="M800 250H900"/></circle>
+<text x="850" y="226" text-anchor="middle" fill="#dfe7f5" font-family="monospace" font-size="11">git push</text>
+<text x="850" y="282" text-anchor="middle" fill="#71809f" font-family="system-ui" font-size="10">Local → Remote</text>
+
+<!-- GitHub repository -->
+<g>
+  <rect x="900" y="145" width="245" height="215" rx="20" fill="#090d1a" stroke="#aa7cff" stroke-width="2"/>
+  <circle cx="936" cy="181" r="17" fill="#aa7cff" opacity=".14"/>
+  <path d="M928 181c0-6 4-10 10-10s10 4 10 10c0 5-3 8-7 9v5h-6v-5c-4-1-7-4-7-9Z" fill="#c19cff"/>
+  <text x="963" y="184" fill="#c19cff" font-family="system-ui" font-size="18" font-weight="900">GITHUB</text>
+  <text x="922" y="216" fill="#dfe7f5" font-family="monospace" font-size="12">iam-pallavi / GitVault</text>
+  <rect x="922" y="231" width="200" height="37" rx="9" fill="#11172a" stroke="#293754"/>
+  <circle cx="938" cy="249" r="5" fill="#55e6c1"/>
+  <text x="951" y="253" fill="#dfe7f5" font-family="monospace" font-size="11">main • abc1234</text>
+  <text x="922" y="291" fill="#9aa8c4" font-family="system-ui" font-size="10">Pull Requests</text>
+  <text x="922" y="309" fill="#9aa8c4" font-family="system-ui" font-size="10">Code Review</text>
+  <text x="922" y="327" fill="#9aa8c4" font-family="system-ui" font-size="10">Issues • Actions • Team</text>
+</g>
+
+<!-- collaboration people -->
+<g>
+  <circle cx="1010" cy="405" r="15" fill="#111a31" stroke="#55e6c1"/>
+  <circle cx="1055" cy="405" r="15" fill="#111a31" stroke="#b083ff"/>
+  <circle cx="1100" cy="405" r="15" fill="#111a31" stroke="#54dfff"/>
+  <path d="M1010 420v18M1055 420v18M1100 420v18M995 438h30M1040 438h30M1085 438h30" stroke="#556681" stroke-width="3" stroke-linecap="round"/>
+  <text x="1055" y="466" text-anchor="middle" fill="#dfe7f5" font-family="system-ui" font-size="12" font-weight="700">COLLABORATION</text>
+</g>
+
+<!-- bottom explanation -->
+<rect x="165" y="492" width="870" height="42" rx="21" fill="#080e1c" stroke="#293754"/>
+<text x="600" y="518" text-anchor="middle" fill="#dfe7f5" font-family="system-ui" font-size="12" font-weight="700">Git creates and tracks versions  →  GitHub hosts those Git repositories and enables collaboration</text>
 </svg>
