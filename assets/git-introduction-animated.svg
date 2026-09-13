@@ -1,110 +1,120 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760">
 <defs>
- <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#030712"/><stop offset=".5" stop-color="#0b1024"/><stop offset="1" stop-color="#180b30"/></linearGradient>
- <linearGradient id="cyan" x1="0" x2="1"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
- <linearGradient id="violet" x1="0" x2="1"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#e879f9"/></linearGradient>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#030712"/><stop offset=".5" stop-color="#0a1024"/><stop offset="1" stop-color="#160a2d"/></linearGradient>
+ <linearGradient id="cyan" x1="0" x2="1"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+ <linearGradient id="violet" x1="0" x2="1"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient>
+ <linearGradient id="gitline" x1="0" x2="1"><stop stop-color="#22d3ee"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#e879f9"/></linearGradient>
  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
- <filter id="blur"><feGaussianBlur stdDeviation="30"/></filter>
+ <filter id="bigGlow"><feGaussianBlur stdDeviation="22"/></filter>
  <style>
- .t{font-family:Inter,Segoe UI,sans-serif;fill:#f8fafc}.m{font-family:Inter,Segoe UI,sans-serif;fill:#94a3b8}.mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.title{font-size:34px;font-weight:850}.h{font-size:20px;font-weight:800}.b{font-size:15px;font-weight:750}.s{font-size:13px}.tiny{font-size:10px}
+ .t{font-family:Inter,Segoe UI,sans-serif;fill:#f8fafc}.muted{font-family:Inter,Segoe UI,sans-serif;fill:#94a3b8}.mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.title{font-size:34px;font-weight:850}.head{font-size:18px;font-weight:800}.small{font-size:13px}.tiny{font-size:11px}
  </style>
 </defs>
-<rect width="1400" height="720" rx="30" fill="url(#bg)"/>
-<circle cx="180" cy="140" r="170" fill="#06b6d4" opacity=".06" filter="url(#blur)"><animate attributeName="r" values="145;185;145" dur="7s" repeatCount="indefinite"/></circle>
-<circle cx="1190" cy="560" r="210" fill="#7c3aed" opacity=".08" filter="url(#blur)"><animate attributeName="r" values="180;230;180" dur="8s" repeatCount="indefinite"/></circle>
 
-<text x="55" y="58" class="t title">Git Introduction</text>
-<text x="55" y="86" class="m s">Think of Git as a checkpoint system for your project — your files keep changing, but important states can be saved.</text>
-<text x="1345" y="57" text-anchor="end" class="m mono tiny">VERSION CONTROL • CONCEPT</text>
+<rect width="1400" height="760" rx="32" fill="url(#bg)"/>
+<circle cx="1110" cy="130" r="190" fill="#8b5cf6" opacity=".08" filter="url(#bigGlow)"><animate attributeName="r" values="170;215;170" dur="7s" repeatCount="indefinite"/></circle>
+<circle cx="280" cy="590" r="180" fill="#06b6d4" opacity=".07" filter="url(#bigGlow)"><animate attributeName="r" values="160;205;160" dur="8s" repeatCount="indefinite"/></circle>
 
-<!-- LIVE PROJECT -->
+<text x="58" y="62" class="t title">Git Introduction</text>
+<text x="58" y="91" class="muted small">Git is a version control system — it remembers meaningful versions of your project.</text>
+<text x="1342" y="62" text-anchor="end" class="muted mono tiny">VERSION CONTROL / LOCAL</text>
+
+<!-- BEFORE: REAL PROJECT PROBLEM -->
 <g>
- <text x="55" y="125" class="m mono tiny">01 • LIVE PROJECT</text>
- <rect x="55" y="145" width="360" height="390" rx="24" fill="#070d1b" stroke="#263858"/>
- <circle cx="80" cy="172" r="5" fill="#fb7185"/><circle cx="97" cy="172" r="5" fill="#facc15"/><circle cx="114" cy="172" r="5" fill="#4ade80"/>
- <text x="138" y="177" class="m mono tiny">~/cloud-app</text>
- <rect x="78" y="205" width="314" height="190" rx="14" fill="#030812" stroke="#1d3150"/>
- <text x="96" y="230" class="m mono tiny">server.py</text>
- <text x="96" y="260" class="m mono tiny">01  def deploy():</text>
- <text x="96" y="283" class="m mono tiny">02      status =</text>
- <text x="96" y="306" class="m mono tiny">03      <tspan fill="#22d3ee">"production"</tspan></text>
- <text x="96" y="329" class="m mono tiny">04      return status</text>
- <rect x="89" y="294" width="230" height="25" rx="6" fill="#22d3ee" opacity=".09">
-   <animate attributeName="x" values="89;105;89" dur="2.8s" repeatCount="indefinite"/>
- </rect>
- <text x="78" y="435" class="t b">You keep editing the project.</text>
- <text x="78" y="459" class="m s">Code changes → files change → project moves forward.</text>
- <rect x="78" y="481" width="314" height="32" rx="10" fill="#111b31" stroke="#33476d"/>
- <circle cx="96" cy="497" r="5" fill="#fbbf24"><animate attributeName="opacity" values=".25;1;.25" dur="1.6s" repeatCount="indefinite"/></circle>
- <text x="111" y="501" class="m mono tiny">CURRENT STATE • always changing</text>
+ <text x="58" y="142" class="muted mono tiny">WITHOUT GIT</text>
+ <text x="58" y="170" class="t head">“final_final_v7” problem</text>
+ <rect x="50" y="190" width="330" height="360" rx="24" fill="#07101d" stroke="#263752"/>
+ <rect x="75" y="220" width="280" height="48" rx="10" fill="#0b1627" stroke="#334766"/>
+ <text x="94" y="249" class="muted mono small">📁 my-project</text>
+ <g class="mono small">
+  <rect x="76" y="286" width="278" height="40" rx="8" fill="#120f20"/>
+  <text x="94" y="312" fill="#fbbf24">project_final.zip</text>
+  <rect x="76" y="334" width="278" height="40" rx="8" fill="#161021"/>
+  <text x="94" y="360" fill="#fb7185">project_final_v2.zip</text>
+  <rect x="76" y="382" width="278" height="40" rx="8" fill="#171025"/>
+  <text x="94" y="408" fill="#e879f9">project_final_NEW.zip</text>
+  <rect x="76" y="430" width="278" height="40" rx="8" fill="#181329"/>
+  <text x="94" y="456" fill="#c4b5fd">project_USE_THIS.zip</text>
+ </g>
+ <text x="75" y="505" class="t small">Which version is correct?</text>
+ <text x="75" y="527" fill="#fb7185" class="mono tiny">⚠ no clear history • hard to compare</text>
+ <circle cx="350" cy="204" r="7" fill="#fb7185" filter="url(#glow)"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
 </g>
 
-<!-- SNAPSHOT ACTION -->
+<!-- GIT CORE: actual transformation -->
 <g>
- <text x="445" y="125" class="m mono tiny">02 • GIT CREATES A CHECKPOINT</text>
- <rect x="445" y="145" width="510" height="390" rx="24" fill="#080d20" stroke="#343d67"/>
- <circle cx="700" cy="318" r="105" fill="#0a1430" stroke="url(#cyan)" stroke-width="3" opacity=".95"/>
- <circle cx="700" cy="318" r="82" fill="none" stroke="#33466d" stroke-width="2" stroke-dasharray="5 8">
-   <animateTransform attributeName="transform" type="rotate" from="0 700 318" to="360 700 318" dur="12s" repeatCount="indefinite"/>
+ <text x="700" y="142" text-anchor="middle" class="muted mono tiny">GIT ENTERS THE WORKFLOW</text>
+ <text x="700" y="170" text-anchor="middle" class="t head">One project. Many safe versions.</text>
+
+ <!-- energy field -->
+ <circle cx="700" cy="356" r="138" fill="#7c3aed" opacity=".08" filter="url(#bigGlow)">
+  <animate attributeName="r" values="125;155;125" dur="3.5s" repeatCount="indefinite"/>
  </circle>
- <text x="700" y="301" text-anchor="middle" class="t mono" font-size="27" font-weight="850">GIT</text>
- <text x="700" y="325" text-anchor="middle" class="m mono tiny">SAVE A SNAPSHOT</text>
- <text x="700" y="350" text-anchor="middle" class="m s">of the project state</text>
+ <circle cx="700" cy="356" r="105" fill="#071225" stroke="url(#gitline)" stroke-width="3" filter="url(#glow)">
+  <animate attributeName="stroke-opacity" values=".45;1;.45" dur="2.5s" repeatCount="indefinite"/>
+ </circle>
+ <circle cx="700" cy="356" r="82" fill="#050b17" stroke="#263957"/>
+ <text x="700" y="347" text-anchor="middle" class="t mono" font-size="30" font-weight="900">GIT</text>
+ <text x="700" y="371" text-anchor="middle" class="muted mono tiny">TRACK • SNAPSHOT • HISTORY</text>
 
- <!-- camera aperture -->
- <g transform="translate(700 318)" fill="none" stroke="#8b5cf6" stroke-width="3" opacity=".85">
-  <path d="M-34-34 L-12-44 L8-36 L-4-12 L-30-12 Z"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite"/></path>
- </g>
-
- <!-- packets entering snapshot -->
+ <!-- incoming code packets -->
  <g>
-  <rect x="472" y="278" width="92" height="28" rx="8" fill="#0c2130" stroke="#1d7d91"/>
-  <text x="518" y="296" text-anchor="middle" class="t mono tiny">server.py</text>
-  <circle r="5" fill="#67e8f9" filter="url(#glow)"><animateMotion dur="2s" repeatCount="indefinite" path="M564 292 C600 292 620 305 635 318"/></circle>
-  <rect x="836" y="278" width="92" height="28" rx="8" fill="#17112d" stroke="#6d4cc1"/>
-  <text x="882" y="296" text-anchor="middle" class="t mono tiny">README</text>
-  <circle r="5" fill="#d8b4fe" filter="url(#glow)"><animateMotion dur="2.4s" repeatCount="indefinite" path="M836 292 C800 292 780 305 765 318"/></circle>
+  <rect x="430" y="235" width="170" height="55" rx="12" fill="#071827" stroke="#24506a"/>
+  <text x="450" y="258" class="muted mono tiny">WORKING PROJECT</text>
+  <text x="450" y="278" class="t mono small">app.py • index.html</text>
+  <path d="M600 263 C635 270 650 300 665 324" fill="none" stroke="#22d3ee" stroke-width="3" stroke-dasharray="7 7"/>
+  <circle r="7" fill="#67e8f9" filter="url(#glow)"><animateMotion dur="1.8s" repeatCount="indefinite" path="M600 263 C635 270 650 300 665 324"/></circle>
  </g>
 
- <text x="700" y="445" text-anchor="middle" class="t h">A checkpoint is a saved version.</text>
- <text x="700" y="470" text-anchor="middle" class="m s">Git remembers what the project looked like at that moment.</text>
- <text x="700" y="505" text-anchor="middle" fill="#67e8f9" class="mono tiny">WORKING FILES  →  SNAPSHOT  →  HISTORY</text>
-</g>
-
-<!-- HISTORY -->
-<g>
- <text x="985" y="125" class="m mono tiny">03 • YOUR PROJECT GETS A MEMORY</text>
- <rect x="985" y="145" width="360" height="390" rx="24" fill="#080d1d" stroke="#2d3d60"/>
- <text x="1012" y="180" class="t h">Project history</text>
- <text x="1012" y="201" class="m mono tiny">older → newer</text>
- <line x1="1040" y1="232" x2="1040" y2="466" stroke="#33466d" stroke-width="3"/>
- <circle cx="1040" cy="248" r="10" fill="#22d3ee" filter="url(#glow)"/>
- <circle cx="1040" cy="327" r="10" fill="#8b5cf6"/>
- <circle cx="1040" cy="406" r="10" fill="#e879f9"/>
- <circle cx="1040" cy="466" r="10" fill="#f8fafc"/>
- <text x="1070" y="244" class="t b">Checkpoint 1</text>
- <text x="1070" y="263" class="m mono tiny">project starts</text>
- <text x="1070" y="323" class="t b">Checkpoint 2</text>
- <text x="1070" y="342" class="m mono tiny">feature added</text>
- <text x="1070" y="402" class="t b">Checkpoint 3</text>
- <text x="1070" y="421" class="m mono tiny">bug fixed</text>
- <text x="1070" y="462" class="t b">Current state</text>
- <text x="1070" y="481" class="m mono tiny">you are here</text>
- <circle r="6" fill="#67e8f9" filter="url(#glow)"><animateMotion dur="4s" repeatCount="indefinite" path="M1040 466 L1040 248"/></circle>
-</g>
-
-<!-- CONNECTION / CORE IDEA -->
-<path d="M415 335 C430 335 435 335 445 335" fill="none" stroke="#22d3ee" stroke-width="3" stroke-dasharray="7 8"/>
-<path d="M955 335 C970 335 975 335 985 335" fill="none" stroke="#8b5cf6" stroke-width="3" stroke-dasharray="7 8"/>
-<circle r="6" fill="#67e8f9" filter="url(#glow)"><animateMotion dur="2s" repeatCount="indefinite" path="M415 335 C430 335 435 335 445 335"/></circle>
-<circle r="6" fill="#d8b4fe" filter="url(#glow)"><animateMotion dur="2s" begin="1s" repeatCount="indefinite" path="M955 335 C970 335 975 335 985 335"/></circle>
-
-<!-- WHAT YOU GET -->
-<g>
- <rect x="55" y="575" width="1290" height="92" rx="20" fill="#070d1a" stroke="#263957"/>
- <text x="82" y="607" class="m mono tiny">THE POINT OF GIT</text>
- <text x="82" y="637" class="t h">Your project can change without losing its past.</text>
- <text x="82" y="657" class="m s">Track changes • save checkpoints • see what changed • move back to a known version when needed</text>
- <text x="1307" y="635" text-anchor="end" fill="#67e8f9" class="mono b">GIT = VERSION CONTROL</text>
+ <!-- snapshots -->
+ <g>
+  <path d="M700 461 C580 515 470 480 470 400" fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="5 8"/>
+  <path d="M700 461 C820 515 930 480 930 400" fill="none" stroke="#d946ef" stroke-width="2" stroke-dasharray="5 8"/>
+  <circle cx="505" cy="415" r="31" fill="#071827" stroke="#22d3ee" stroke-width="2"/>
+  <text x="505" y="411" text-anchor="middle" class="t mono small">V1</text><text x="505" y="427" text-anchor="middle" class="muted tiny">saved</text>
+  <circle cx="700" cy="485" r="31" fill="#100c25" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="700" y="481" text-anchor="middle" class="t mono small">V2</text><text x="700" y="497" text-anchor="middle" class="muted tiny">saved</text>
+  <circle cx="895" cy="415" r="31" fill="#180c25" stroke="#e879f9" stroke-width="2"/>
+  <text x="895" y="411" text-anchor="middle" class="t mono small">V3</text><text x="895" y="427" text-anchor="middle" class="muted tiny">current</text>
+  <circle r="6" fill="#fff" filter="url(#glow)"><animateMotion dur="4s" repeatCount="indefinite" path="M505 415 C580 470 625 480 700 485 C775 480 820 470 895 415"/></circle>
  </g>
+ <text x="700" y="555" text-anchor="middle" class="muted small">Each checkpoint becomes a known point in your project’s history.</text>
+</g>
+
+<!-- AFTER GIT: clean history -->
+<g>
+ <text x="1010" y="142" class="muted mono tiny">WITH GIT</text>
+ <text x="1010" y="170" class="t head">Clean project history</text>
+ <rect x="1000" y="190" width="350" height="360" rx="24" fill="#07101d" stroke="#303f66"/>
+ <text x="1028" y="224" class="muted mono tiny">my-project / .git</text>
+ <line x1="1055" y1="275" x2="1055" y2="470" stroke="#33476b" stroke-width="3"/>
+ <g>
+  <circle cx="1055" cy="280" r="10" fill="#22d3ee" filter="url(#glow)"/>
+  <text x="1080" y="276" class="t small">Version 1</text><text x="1080" y="294" class="muted mono tiny">project created</text>
+  <circle cx="1055" cy="355" r="10" fill="#8b5cf6" filter="url(#glow)"/>
+  <text x="1080" y="351" class="t small">Version 2</text><text x="1080" y="369" class="muted mono tiny">feature added</text>
+  <circle cx="1055" cy="430" r="10" fill="#e879f9" filter="url(#glow)"/>
+  <text x="1080" y="426" class="t small">Version 3</text><text x="1080" y="444" class="muted mono tiny">current state</text>
+ </g>
+ <rect x="1028" y="480" width="294" height="42" rx="11" fill="#0c1730" stroke="#35486e">
+  <animate attributeName="stroke-opacity" values=".35;1;.35" dur="2.2s" repeatCount="indefinite"/>
+ </rect>
+ <text x="1175" y="498" text-anchor="middle" class="t mono tiny">COMPARE</text>
+ <text x="1175" y="514" text-anchor="middle" class="muted tiny">inspect • compare • restore</text>
+</g>
+
+<!-- central directional flow -->
+<g opacity=".9">
+ <path d="M382 370 C420 350 430 300 430 263" fill="none" stroke="url(#cyan)" stroke-width="2" stroke-dasharray="6 9"/>
+ <path d="M930 415 C960 415 980 390 1000 370" fill="none" stroke="url(#violet)" stroke-width="2" stroke-dasharray="6 9"/>
+ <circle r="5" fill="#67e8f9" filter="url(#glow)"><animateMotion dur="2.8s" repeatCount="indefinite" path="M382 370 C420 350 430 300 430 263"/></circle>
+ <circle r="5" fill="#d8b4fe" filter="url(#glow)"><animateMotion dur="2.8s" repeatCount="indefinite" path="M930 415 C960 415 980 390 1000 370"/></circle>
+</g>
+
+<!-- learning takeaway -->
+<rect x="50" y="610" width="1300" height="92" rx="22" fill="#070d1b" stroke="#263856"/>
+<text x="80" y="640" class="muted mono tiny">THE IDEA</text>
+<text x="80" y="668" class="t head">Git does not replace your project — it remembers how your project changes over time.</text>
+<text x="80" y="690" class="muted small">You keep working normally. Git gives those changes a reliable history you can inspect, compare and recover.</text>
+<text x="1320" y="660" text-anchor="end" fill="#67e8f9" class="mono tiny">GIT = VERSION CONTROL</text>
 </svg>
