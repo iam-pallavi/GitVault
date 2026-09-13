@@ -59,6 +59,12 @@ With Git, I can:
 - Go back to earlier versions when needed
 - Work with other developers
 
+### How Git works
+
+<div align="center">
+<img src="../assets/git-introduction-animated.svg" width="100%" alt="Animated Git Introduction — how Git tracks changes and maintains project history"/>
+</div>
+
 ### Why do we use Git?
 
 Without version control, managing multiple changes manually can become difficult. Git gives the project a structured history and makes changes easier to track and manage.
