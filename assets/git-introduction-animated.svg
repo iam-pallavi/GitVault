@@ -1,73 +1,98 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 620">
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070b1f"/><stop offset=".55" stop-color="#10143a"/><stop offset="1" stop-color="#180d35"/></linearGradient>
-  <linearGradient id="cyan" x1="0" x2="1"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
-  <linearGradient id="purple" x1="0" x2="1"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
-  <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <style>
-    .t{font-family:Inter,Segoe UI,sans-serif;fill:#eaf2ff}.muted{fill:#8fa2c7;font-family:Inter,Segoe UI,sans-serif}.mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.line{stroke:#31416f;stroke-width:2}.node{fill:#0d1530;stroke:#4c5d92;stroke-width:2}.small{font-size:16px}.label{font-size:18px;font-weight:600}.title{font-size:30px;font-weight:700}.cmd{fill:#7dd3fc;font-size:17px}
-  </style>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050816"/><stop offset=".5" stop-color="#0b1230"/><stop offset="1" stop-color="#170b2d"/></linearGradient>
+ <linearGradient id="cyan" x1="0" x2="1"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+ <linearGradient id="violet" x1="0" x2="1"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient>
+ <linearGradient id="pink" x1="0" x2="1"><stop stop-color="#c084fc"/><stop offset="1" stop-color="#f472b6"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+ <style>
+ .t{font-family:Inter,Segoe UI,sans-serif;fill:#eef6ff}.muted{font-family:Inter,Segoe UI,sans-serif;fill:#8ea2c8}.mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.h{font-size:31px;font-weight:750}.s{font-size:16px}.label{font-size:18px;font-weight:650}.tiny{font-size:13px}.cmd{font-size:15px;fill:#7dd3fc}
+ </style>
 </defs>
-<rect width="1200" height="560" rx="28" fill="url(#bg)"/>
-<circle cx="1080" cy="80" r="90" fill="#7c3aed" opacity=".08"><animate attributeName="r" values="90;125;90" dur="5s" repeatCount="indefinite"/></circle>
-<circle cx="120" cy="490" r="110" fill="#06b6d4" opacity=".06"><animate attributeName="r" values="110;145;110" dur="6s" repeatCount="indefinite"/></circle>
+<rect width="1280" height="620" rx="30" fill="url(#bg)"/>
+<circle cx="1110" cy="90" r="150" fill="#7c3aed" opacity=".07" filter="url(#soft)"><animate attributeName="r" values="140;180;140" dur="7s" repeatCount="indefinite"/></circle>
+<circle cx="130" cy="530" r="150" fill="#06b6d4" opacity=".05" filter="url(#soft)"><animate attributeName="r" values="130;175;130" dur="8s" repeatCount="indefinite"/></circle>
 
-<text x="60" y="58" class="t title">Git Introduction — How Git protects your project history</text>
-<text x="60" y="88" class="muted small">One project → tracked changes → snapshots → recoverable history</text>
+<text x="58" y="55" class="t h">Git Introduction</text>
+<text x="58" y="84" class="muted s">From a changed file to a traceable project history</text>
+<text x="1222" y="58" text-anchor="end" class="muted mono tiny">VERSION CONTROL / LOCAL</text>
 
-<!-- developer workspace -->
-<rect x="55" y="125" width="260" height="330" rx="18" fill="#0b1228" stroke="#26365f"/>
-<text x="80" y="160" class="t label">PROJECT FOLDER</text>
-<text x="80" y="188" class="muted mono small">~/git-project</text>
-<g class="mono small">
- <text x="82" y="235" class="t">📄 app.py</text><text x="82" y="270" class="t">📄 README.md</text><text x="82" y="305" class="t">📄 config.yml</text>
- <text x="82" y="365" class="cmd">$ git status</text>
- <text x="82" y="394" class="muted">modified: app.py</text>
+<!-- workspace -->
+<rect x="48" y="120" width="310" height="382" rx="22" fill="#080f25" stroke="#263860"/>
+<circle cx="74" cy="147" r="5" fill="#fb7185"/><circle cx="91" cy="147" r="5" fill="#facc15"/><circle cx="108" cy="147" r="5" fill="#4ade80"/>
+<text x="130" y="152" class="muted mono tiny">developer / project</text>
+<text x="75" y="192" class="t label">WORKING FOLDER</text>
+<text x="75" y="217" class="muted mono tiny">~/git-project</text>
+
+<g class="mono s">
+ <rect x="70" y="239" width="265" height="34" rx="8" fill="#0c1732" stroke="#1d3158"/>
+ <text x="84" y="261" class="t">📄 app.py</text><text x="284" y="261" class="cmd">M</text>
+ <rect x="70" y="281" width="265" height="34" rx="8" fill="#0c1732" stroke="#1d3158"/>
+ <text x="84" y="303" class="t">📄 README.md</text><text x="286" y="303" class="muted">✓</text>
+ <rect x="70" y="323" width="265" height="34" rx="8" fill="#0c1732" stroke="#1d3158"/>
+ <text x="84" y="345" class="t">📄 config.yml</text><text x="286" y="345" class="muted">✓</text>
+ <text x="75" y="389" class="cmd">$ git status</text>
+ <text x="75" y="414" class="muted">modified: app.py</text>
+ <text x="75" y="437" class="muted">Git can see what changed.</text>
 </g>
-<rect x="72" y="210" width="210" height="120" rx="12" fill="none" stroke="#22d3ee" opacity=".35">
- <animate attributeName="stroke-opacity" values=".15;.7;.15" dur="2.8s" repeatCount="indefinite"/>
-</rect>
 
-<!-- git engine -->
-<path d="M315 290 H425" class="line"/>
-<circle cx="425" cy="290" r="8" fill="#22d3ee" filter="url(#glow)"><animate attributeName="cx" values="315;425" dur="1.2s" repeatCount="indefinite"/></circle>
-<rect x="425" y="150" width="330" height="280" rx="22" fill="#0d1530" stroke="#4b3f83" stroke-width="2"/>
-<text x="455" y="188" class="t label">GIT</text>
-<text x="455" y="216" class="muted small">Version control engine</text>
+<!-- central flow -->
+<path d="M358 310 C405 310 410 310 445 310" stroke="#30466f" stroke-width="3" fill="none"/>
+<circle r="7" fill="#22d3ee" filter="url(#glow)"><animateMotion dur="1.7s" repeatCount="indefinite" path="M358 310 C405 310 410 310 445 310"/></circle>
 
-<!-- tracking animation -->
-<g>
- <circle cx="470" cy="275" r="18" fill="#111c3d" stroke="#22d3ee"/>
- <text x="463" y="281" class="t small">Δ</text>
- <text x="505" y="281" class="t label">Track changes</text>
- <circle cx="470" cy="330" r="18" fill="#111c3d" stroke="#a78bfa"/>
- <text x="463" y="336" class="t small">◎</text>
- <text x="505" y="336" class="t label">Create snapshots</text>
- <circle cx="470" cy="385" r="18" fill="#111c3d" stroke="#ec4899"/>
- <text x="463" y="391" class="t small">↶</text>
- <text x="505" y="391" class="t label">Keep history</text>
- <circle cx="425" cy="275" r="5" fill="#22d3ee"><animate attributeName="cy" values="260;395;260" dur="3s" repeatCount="indefinite"/></circle>
-</g>
+<rect x="445" y="120" width="390" height="382" rx="22" fill="#09132b" stroke="#3c3272"/>
+<text x="475" y="158" class="t label">WHAT GIT ACTUALLY DOES</text>
+<text x="475" y="183" class="muted s">It records meaningful states of your project.</text>
+
+<!-- animated change detector -->
+<rect x="475" y="215" width="330" height="80" rx="15" fill="#0d1937" stroke="#234064"/>
+<text x="495" y="241" class="muted tiny">1 / DETECT</text>
+<text x="495" y="268" class="t label">Changed file → change detected</text>
+<rect x="485" y="220" width="4" height="70" fill="#22d3ee" opacity=".7"><animate attributeName="x" values="485;795;485" dur="2.2s" repeatCount="indefinite"/></rect>
+
+<path d="M640 295 V330" stroke="#4a5b86" stroke-width="2"/>
+<circle cx="640" cy="310" r="5" fill="#a78bfa"><animate attributeName="cy" values="295;330;295" dur="1.4s" repeatCount="indefinite"/></circle>
+
+<rect x="475" y="330" width="330" height="80" rx="15" fill="#0d1937" stroke="#493d80"/>
+<text x="495" y="356" class="muted tiny">2 / SNAPSHOT</text>
+<text x="495" y="383" class="t label">Save a known project state</text>
+<circle cx="758" cy="370" r="18" fill="none" stroke="#a78bfa" opacity=".8"><animate attributeName="r" values="12;25;12" dur="2s" repeatCount="indefinite"/></circle>
+<circle cx="758" cy="370" r="5" fill="#d8b4fe" filter="url(#glow)"/>
+
+<path d="M640 410 V445" stroke="#4a5b86" stroke-width="2"/>
+<circle cx="640" cy="425" r="5" fill="#f472b6"><animate attributeName="cy" values="410;445;410" dur="1.4s" repeatCount="indefinite"/></circle>
+
+<rect x="475" y="445" width="330" height="42" rx="12" fill="#101b3a" stroke="#6b3d75"/>
+<text x="640" y="472" text-anchor="middle" class="t label">3 / HISTORY — versions you can inspect</text>
 
 <!-- history -->
-<path d="M755 290 H865" class="line"/>
-<circle cx="755" cy="290" r="8" fill="#a78bfa" filter="url(#glow)"><animate attributeName="cx" values="755;865" dur="1.2s" repeatCount="indefinite"/></circle>
-<rect x="865" y="125" width="280" height="330" rx="18" fill="#0b1228" stroke="#26365f"/>
-<text x="892" y="160" class="t label">PROJECT HISTORY</text>
-<text x="892" y="188" class="muted small">Git remembers versions</text>
+<path d="M825 310 C860 310 875 310 910 310" stroke="#30466f" stroke-width="3" fill="none"/>
+<circle r="7" fill="#d946ef" filter="url(#glow)"><animateMotion dur="1.7s" repeatCount="indefinite" path="M825 310 C860 310 875 310 910 310"/></circle>
 
-<line x1="930" y1="225" x2="930" y2="400" stroke="#4c5d92" stroke-width="3"/>
+<rect x="910" y="120" width="322" height="382" rx="22" fill="#080f25" stroke="#263860"/>
+<text x="940" y="158" class="t label">PROJECT HISTORY</text>
+<text x="940" y="183" class="muted s">Every saved state has a place.</text>
+
+<line x1="968" y1="220" x2="968" y2="437" stroke="#33466f" stroke-width="3"/>
 <g>
- <circle cx="930" cy="240" r="10" fill="#22d3ee" filter="url(#glow)"/>
- <text x="955" y="246" class="t label">Version 3</text><text x="955" y="268" class="muted mono small">latest changes</text>
- <circle cx="930" cy="310" r="9" fill="#a78bfa"/>
- <text x="955" y="316" class="t label">Version 2</text><text x="955" y="338" class="muted mono small">previous snapshot</text>
- <circle cx="930" cy="380" r="8" fill="#64748b"/>
- <text x="955" y="386" class="t label">Version 1</text><text x="955" y="408" class="muted mono small">first snapshot</text>
+ <circle cx="968" cy="236" r="11" fill="#22d3ee" filter="url(#glow)"/>
+ <text x="995" y="241" class="t label">Latest version</text><text x="995" y="261" class="muted mono tiny">current project state</text>
+ <circle cx="968" cy="315" r="10" fill="#a78bfa"/>
+ <text x="995" y="320" class="t label">Previous version</text><text x="995" y="340" class="muted mono tiny">earlier saved state</text>
+ <circle cx="968" cy="394" r="9" fill="#64748b"/>
+ <text x="995" y="399" class="t label">Older version</text><text x="995" y="419" class="muted mono tiny">project history</text>
 </g>
-<circle cx="930" cy="240" r="17" fill="none" stroke="#22d3ee" opacity=".5"><animate attributeName="r" values="12;25;12" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;0;.7" dur="2s" repeatCount="indefinite"/></circle>
+<circle cx="968" cy="236" r="18" fill="none" stroke="#22d3ee"><animate attributeName="r" values="13;27;13" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0;.8" dur="2.4s" repeatCount="indefinite"/></circle>
 
-<!-- bottom takeaway -->
-<rect x="55" y="480" width="1090" height="48" rx="14" fill="#0d1530" stroke="#26365f"/>
-<text x="600" y="511" text-anchor="middle" class="t label">Git = track changes • save meaningful snapshots • understand what changed • move back through history</text>
+<!-- bottom command rail -->
+<rect x="48" y="535" width="1184" height="54" rx="17" fill="#09132b" stroke="#263860"/>
+<text x="72" y="568" class="muted mono s">CHANGE</text>
+<text x="170" y="568" class="t mono s">→</text>
+<text x="205" y="568" class="cmd mono s">TRACK</text>
+<text x="300" y="568" class="t mono s">→</text>
+<text x="335" y="568" class="cmd mono s">SNAPSHOT</text>
+<text x="475" y="568" class="t mono s">→</text>
+<text x="510" y="568" class="cmd mono s">HISTORY</text>
+<text x="650" y="568" class="muted s">• Git makes project changes traceable and recoverable.</text>
 </svg>
