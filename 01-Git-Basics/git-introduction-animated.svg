@@ -1,106 +1,84 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080B1A"/><stop offset="0.55" stop-color="#11102B"/><stop offset="1" stop-color="#071827"/></linearGradient>
-    <linearGradient id="cyan" x1="0" x2="1"><stop stop-color="#35F2FF"/><stop offset="1" stop-color="#7C5CFF"/></linearGradient>
-    <linearGradient id="purple" x1="0" x2="1"><stop stop-color="#9B5CFF"/><stop offset="1" stop-color="#35F2FF"/></linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="soft"><feGaussianBlur stdDeviation="24"/></filter>
-    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#8BA4D81A" stroke-width="1"/></pattern>
-    <style>
-      .title{font:700 34px Inter,Segoe UI,sans-serif;fill:#F7FAFF}.label{font:600 16px Inter,Segoe UI,sans-serif;fill:#A9B8D4;letter-spacing:1.5px}.small{font:500 14px Inter,Segoe UI,sans-serif;fill:#8798B7}.code{font:600 17px JetBrains Mono,Consolas,monospace;fill:#EAFBFF}.cyan{fill:#55F2FF}.purple{fill:#B98CFF}.green{fill:#67F5B1}.white{fill:#F7FAFF}
-    </style>
-  </defs>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070B18"/><stop offset=".55" stop-color="#15102D"/><stop offset="1" stop-color="#061C2A"/></linearGradient>
+<linearGradient id="line" x1="0" x2="1"><stop stop-color="#35F2FF"/><stop offset="1" stop-color="#9B5CFF"/></linearGradient>
+</defs>
+<rect width="1400" height="760" rx="28" fill="url(#bg)"/>
+<path d="M0 180H1400M0 360H1400M0 540H1400" stroke="#8BA4D814"/>
+<path d="M180 0V760M420 0V760M660 0V760M900 0V760M1140 0V760" stroke="#8BA4D814"/>
+<text x="65" y="62" fill="#A9B8D4" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2">01 / GIT INTRODUCTION</text>
+<text x="65" y="105" fill="#F7FAFF" font-family="Arial,sans-serif" font-size="34" font-weight="700">How Git actually works</text>
+<text x="65" y="136" fill="#8798B7" font-family="Arial,sans-serif" font-size="15">Git tracks changes, selects what to save, and builds a recoverable project history.</text>
 
-  <rect width="1400" height="760" rx="28" fill="url(#bg)"/>
-  <rect x="0" y="0" width="1400" height="760" rx="28" fill="url(#grid)"/>
-  <circle cx="180" cy="170" r="150" fill="#6E4BFF22" filter="url(#soft)"/>
-  <circle cx="1190" cy="300" r="180" fill="#20E8FF18" filter="url(#soft)"/>
+<!-- WORKING DIRECTORY -->
+<g transform="translate(60 190)">
+<rect width="300" height="330" rx="20" fill="#0E1628" stroke="#33445F" stroke-width="2"/>
+<text x="24" y="36" fill="#A9B8D4" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">01 / WORKING DIRECTORY</text>
+<text x="24" y="68" fill="#F7FAFF" font-family="Arial,sans-serif" font-size="21" font-weight="700">You write &amp; change code</text>
+<g transform="translate(24 92)"><rect width="252" height="55" rx="11" fill="#080E1C" stroke="#263650"/><text x="18" y="34" fill="#EAFBFF" font-family="monospace" font-size="16">app.py</text><text x="194" y="34" fill="#FFCC66" font-family="Arial,sans-serif" font-size="13">modified</text><circle cx="177" cy="27" r="4" fill="#FFCC66"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle></g>
+<g transform="translate(24 158)"><rect width="252" height="55" rx="11" fill="#080E1C" stroke="#263650"/><text x="18" y="34" fill="#EAFBFF" font-family="monospace" font-size="16">index.html</text><text x="205" y="34" fill="#67F5B1" font-family="Arial,sans-serif" font-size="13">new</text></g>
+<g transform="translate(24 224)"><rect width="252" height="55" rx="11" fill="#080E1C" stroke="#263650"/><text x="18" y="34" fill="#EAFBFF" font-family="monospace" font-size="16">README.md</text><text x="196" y="34" fill="#FFCC66" font-family="Arial,sans-serif" font-size="13">changed</text></g>
+</g>
 
-  <text x="70" y="70" class="label">01 / GIT INTRODUCTION</text>
-  <text x="70" y="112" class="title">How Git actually works</text>
-  <text x="70" y="143" class="small">Git tracks changes, lets you choose what to save, and builds a history of your project.</text>
+<!-- GIT TRACKING -->
+<g transform="translate(390 190)">
+<rect width="300" height="330" rx="20" fill="#12122B" stroke="#6445A4" stroke-width="2"/>
+<text x="24" y="36" fill="#A9B8D4" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">02 / GIT TRACKING</text>
+<text x="24" y="68" fill="#F7FAFF" font-family="Arial,sans-serif" font-size="21" font-weight="700">Git sees what changed</text>
+<rect x="24" y="94" width="252" height="112" rx="13" fill="#080B18" stroke="#382C66"/>
+<text x="42" y="128" fill="#EAFBFF" font-family="monospace" font-size="16">$ git status</text>
+<text x="42" y="158" fill="#8798B7" font-family="monospace" font-size="13">modified: app.py</text>
+<text x="42" y="184" fill="#8798B7" font-family="monospace" font-size="13">untracked: index.html</text>
+<path d="M42 246H258" stroke="#5C478D" stroke-width="3"/>
+<circle cy="246" r="7" fill="#B98CFF"><animate attributeName="cx" values="45;255;45" dur="2.4s" repeatCount="indefinite"/></circle>
+<text x="24" y="282" fill="#8798B7" font-family="Arial,sans-serif" font-size="13">Git compares current files</text>
+<text x="24" y="303" fill="#8798B7" font-family="Arial,sans-serif" font-size="13">with the saved project state.</text>
+</g>
 
-  <!-- Working directory -->
-  <g transform="translate(70 205)">
-    <rect width="300" height="315" rx="22" fill="#10162A" stroke="#31425F"/>
-    <text x="24" y="38" class="label">01 / WORKING DIRECTORY</text>
-    <text x="24" y="67" class="white" style="font:700 21px Inter,Segoe UI,sans-serif">You write &amp; change code</text>
-    <rect x="24" y="92" width="252" height="54" rx="12" fill="#0A1020" stroke="#263650"/>
-    <text x="42" y="125" class="code">app.py</text><text x="235" y="125" class="small">modified</text>
-    <rect x="24" y="158" width="252" height="54" rx="12" fill="#0A1020" stroke="#263650"/>
-    <text x="42" y="191" class="code">index.html</text><text x="215" y="191" class="small">new</text>
-    <rect x="24" y="224" width="252" height="54" rx="12" fill="#0A1020" stroke="#263650"/>
-    <text x="42" y="257" class="code">README.md</text><text x="215" y="257" class="small">changed</text>
-    <circle cx="268" cy="118" r="5" fill="#FFCC66"><animate attributeName="opacity" values="1;.25;1" dur="1.3s" repeatCount="indefinite"/></circle>
-  </g>
+<!-- STAGING -->
+<g transform="translate(720 190)">
+<rect width="300" height="330" rx="20" fill="#0E1B2A" stroke="#2F7078" stroke-width="2"/>
+<text x="24" y="36" fill="#A9B8D4" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">03 / STAGING AREA</text>
+<text x="24" y="68" fill="#F7FAFF" font-family="Arial,sans-serif" font-size="21" font-weight="700">You choose what to save</text>
+<rect x="24" y="94" width="252" height="112" rx="13" fill="#08131D" stroke="#28545E"/>
+<text x="42" y="128" fill="#EAFBFF" font-family="monospace" font-size="16">$ git add app.py</text>
+<text x="42" y="158" fill="#67F5B1" font-family="monospace" font-size="13">app.py → staged ✓</text>
+<text x="42" y="184" fill="#8798B7" font-family="monospace" font-size="13">index.html → not staged</text>
+<rect x="42" y="230" width="216" height="42" rx="10" fill="#12383B" stroke="#35F2FF" stroke-opacity=".5"/>
+<text x="59" y="256" fill="#67F5B1" font-family="Arial,sans-serif" font-size="13" font-weight="700">NEXT COMMIT SELECTION</text>
+<circle cx="243" cy="251" r="5" fill="#67F5B1"><animate attributeName="r" values="4;7;4" dur="1.4s" repeatCount="indefinite"/></circle>
+</g>
 
-  <!-- Git engine -->
-  <g transform="translate(430 205)">
-    <rect width="300" height="315" rx="22" fill="#11142B" stroke="#5A3E9B"/>
-    <text x="24" y="38" class="label">02 / GIT ENGINE</text>
-    <text x="24" y="67" class="white" style="font:700 21px Inter,Segoe UI,sans-serif">Git tracks the changes</text>
-    <rect x="24" y="95" width="252" height="108" rx="15" fill="#0A1020" stroke="#3A2E68"/>
-    <text x="42" y="128" class="code">$ git status</text>
-    <text x="42" y="158" class="small">modified: app.py</text>
-    <text x="42" y="184" class="small">untracked: index.html</text>
-    <path d="M52 238 H250" stroke="#5A3E9B" stroke-width="2"/>
-    <circle cx="70" cy="238" r="7" fill="#9B5CFF" filter="url(#glow)"><animate attributeName="cx" values="70;230;70" dur="2.6s" repeatCount="indefinite"/></circle>
-    <text x="24" y="270" class="small">Git compares your current files</text>
-    <text x="24" y="293" class="small">with the saved project state.</text>
-  </g>
+<!-- HISTORY -->
+<g transform="translate(1050 190)">
+<rect width="290" height="330" rx="20" fill="#10172A" stroke="#3B5F86" stroke-width="2"/>
+<text x="24" y="36" fill="#A9B8D4" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.5">04 / PROJECT HISTORY</text>
+<text x="24" y="68" fill="#F7FAFF" font-family="Arial,sans-serif" font-size="21" font-weight="700">Saved snapshots</text>
+<path d="M55 105V270" stroke="#405775" stroke-width="4"/>
+<circle cx="55" cy="110" r="10" fill="#35F2FF"><animate attributeName="r" values="8;12;8" dur="1.7s" repeatCount="indefinite"/></circle>
+<circle cx="55" cy="175" r="8" fill="#9B5CFF"/>
+<circle cx="55" cy="240" r="8" fill="#52647D"/>
+<text x="82" y="116" fill="#EAFBFF" font-family="Arial,sans-serif" font-size="14">Current commit</text>
+<text x="82" y="181" fill="#A9B8D4" font-family="Arial,sans-serif" font-size="14">Previous commit</text>
+<text x="82" y="246" fill="#8798B7" font-family="Arial,sans-serif" font-size="14">Older commit</text>
+<text x="24" y="292" fill="#8798B7" font-family="Arial,sans-serif" font-size="13">Git history = checkpoints</text>
+</g>
 
-  <!-- Staging -->
-  <g transform="translate(790 205)">
-    <rect width="300" height="315" rx="22" fill="#101B2A" stroke="#2E6670"/>
-    <text x="24" y="38" class="label">03 / STAGING AREA</text>
-    <text x="24" y="67" class="white" style="font:700 21px Inter,Segoe UI,sans-serif">You choose what to save</text>
-    <rect x="24" y="95" width="252" height="108" rx="15" fill="#0A121F" stroke="#28545E"/>
-    <text x="42" y="128" class="code">$ git add app.py</text>
-    <text x="42" y="158" class="small">app.py  →  staged ✓</text>
-    <text x="42" y="184" class="small">index.html → not staged</text>
-    <rect x="42" y="226" width="216" height="42" rx="10" fill="#123A3D" stroke="#35F2FF" stroke-opacity=".35"/>
-    <text x="61" y="253" class="small" style="fill:#67F5B1">NEXT COMMIT SELECTION</text>
-    <circle cx="246" cy="247" r="5" fill="#67F5B1"><animate attributeName="r" values="4;7;4" dur="1.5s" repeatCount="indefinite"/></circle>
-  </g>
+<!-- FLOW -->
+<g stroke="url(#line)" stroke-width="4" fill="none" opacity=".7">
+<path d="M360 355H390"/><path d="M690 355H720"/><path d="M1020 355H1050"/>
+</g>
+<g fill="#55F2FF">
+<circle cy="355" r="6"><animate attributeName="cx" values="360;390;360" dur="1.5s" repeatCount="indefinite"/></circle>
+<circle cy="355" r="6" fill="#B98CFF"><animate attributeName="cx" values="690;720;690" dur="1.5s" begin=".4s" repeatCount="indefinite"/></circle>
+<circle cy="355" r="6"><animate attributeName="cx" values="1020;1050;1020" dur="1.5s" begin=".8s" repeatCount="indefinite"/></circle>
+</g>
 
-  <!-- History -->
-  <g transform="translate(1150 205)">
-    <rect width="180" height="315" rx="22" fill="#11162A" stroke="#3C5E86"/>
-    <text x="20" y="38" class="label">04 / HISTORY</text>
-    <text x="20" y="67" class="white" style="font:700 20px Inter,Segoe UI,sans-serif">Snapshots</text>
-    <line x1="44" y1="103" x2="44" y2="250" stroke="#49617F" stroke-width="3"/>
-    <circle cx="44" cy="110" r="9" fill="#55F2FF" filter="url(#glow)"/>
-    <circle cx="44" cy="170" r="8" fill="#9B5CFF"/>
-    <circle cx="44" cy="230" r="8" fill="#52647D"/>
-    <text x="66" y="116" class="small">Current commit</text>
-    <text x="66" y="176" class="small">Previous commit</text>
-    <text x="66" y="236" class="small">Older commit</text>
-    <text x="20" y="278" class="small">Project history</text>
-    <text x="20" y="299" class="small">can move backward.</text>
-  </g>
-
-  <!-- Animated flow connectors -->
-  <g fill="none" stroke-linecap="round">
-    <path d="M370 360 C395 360 405 360 430 360" stroke="#35F2FF55" stroke-width="4"/>
-    <path d="M730 360 C755 360 765 360 790 360" stroke="#9B5CFF55" stroke-width="4"/>
-    <path d="M1090 360 C1115 360 1125 360 1150 360" stroke="#35F2FF55" stroke-width="4"/>
-    <circle r="7" fill="#55F2FF" filter="url(#glow)"><animateMotion dur="2.1s" repeatCount="indefinite" path="M370 360 C395 360 405 360 430 360"/></circle>
-    <circle r="7" fill="#B98CFF" filter="url(#glow)"><animateMotion dur="2.1s" begin=".45s" repeatCount="indefinite" path="M730 360 C755 360 765 360 790 360"/></circle>
-    <circle r="7" fill="#55F2FF" filter="url(#glow)"><animateMotion dur="2.1s" begin=".9s" repeatCount="indefinite" path="M1090 360 C1115 360 1125 360 1150 360"/></circle>
-  </g>
-
-  <!-- Bottom explanation -->
-  <g transform="translate(70 565)">
-    <rect width="1260" height="135" rx="22" fill="#0A1020" stroke="#263650"/>
-    <text x="28" y="38" class="label">THE CORE IDEA</text>
-    <text x="28" y="75" class="white" style="font:700 22px Inter,Segoe UI,sans-serif">WRITE → TRACK → STAGE → COMMIT → HISTORY</text>
-    <text x="28" y="105" class="small">Git does not replace your code. It creates controlled checkpoints so you can understand, compare, and recover changes.</text>
-    <text x="1050" y="77" class="cyan" style="font:700 18px Inter,Segoe UI,sans-serif">git = version control</text>
-    <text x="1050" y="104" class="purple" style="font:600 15px Inter,Segoe UI,sans-serif">local • track • history</text>
-  </g>
-
-  <!-- subtle scan line -->
-  <rect x="55" y="165" width="1290" height="2" fill="url(#cyan)" opacity=".22">
-    <animate attributeName="y" values="165;540;165" dur="6s" repeatCount="indefinite"/>
-  </rect>
+<!-- BOTTOM -->
+<rect x="60" y="565" width="1280" height="125" rx="20" fill="#080E1B" stroke="#293A54"/>
+<text x="88" y="603" fill="#A9B8D4" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">THE CORE IDEA</text>
+<text x="88" y="638" fill="#F7FAFF" font-family="Arial,sans-serif" font-size="22" font-weight="700">WRITE → TRACK → STAGE → COMMIT → HISTORY</text>
+<text x="88" y="666" fill="#8798B7" font-family="Arial,sans-serif" font-size="13">Git gives your project controlled checkpoints so changes can be understood, compared, and recovered.</text>
+<text x="1070" y="640" fill="#55F2FF" font-family="Arial,sans-serif" font-size="16" font-weight="700">GIT</text>
+<text x="1070" y="665" fill="#B98CFF" font-family="Arial,sans-serif" font-size="13">version control</text>
 </svg>
