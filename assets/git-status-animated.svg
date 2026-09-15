@@ -27,29 +27,24 @@
 <rect x="92" y="548" width="441" height="48" rx="14" fill="#0b1828" stroke="#155e75"/>
 <text x="312" y="578" text-anchor="middle" fill="#67e8f9" class="c x">OUTPUT = CURRENT REPOSITORY STATE</text>
 
-<!-- central scanner -->
-<text x="610" y="182" fill="#a5b4fc" class="c x">REPOSITORY STATE SCANNER</text>
+<!-- central state map -->
+<text x="610" y="182" fill="#a5b4fc" class="c x">HOW GIT STATUS WORKS</text>
 <rect x="610" y="215" width="355" height="415" rx="28" fill="#071121" stroke="#38476d"/>
-<text x="787" y="253" text-anchor="middle" class="t b">Three places Git compares</text>
-<!-- working tree -->
+<text x="787" y="253" text-anchor="middle" class="t b">Git checks 3 states</text>
 <rect x="650" y="285" width="275" height="75" rx="18" fill="#0b1729" stroke="#33466a"/>
 <text x="670" y="313" class="t c s">WORKING TREE</text>
 <text x="670" y="338" fill="#fb7185" class="c x">app.py • modified</text>
-<circle cx="900" cy="322" r="7" fill="#fb7185" filter="url(#glow)"/>
-<!-- index -->
+<circle cx="900" cy="322" r="7" fill="#fb7185"/>
 <rect x="650" y="380" width="275" height="75" rx="18" fill="#0b1729" stroke="#33466a"/>
 <text x="670" y="408" class="t c s">INDEX / STAGING AREA</text>
 <text x="670" y="433" fill="#64748b" class="c x">nothing staged</text>
 <circle cx="900" cy="417" r="7" fill="#64748b"/>
-<!-- head -->
 <rect x="650" y="475" width="275" height="75" rx="18" fill="#0b1729" stroke="#33466a"/>
 <text x="670" y="503" class="t c s">HEAD → main</text>
 <text x="670" y="528" fill="#67e8f9" class="c x">last committed snapshot</text>
-<circle cx="900" cy="512" r="7" fill="#67e8f9" filter="url(#glow)"/>
-<!-- scanner -->
-<path d="M640 275H935" stroke="url(#scan)" stroke-width="3" stroke-dasharray="8 10"><animate attributeName="stroke-dashoffset" from="0" to="-36" dur="1s" repeatCount="indefinite"/></path>
-<circle cx="640" cy="275" r="5" fill="#22d3ee" filter="url(#glow)"><animate attributeName="cx" values="640;935;640" dur="2.5s" repeatCount="indefinite"/></circle>
-<text x="787" y="590" text-anchor="middle" fill="#67e8f9" class="c x">GIT INSPECTS • IT DOES NOT CHANGE</text>
+<circle cx="900" cy="512" r="7" fill="#67e8f9"/>
+<path d="M787 360V380M787 455V475" stroke="url(#scan)" stroke-width="3"/>
+<text x="787" y="590" text-anchor="middle" fill="#67e8f9" class="c x">INSPECTS ONLY • NOTHING IS CHANGED</text>
 
 <!-- state result -->
 <text x="1010" y="182" fill="#d8b4fe" class="c x">RESULT / WHAT GIT FOUND</text>
@@ -67,12 +62,6 @@
 <text x="1068" y="525" class="t c s">points to main branch</text>
 <rect x="1045" y="566" width="360" height="38" rx="12" fill="#11152e" stroke="#4c3a79"/>
 <text x="1225" y="590" text-anchor="middle" fill="#c4b5fd" class="c x">STATUS = INSPECTION ONLY</text>
-
-<!-- bridge packets -->
-<path d="M565 365 C580 365 595 365 610 365" fill="none" stroke="url(#scan)" stroke-width="4" stroke-dasharray="8 10"/>
-<circle r="6" fill="#67e8f9" filter="url(#glow)"><animateMotion dur="1.4s" repeatCount="indefinite" path="M565 365 C580 365 595 365 610 365"/></circle>
-<path d="M965 365 C980 365 995 365 1010 365" fill="none" stroke="url(#scan)" stroke-width="4" stroke-dasharray="8 10"/>
-<circle r="6" fill="#d8b4fe" filter="url(#glow)"><animateMotion dur="1.4s" repeatCount="indefinite" path="M965 365 C980 365 995 365 1010 365"/></circle>
 
 <!-- bottom -->
 <rect x="60" y="670" width="1380" height="90" rx="24" fill="#050a15" stroke="#293e61"/>
