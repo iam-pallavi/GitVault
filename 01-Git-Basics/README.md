@@ -91,6 +91,16 @@ Without version control, managing multiple changes manually can become difficult
 
 ## 3. ⚙️ Git Installation / Verification
 
+Git needs to be installed on the computer before Git commands can be used from the terminal.
+
+### Installation flow
+
+<div align="center">
+<img src="../assets/git-installation-animated.svg" width="100%" alt="Animated Git installation and verification flow"/>
+</div>
+
+### Verify Git installation
+
 If Git is already installed, I can verify it with:
 
 ```bash
@@ -102,6 +112,8 @@ Example output:
 ```text
 git version 2.x.x
 ```
+
+If the terminal returns a Git version, Git is available and ready for the next step.
 
 ---
 
@@ -458,20 +470,20 @@ Modify → Check → Review → Stage → Commit → Check History
 
 - [x] Understand what Git is
 - [x] Understand Git vs GitHub
-- [x] Verify Git installation
-- [x] Configure Git identity
-- [x] Initialize a repository with `git init`
-- [x] Check repository state with `git status`
-- [x] Stage changes with `git add`
-- [x] Create commits with `git commit`
-- [x] View history with `git log`
-- [x] Inspect changes with `git diff`
-- [x] Discard unstaged changes with `git restore`
-- [x] Remove files with `git rm`
-- [x] Understand the basic Git workflow
-- [x] Practice the complete local Git cycle
+- [ ] Verify Git installation
+- [ ] Configure Git identity
+- [ ] Initialize a repository with `git init`
+- [ ] Check repository state with `git status`
+- [ ] Stage changes with `git add`
+- [ ] Create commits with `git commit`
+- [ ] View history with `git log`
+- [ ] Inspect changes with `git diff`
+- [ ] Discard unstaged changes with `git restore`
+- [ ] Remove files with `git rm`
+- [ ] Understand the basic Git workflow
+- [ ] Practice the complete local Git cycle
 
-> **Folder status: 🟢 Git Basics complete**
+> **Folder status: 🟡 In progress — Git Installation / Verification**
 
 ---
 
