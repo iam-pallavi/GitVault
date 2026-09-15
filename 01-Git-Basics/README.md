@@ -207,21 +207,43 @@ It can show information such as:
 
 ## 7. ➕ Stage Changes — `git add`
 
-`git add` moves changes from the working directory into the **staging area** so they can be included in the next commit.
+`git add` stages the current version of selected changes so they can be included in the **next commit**.
+
+### Visual: What actually happens
+
+<div align="center">
+<img src="../assets/git-add-animated.svg" width="100%" alt="Terminal visual showing git add moving a file from the working directory into the staging area"/>
+</div>
 
 ### Add one file
 
 ```bash
-git add index.html
+git add app.py
 ```
 
-### Add changes under the current directory
+### Add all changes
 
 ```bash
 git add .
 ```
 
-> Staging lets me choose which changes should be included in the next commit.
+### Actual terminal behavior
+
+```text
+$ git add app.py
+
+# No success message is normally printed.
+```
+
+Then verify the result:
+
+```bash
+git status
+```
+
+The file should appear under **Changes to be committed**.
+
+> **Remember:** `git add` does not create a commit or push to GitHub. It updates the **index / staging area** with the version you want in the next commit.
 
 ---
 
