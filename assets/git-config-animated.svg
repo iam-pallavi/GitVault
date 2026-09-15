@@ -25,18 +25,18 @@
  <text x="145" y="280" class="green mono note">pallavi@devbox</text>
  <text x="300" y="280" class="m mono note">MINGW64 ~/GitVault</text>
  <text x="145" y="316" class="cyan mono cmd">$ git config --global user.name "Pallavi"</text>
- <text x="145" y="360" class="green mono out" opacity="0">✓ global user.name saved<animate attributeName="opacity" begin="1.15s" dur=".35s" values="0;1" fill="freeze"/></text>
- <text x="145" y="418" class="green mono note" opacity="0">pallavi@devbox<animate attributeName="opacity" begin="1.8s" dur=".25s" values="0;1" fill="freeze"/></text>
- <text x="300" y="418" class="m mono note" opacity="0">MINGW64 ~/GitVault<animate attributeName="opacity" begin="1.8s" dur=".25s" values="0;1" fill="freeze"/></text>
- <text x="145" y="454" class="purple mono cmd" opacity="0">$ git config --global user.email "your-email@example.com"<animate attributeName="opacity" begin="1.8s" dur=".25s" values="0;1" fill="freeze"/></text>
- <text x="145" y="498" class="green mono out" opacity="0">✓ global user.email saved<animate attributeName="opacity" begin="3.1s" dur=".35s" values="0;1" fill="freeze"/></text>
- <text x="145" y="556" class="green mono note" opacity="0">pallavi@devbox<animate attributeName="opacity" begin="3.65s" dur=".25s" values="0;1" fill="freeze"/></text>
- <text x="300" y="556" class="m mono note" opacity="0">MINGW64 ~/GitVault<animate attributeName="opacity" begin="3.65s" dur=".25s" values="0;1" fill="freeze"/></text>
- <text x="145" y="592" class="cyan mono cmd" opacity="0">$ git config --global --list<animate attributeName="opacity" begin="3.65s" dur=".25s" values="0;1" fill="freeze"/></text>
- <text x="145" y="628" class="out mono" opacity="0">user.name=Pallavi<animate attributeName="opacity" begin="4.05s" dur=".3s" values="0;1" fill="freeze"/></text>
- <text x="145" y="658" class="out mono" opacity="0">user.email=your-email@example.com<animate attributeName="opacity" begin="4.35s" dur=".3s" values="0;1" fill="freeze"/></text>
- <rect x="145" y="676" width="520" height="42" rx="12" fill="#10271F" stroke="#39F5B2" opacity="0"><animate attributeName="opacity" begin="4.9s" dur=".4s" values="0;1" fill="freeze"/></rect>
- <text x="165" y="703" class="green mono note" opacity="0">✓ Git identity ready for commits<animate attributeName="opacity" begin="4.9s" dur=".4s" values="0;1" fill="freeze"/></text>
+ <text x="145" y="360" class="green mono out">✓ global user.name saved</text>
+ <text x="145" y="418" class="green mono note">pallavi@devbox</text>
+ <text x="300" y="418" class="m mono note">MINGW64 ~/GitVault</text>
+ <text x="145" y="454" class="purple mono cmd">$ git config --global user.email "your-email@example.com"</text>
+ <text x="145" y="498" class="green mono out">✓ global user.email saved</text>
+ <text x="145" y="556" class="green mono note">pallavi@devbox</text>
+ <text x="300" y="556" class="m mono note">MINGW64 ~/GitVault</text>
+ <text x="145" y="592" class="cyan mono cmd">$ git config --global --list</text>
+ <text x="145" y="628" class="out mono">user.name=Pallavi</text>
+ <text x="145" y="658" class="out mono">user.email=your-email@example.com</text>
+ <rect x="145" y="676" width="520" height="42" rx="12" fill="#10271F" stroke="#39F5B2"/>
+ <text x="165" y="703" class="green mono note">✓ Git identity ready for commits</text>
 </g>
 <g>
  <rect x="70" y="795" width="1460" height="65" rx="18" fill="#0B1022" stroke="#273153"/>
