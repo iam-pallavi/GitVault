@@ -1,80 +1,88 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
 <defs>
- <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#02040D"/><stop offset=".5" stop-color="#0A1025"/><stop offset="1" stop-color="#190728"/></linearGradient>
- <linearGradient id="flow" x1="0" x2="1"><stop stop-color="#22D3EE"/><stop offset=".5" stop-color="#6366F1"/><stop offset="1" stop-color="#E879F9"/></linearGradient>
- <linearGradient id="git" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FF8A3D"/><stop offset=".5" stop-color="#F04438"/><stop offset="1" stop-color="#A21CAF"/></linearGradient>
- <radialGradient id="halo"><stop stop-color="#6366F1" stop-opacity=".38"/><stop offset="1" stop-color="#6366F1" stop-opacity="0"/></radialGradient>
- <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
- <filter id="shadow"><feGaussianBlur in="SourceAlpha" stdDeviation="15"/><feOffset dy="12"/><feComponentTransfer><feFuncA type="linear" slope=".42"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
- <filter id="blur"><feGaussianBlur stdDeviation="38"/></filter>
- <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#A8B7D8" stroke-opacity=".045"/></pattern>
- <style>.title{font:800 46px Inter,Segoe UI,sans-serif;fill:#F8FAFC}.sub{font:500 16px Inter,Segoe UI,sans-serif;fill:#91A0BA}.label{font:700 11px Inter,Segoe UI,sans-serif;fill:#91A4C2;letter-spacing:2px}.head{font:800 21px Inter,Segoe UI,sans-serif;fill:#F8FAFC}.body{font:500 14px Inter,Segoe UI,sans-serif;fill:#8EA0BC}.code{font:600 14px ui-monospace,Consolas,monospace;fill:#E6FAFF}.tiny{font:700 10px ui-monospace,Consolas,monospace;fill:#71839F}.output{font:600 12px ui-monospace,Consolas,monospace;fill:#86EFAC}</style>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#030615"/><stop offset=".55" stop-color="#0B1024"/><stop offset="1" stop-color="#180A28"/></linearGradient>
+ <linearGradient id="accent" x1="0" x2="1"><stop stop-color="#22D3EE"/><stop offset=".5" stop-color="#818CF8"/><stop offset="1" stop-color="#E879F9"/></linearGradient>
+ <linearGradient id="gitline" x1="0" x2="1"><stop stop-color="#22D3EE"/><stop offset="1" stop-color="#A78BFA"/></linearGradient>
+ <radialGradient id="orb"><stop stop-color="#6366F1" stop-opacity=".32"/><stop offset="1" stop-color="#6366F1" stop-opacity="0"/></radialGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <filter id="shadow"><feGaussianBlur in="SourceAlpha" stdDeviation="12"/><feOffset dy="10"/><feComponentTransfer><feFuncA type="linear" slope=".4"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#9FB1D0" stroke-opacity=".045"/></pattern>
+ <style>
+ .title{font:800 45px Inter,Segoe UI,sans-serif;fill:#F8FAFC}.sub{font:500 16px Inter,Segoe UI,sans-serif;fill:#91A0BA}.label{font:800 11px Inter,Segoe UI,sans-serif;fill:#8FA2C2;letter-spacing:2px}.head{font:800 22px Inter,Segoe UI,sans-serif;fill:#F8FAFC}.body{font:500 14px Inter,Segoe UI,sans-serif;fill:#94A3B8}.code{font:600 15px ui-monospace,Consolas,monospace;fill:#E6FAFF}.tiny{font:700 10px ui-monospace,Consolas,monospace;fill:#7285A2}.output{font:600 12px ui-monospace,Consolas,monospace;fill:#86EFAC}
+ </style>
 </defs>
 <rect width="1600" height="900" rx="36" fill="url(#bg)"/><rect width="1600" height="900" rx="36" fill="url(#grid)"/>
-<circle cx="800" cy="430" r="420" fill="url(#halo)" filter="url(#blur)"/>
+<circle cx="810" cy="430" r="390" fill="url(#orb)"/>
 <text x="70" y="60" class="label">GITVAULT / GIT BASICS / 05</text>
-<text x="70" y="110" class="title">git init — initialize a repository</text>
-<text x="70" y="140" class="sub">What it does, why we use it, and the actual terminal output you see.</text>
+<text x="70" y="110" class="title">git init — give a folder a Git identity</text>
+<text x="70" y="140" class="sub">Use it when a normal project folder is not yet a Git repository.</text>
 
-<!-- BEFORE -->
-<g transform="translate(65 250)" filter="url(#shadow)">
- <rect width="330" height="315" rx="26" fill="#0B1527" stroke="#2B4969" stroke-width="2"/><rect width="330" height="5" rx="2" fill="#22D3EE"/>
- <text x="25" y="38" class="label">01 / BEFORE git init</text><text x="25" y="70" class="head">Just a project folder</text>
- <rect x="25" y="94" width="280" height="145" rx="16" fill="#030812" stroke="#20334D"/>
- <text x="45" y="126" class="code">📁 my-project</text>
- <text x="45" y="157" class="body">app.py</text><text x="45" y="185" class="body">index.html</text><text x="45" y="213" class="body">README.md</text>
- <rect x="25" y="258" width="280" height="34" rx="17" fill="#1B1220" stroke="#6B314F"/><text x="165" y="280" text-anchor="middle" fill="#FB7185" class="tiny">NO .git DIRECTORY YET</text>
+<!-- TERMINAL -->
+<g transform="translate(70 205)" filter="url(#shadow)">
+ <rect width="620" height="410" rx="26" fill="#050914" stroke="#263A5B" stroke-width="2"/>
+ <rect width="620" height="46" rx="26" fill="#0A1220"/>
+ <circle cx="28" cy="23" r="6" fill="#FB7185"/><circle cx="49" cy="23" r="6" fill="#FBBF24"/><circle cx="70" cy="23" r="6" fill="#34D399"/>
+ <text x="100" y="29" class="tiny">Git Bash — my-project</text>
+ <text x="30" y="90" class="code">pallavi@devbox MINGW64 ~/my-project</text>
+ <text x="30" y="125" fill="#67E8F9" class="code">$ git init</text>
+ <rect x="24" y="148" width="572" height="86" rx="14" fill="#071522" stroke="#155E75"/>
+ <text x="42" y="180" fill="#67E8F9" class="tiny">ACTUAL TERMINAL OUTPUT</text>
+ <text x="42" y="207" class="code">Initialized empty Git repository in</text>
+ <text x="42" y="228" class="code">C:/Users/Pallavi/my-project/.git/</text>
+ <text x="30" y="275" class="tiny">$</text><text x="50" y="275" class="body"># Git repository is now initialized</text>
+ <line x1="30" y1="300" x2="590" y2="300" stroke="#1E293B"/>
+ <text x="30" y="333" class="tiny">WHAT JUST HAPPENED?</text>
+ <text x="30" y="361" class="body">A hidden .git directory was created.</text>
+ <text x="30" y="385" class="body">Your project files are still untracked.</text>
+ </g>
+
+<!-- TRANSFORMATION: unique filesystem reveal -->
+<g transform="translate(820 390)">
+ <text x="0" y="-155" text-anchor="middle" class="label">THE TRANSFORMATION</text>
+ <path d="M0 -125V115" stroke="url(#gitline)" stroke-width="3" stroke-dasharray="7 9" opacity=".7">
+   <animate attributeName="stroke-dashoffset" from="0" to="-32" dur="2.2s" repeatCount="indefinite"/>
+ </path>
+ <circle cy="-100" r="12" fill="#22D3EE" filter="url(#glow)"><animate attributeName="cy" values="-100;100;-100" dur="3s" repeatCount="indefinite"/></circle>
+ <g transform="translate(-175 -100)">
+  <path d="M0 30Q0 10 20 10H75L95 32H315Q335 32 335 52V150Q335 170 315 170H20Q0 170 0 150Z" fill="#101A2B" stroke="#3A5575" stroke-width="2"/>
+  <path d="M0 30Q0 10 20 10H75L95 32H335" fill="none" stroke="#4F6B8F" stroke-width="3"/>
+  <text x="168" y="78" text-anchor="middle" class="head">my-project</text>
+  <text x="168" y="108" text-anchor="middle" class="body">ordinary folder</text>
+  <text x="168" y="137" text-anchor="middle" fill="#FB7185" class="tiny">NO .git DIRECTORY</text>
+ </g>
+ <g transform="translate(-175 85)">
+  <path d="M0 30Q0 10 20 10H75L95 32H315Q335 32 335 52V150Q335 170 315 170H20Q0 170 0 150Z" fill="#11112B" stroke="#8B5CF6" stroke-width="2"/>
+  <path d="M0 30Q0 10 20 10H75L95 32H335" fill="none" stroke="#A78BFA" stroke-width="3"/>
+  <text x="168" y="75" text-anchor="middle" class="head">.git/</text>
+  <text x="168" y="104" text-anchor="middle" class="body">repository metadata</text>
+  <text x="168" y="130" text-anchor="middle" class="tiny">objects/   refs/   HEAD   config</text>
+  <rect x="88" y="145" width="160" height="22" rx="11" fill="#10252B" stroke="#155E75"/>
+  <text x="168" y="160" text-anchor="middle" fill="#67E8F9" class="tiny">REPOSITORY READY</text>
+ </g>
 </g>
 
-<!-- CENTER TERMINAL -->
-<g transform="translate(800 250)" filter="url(#shadow)">
- <rect x="-360" y="0" width="720" height="275" rx="26" fill="#050A15" stroke="#30496D" stroke-width="2"/>
- <rect x="-360" y="0" width="720" height="48" rx="26" fill="#0B1426"/>
- <circle cx="-325" cy="24" r="6" fill="#FB7185"/><circle cx="-305" cy="24" r="6" fill="#FBBF24"/><circle cx="-285" cy="24" r="6" fill="#34D399"/>
- <text x="-255" y="29" class="tiny">Git Bash / terminal</text>
- <text x="-325" y="82" class="body" style="font-family:ui-monospace,Consolas,monospace">pallavi@devbox ~/my-project</text>
- <text x="-325" y="118" class="code">$ git init</text>
- <rect x="-325" y="140" width="650" height="92" rx="14" fill="#02060D" stroke="#1F344F"/>
- <text x="-305" y="168" class="output">Initialized empty Git repository in</text>
- <text x="-305" y="190" class="output">C:/Users/Pallavi/my-project/.git/</text>
- <text x="-305" y="217" fill="#67E8F9" class="tiny">✓ .git/ directory created</text>
- <text x="305" y="217" text-anchor="end" fill="#67E8F9" class="tiny">ACTUAL OUTPUT</text>
+<!-- BOUNDARY -->
+<g transform="translate(1100 205)" filter="url(#shadow)">
+ <rect width="430" height="410" rx="26" fill="#080D1B" stroke="#30385D" stroke-width="2"/>
+ <text x="30" y="42" class="label">KNOW THE BOUNDARY</text>
+ <text x="30" y="78" class="head">git init DOES</text>
+ <circle cx="34" cy="112" r="6" fill="#34D399"/><text x="54" y="117" class="body">Creates the .git directory</text>
+ <circle cx="34" cy="145" r="6" fill="#34D399"/><text x="54" y="150" class="body">Initializes repository metadata</text>
+ <circle cx="34" cy="178" r="6" fill="#34D399"/><text x="54" y="183" class="body">Prepares the folder for Git</text>
+ <line x1="30" y1="212" x2="400" y2="212" stroke="#25304A"/>
+ <text x="30" y="250" class="head">git init DOES NOT</text>
+ <circle cx="34" cy="284" r="6" fill="#FB7185"/><text x="54" y="289" class="body">Track your files yet</text>
+ <circle cx="34" cy="317" r="6" fill="#FB7185"/><text x="54" y="322" class="body">Create a commit</text>
+ <circle cx="34" cy="350" r="6" fill="#FB7185"/><text x="54" y="355" class="body">Push anything to GitHub</text>
+ <rect x="30" y="372" width="370" height="24" rx="12" fill="#111A30" stroke="#3C4B70"/>
+ <text x="215" y="388" text-anchor="middle" class="tiny">NEXT → git add → git commit</text>
 </g>
 
-<!-- WHY -->
-<g transform="translate(440 555)" filter="url(#shadow)">
- <rect width="720" height="150" rx="24" fill="#080E1B" stroke="#3B4C72" stroke-width="2"/>
- <text x="28" y="34" class="label">02 / WHY DO WE USE IT?</text>
- <text x="28" y="68" class="head">To tell Git: “start tracking this folder.”</text>
- <text x="28" y="96" class="body">git init creates the hidden .git directory that stores repository metadata.</text>
- <text x="28" y="121" class="body">After this, Git can inspect changes, create commits, and maintain local history.</text>
-</g>
-
-<!-- AFTER -->
-<g transform="translate(1205 250)" filter="url(#shadow)">
- <rect width="330" height="315" rx="26" fill="#10142A" stroke="#563D79" stroke-width="2"/><rect width="330" height="5" rx="2" fill="#E879F9"/>
- <text x="25" y="38" class="label">03 / AFTER git init</text><text x="25" y="70" class="head">Local repository ready</text>
- <rect x="25" y="94" width="280" height="145" rx="16" fill="#030812" stroke="#30265B"/>
- <text x="45" y="126" class="code">📁 my-project</text>
- <text x="45" y="157" class="body">app.py</text><text x="45" y="185" class="body">index.html</text><text x="45" y="213" fill="#D8B4FE" class="code">.git/</text>
- <rect x="25" y="258" width="280" height="34" rx="17" fill="#0B2227" stroke="#155E75"/><text x="165" y="280" text-anchor="middle" fill="#67E8F9" class="tiny">✓ LOCAL REPOSITORY READY</text>
-</g>
-
-<!-- FLOW -->
-<g fill="none" stroke-linecap="round">
- <path d="M395 405 C470 405 500 390 535 390" stroke="#22D3EE66" stroke-width="5"/>
- <path d="M1065 390 C1100 390 1130 405 1205 405" stroke="#E879F966" stroke-width="5"/>
- <circle cx="510" cy="395" r="7" fill="#67E8F9" filter="url(#glow)"/>
- <circle cx="1090" cy="395" r="7" fill="#F0ABFC" filter="url(#glow)"/>
-</g>
-<rect x="435" y="370" width="150" height="32" rx="16" fill="#0A1728" stroke="#29445F"/><text x="510" y="391" text-anchor="middle" class="tiny">RUN git init</text>
-<rect x="1015" y="370" width="150" height="32" rx="16" fill="#120D24" stroke="#49345D"/><text x="1090" y="391" text-anchor="middle" class="tiny">CREATE .git/</text>
-
-<!-- CORE IDEA -->
-<g transform="translate(65 750)">
- <rect width="1470" height="90" rx="24" fill="#070C18" stroke="#293D5D" stroke-width="2"/>
- <text x="30" y="31" class="label">REMEMBER</text>
- <text x="30" y="62" class="code">git init → initialize current folder → create .git/ → local Git repository ready</text>
- <text x="1425" y="42" text-anchor="end" fill="#A78BFA" class="tiny">NO COMMIT • NO PUSH</text>
+<g transform="translate(70 675)">
+ <rect width="1460" height="135" rx="28" fill="#070C18" stroke="#293B5C"/>
+ <text x="32" y="35" class="label">ONE-LINE MEMORY</text>
+ <text x="32" y="73" class="title" style="font-size:27px">git init = start version control for this folder.</text>
+ <text x="32" y="103" class="body" style="font-size:15px">Normal folder → .git created → Git repository initialized → ready for git add and git commit.</text>
+ <text x="1390" y="73" text-anchor="end" fill="#67E8F9" class="tiny">INITIALIZE ≠ TRACK ≠ COMMIT ≠ PUSH</text>
 </g>
 </svg>
