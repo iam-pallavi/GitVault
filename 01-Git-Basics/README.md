@@ -121,6 +121,12 @@ If the terminal returns a Git version, Git is available and ready for the next s
 
 Before creating commits, Git should know the identity that will be associated with those commits.
 
+### Configure Git identity
+
+<div align="center">
+<img src="../assets/git-config-animated.svg" width="100%" alt="Animated Git configuration terminal flow showing commands and output"/>
+</div>
+
 ### Set username
 
 ```bash
@@ -470,8 +476,8 @@ Modify → Check → Review → Stage → Commit → Check History
 
 - [x] Understand what Git is
 - [x] Understand Git vs GitHub
-- [ ] Verify Git installation
-- [ ] Configure Git identity
+- [x] Verify Git installation
+- [x] Configure Git identity
 - [ ] Initialize a repository with `git init`
 - [ ] Check repository state with `git status`
 - [ ] Stage changes with `git add`
@@ -483,7 +489,7 @@ Modify → Check → Review → Stage → Commit → Check History
 - [ ] Understand the basic Git workflow
 - [ ] Practice the complete local Git cycle
 
-> **Folder status: 🟡 In progress — Git Installation / Verification**
+> **Folder status: 🟡 In progress — Git Configuration completed**
 
 ---
 
