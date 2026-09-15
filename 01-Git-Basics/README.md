@@ -167,6 +167,10 @@ git config --global user.email
 
 `git init` initializes the current directory as a Git repository.
 
+<div align="center">
+<img src="../assets/git-init-animated.svg" width="100%" alt="Animated git init flow — initialize a local Git repository and create the .git directory"/>
+</div>
+
 ```bash
 git init
 ```
@@ -180,6 +184,10 @@ Git creates a hidden `.git` directory that stores repository metadata and histor
 ## 6. 🔍 Check Repository Status — `git status`
 
 `git status` shows the current state of the working tree and staging area.
+
+<div align="center">
+<img src="../assets/git-status-animated.svg" width="100%" alt="Animated git status flow — inspect the working tree, staging area and HEAD"/>
+</div>
 
 ```bash
 git status
@@ -478,8 +486,8 @@ Modify → Check → Review → Stage → Commit → Check History
 - [x] Understand Git vs GitHub
 - [x] Verify Git installation
 - [x] Configure Git identity
-- [ ] Initialize a repository with `git init`
-- [ ] Check repository state with `git status`
+- [x] Initialize a repository with `git init`
+- [x] Check repository state with `git status`
 - [ ] Stage changes with `git add`
 - [ ] Create commits with `git commit`
 - [ ] View history with `git log`
@@ -489,7 +497,7 @@ Modify → Check → Review → Stage → Commit → Check History
 - [ ] Understand the basic Git workflow
 - [ ] Practice the complete local Git cycle
 
-> **Folder status: 🟡 In progress — Git Configuration completed**
+> **Folder status: 🟡 In progress — git status completed**
 
 ---
 
