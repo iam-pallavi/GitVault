@@ -73,6 +73,10 @@ Without version control, managing multiple changes manually can become difficult
 
 ## 2. 🔄 Git vs GitHub
 
+<div align="center">
+<img src="../assets/git-vs-github-animated.svg" width="100%" alt="Animated Git vs GitHub comparison — local Git and GitHub remote repository"/>
+</div>
+
 | Git | GitHub |
 |---|---|
 | Version control system | Cloud-based Git hosting platform |
@@ -440,7 +444,7 @@ It can discard unstaged changes in a tracked file and restore the file from the 
 
 ### Q9. What is the difference between `git rm` and `git rm --cached`?
 
-`git rm` removes the file and stages its deletion. `git rm --cached` removes it from Git tracking while keeping the file in the working directory.
+`git rm` removes the file and stages its deletion. `git rm --cached` removes the file from Git tracking while keeping the file in the working directory.
 
 ### Q10. What is the basic Git workflow?
 
