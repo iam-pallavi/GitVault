@@ -10,45 +10,63 @@
 </defs>
 <rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
 <text x="80" y="72" class="t title">How to Install Git on Windows</text>
-<text x="80" y="110" class="m sub">First step: open your browser and download Git for Windows</text>
-<text x="1520" y="72" text-anchor="end" class="cyan label">STEP 01 · DOWNLOAD</text>
+<text x="80" y="110" class="m sub">Step 2: open the Git installer you downloaded</text>
+<text x="1520" y="72" text-anchor="end" class="cyan label">STEP 02 · OPEN INSTALLER</text>
 
-<!-- Browser -->
-<g transform="translate(150 180)">
- <rect width="1300" height="470" rx="30" fill="#0B1028" stroke="#394477" stroke-width="2"/>
- <rect x="30" y="30" width="1240" height="410" rx="20" fill="#080B18" stroke="#29335E"/>
- <rect x="30" y="30" width="1240" height="62" rx="20" fill="#151B35"/>
- <circle cx="62" cy="61" r="7" fill="#FF6B7A"/><circle cx="86" cy="61" r="7" fill="#FFD166"/><circle cx="110" cy="61" r="7" fill="#39F5B2"/>
- <text x="145" y="68" class="m small">Browser</text>
- <rect x="280" y="45" width="850" height="34" rx="17" fill="#080B18" stroke="#303A68"/>
- <text x="305" y="68" class="mono small cyan">git-scm.com/install/windows</text>
- <path d="M1145 61h80" stroke="#47528C" stroke-width="3"/>
- <circle cx="1145" cy="61" r="6" fill="#62F6FF"><animate attributeName="cx" values="1145;1225;1145" dur="1.8s" repeatCount="indefinite"/></circle>
-
- <!-- website -->
- <text x="75" y="145" class="t big">Git for Windows</text>
- <text x="75" y="178" class="m body">Download the latest maintained Git for Windows build.</text>
- <rect x="75" y="215" width="760" height="105" rx="18" fill="#11183A" stroke="#39477F"/>
- <text x="105" y="248" class="t body">Git for Windows / x64</text>
- <text x="105" y="278" class="m small">Windows installer • x64</text>
- <text x="105" y="301" class="m tiny">Latest maintained version shown on the official Git site</text>
- <rect x="880" y="230" width="300" height="64" rx="14" fill="#102A2B" stroke="#39F5B2" stroke-width="2"/>
- <text x="1030" y="270" text-anchor="middle" class="green body">Download</text>
- <path d="M1110 252v20M1100 264l10 10 10-10" fill="none" stroke="#39F5B2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-
- <text x="75" y="365" class="m small">What we do here:</text>
- <text x="75" y="397" class="t body">Open browser → type the Git download page → click Download</text>
+<!-- Downloads window -->
+<g transform="translate(80 180)">
+ <rect width="620" height="500" rx="28" fill="#0B1028" stroke="#394477" stroke-width="2"/>
+ <rect x="25" y="25" width="570" height="450" rx="18" fill="#0A0F21" stroke="#29335E"/>
+ <rect x="25" y="25" width="570" height="58" rx="18" fill="#151B35"/>
+ <text x="55" y="62" class="t body">Downloads</text>
+ <text x="55" y="125" class="m small">Today</text>
+ <rect x="50" y="150" width="520" height="95" rx="16" fill="#11183A" stroke="#39477F"/>
+ <rect x="72" y="172" width="48" height="48" rx="10" fill="#17264B" stroke="#62F6FF"/>
+ <text x="96" y="203" text-anchor="middle" class="cyan big">G</text>
+ <text x="140" y="185" class="t small">Git-2.55.0-64-bit.exe</text>
+ <text x="140" y="213" class="m tiny">Git for Windows • Installer</text>
+ <path d="M500 178v32M488 198l12 12 12-12" stroke="#39F5B2" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+ <rect x="50" y="270" width="520" height="52" rx="14" fill="#102A2B" stroke="#39F5B2"/>
+ <text x="310" y="303" text-anchor="middle" class="green step">DOUBLE-CLICK THE .EXE FILE</text>
+ <text x="50" y="380" class="m small">Downloaded installer</text>
+ <text x="50" y="415" class="t body">Git-2.55.0-64-bit.exe</text>
+ <text x="50" y="447" class="m tiny">This starts the Windows installation setup.</text>
 </g>
 
-<!-- Download packet -->
-<g transform="translate(545 700)">
- <rect width="510" height="105" rx="22" fill="#0A1126" stroke="#394477"/>
- <circle cx="62" cy="53" r="25" fill="#101C36" stroke="#62F6FF"/>
- <path d="M62 39v25M50 53l12 12 12-12" stroke="#62F6FF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
- <text x="105" y="47" class="t body">Git installer starts downloading</text>
- <text x="105" y="73" class="m small">Next step → open the downloaded installer</text>
- <circle cx="470" cy="53" r="7" fill="#39F5B2" filter="url(#glow)"><animate attributeName="cx" values="430;480;430" dur="1.6s" repeatCount="indefinite"/></circle>
+<!-- Animated action arrow -->
+<g>
+ <path d="M710 420 C780 420 790 420 850 420" fill="none" stroke="#62F6FF" stroke-width="4" stroke-dasharray="12 10"/>
+ <circle cx="710" cy="420" r="7" fill="#62F6FF" filter="url(#glow)"><animate attributeName="cx" values="710;850;710" dur="2s" repeatCount="indefinite"/></circle>
+ <text x="780" y="390" text-anchor="middle" class="cyan label">DOUBLE-CLICK</text>
 </g>
 
-<text x="800" y="855" text-anchor="middle" class="m small">DOWNLOAD ONLY — installation starts after the downloaded installer is opened</text>
+<!-- UAC dialog -->
+<g transform="translate(870 205)">
+ <rect width="620" height="210" rx="24" fill="#10152D" stroke="#4A5590" stroke-width="2"/>
+ <text x="40" y="48" class="t body">User Account Control</text>
+ <text x="40" y="83" class="m small">Do you want to allow this app to make</text>
+ <text x="40" y="107" class="m small">changes to your device?</text>
+ <text x="40" y="145" class="t small">Git for Windows</text>
+ <rect x="390" y="142" width="90" height="42" rx="10" fill="#102A2B" stroke="#39F5B2"/>
+ <text x="435" y="169" text-anchor="middle" class="green step">Yes</text>
+ <rect x="490" y="142" width="90" height="42" rx="10" fill="#161B35" stroke="#394477"/>
+ <text x="535" y="169" text-anchor="middle" class="m step">No</text>
+ <circle cx="435" cy="163" r="7" fill="#39F5B2" filter="url(#glow)"><animate attributeName="r" values="5;9;5" dur="1.4s" repeatCount="indefinite"/></circle>
+</g>
+
+<!-- Setup welcome -->
+<g transform="translate(870 455)">
+ <rect width="620" height="225" rx="24" fill="#0B1028" stroke="#394477" stroke-width="2"/>
+ <text x="38" y="48" class="purple label">GIT SETUP</text>
+ <text x="38" y="88" class="t big">Welcome to Git Setup</text>
+ <text x="38" y="122" class="m small">This will install Git for Windows on your computer.</text>
+ <text x="38" y="151" class="m small">Click Next to continue.</text>
+ <rect x="420" y="166" width="145" height="42" rx="10" fill="#102A2B" stroke="#39F5B2"/>
+ <text x="492" y="193" text-anchor="middle" class="green step">Next →</text>
+ <path d="M405 187h-50" stroke="#9B7CFF" stroke-width="3" stroke-dasharray="8 7"><animate attributeName="stroke-dashoffset" values="0;-30" dur="1s" repeatCount="indefinite"/></path>
+</g>
+
+<text x="800" y="770" text-anchor="middle" class="t body">Downloaded .exe → double-click → User Account Control → Yes → Git Setup opens</text>
+<text x="800" y="812" text-anchor="middle" class="m small">Next step → choose the installation options and continue with Next</text>
+<text x="800" y="855" text-anchor="middle" class="m tiny">STEP 02 COMPLETE — the installer is now open</text>
 </svg>
