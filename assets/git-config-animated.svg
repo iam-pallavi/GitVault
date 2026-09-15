@@ -1,79 +1,67 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="820" viewBox="0 0 1500 820">
 <defs>
  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#060914"/><stop offset=".55" stop-color="#111638"/><stop offset="1" stop-color="#070A18"/></linearGradient>
- <linearGradient id="line" x1="0" x2="1"><stop stop-color="#62F6FF"/><stop offset=".5" stop-color="#A17CFF"/><stop offset="1" stop-color="#39F5B2"/></linearGradient>
- <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
- <clipPath id="termClip"><rect x="70" y="170" width="820" height="485" rx="22"/></clipPath>
+ <linearGradient id="prompt" x1="0" x2="1"><stop stop-color="#62F6FF"/><stop offset="1" stop-color="#39F5B2"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
  <style>
- .t{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#F5F7FF}.m{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#9FA9D0}.mono{font-family:Consolas,Monaco,monospace}.cyan{fill:#62F6FF}.green{fill:#39F5B2}.purple{fill:#B39CFF}.label{font-size:13px;letter-spacing:2.5px}.title{font-size:45px;font-weight:750}.sub{font-size:18px}.cmd{font-size:18px;fill:#F5F7FF}.out{font-size:17px;fill:#39F5B2}.dim{font-size:15px;fill:#7E89B0}.h{font-size:23px;font-weight:700}.small{font-size:14px}
+ .t{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#F5F7FF}.m{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#9FA9D0}.mono{font-family:Consolas,Monaco,monospace}.cyan{fill:#62F6FF}.green{fill:#39F5B2}.label{font-size:13px;letter-spacing:2.5px}.title{font-size:45px;font-weight:750}.sub{font-size:18px}.cmd{font-size:23px;fill:#F5F7FF}.out{font-size:21px;fill:#39F5B2}.dim{font-size:17px;fill:#7E89B0}.small{font-size:15px}
  </style>
 </defs>
 <rect width="1500" height="820" fill="url(#bg)"/>
-<g opacity=".12"><path d="M0 120H1500M0 220H1500M0 320H1500M0 420H1500M0 520H1500M0 620H1500M0 720H1500" stroke="#7D87C5"/><path d="M100 0V820M300 0V820M500 0V820M700 0V820M900 0V820M1100 0V820M1300 0V820" stroke="#7D87C5"/></g>
-<text x="70" y="70" class="t title">Git Configuration — Type the command, see the output</text>
-<text x="70" y="105" class="m sub">Git stores your identity so future commits can record who created them.</text>
-<text x="1430" y="70" text-anchor="end" class="cyan label">04 / GIT CONFIGURATION</text>
+<g opacity=".10"><path d="M0 120H1500M0 220H1500M0 320H1500M0 420H1500M0 520H1500M0 620H1500M0 720H1500" stroke="#7D87C5"/><path d="M100 0V820M300 0V820M500 0V820M700 0V820M900 0V820M1100 0V820M1300 0V820" stroke="#7D87C5"/></g>
 
-<!-- terminal -->
+<text x="70" y="70" class="t title">Git Configuration</text>
+<text x="70" y="105" class="m sub">Type the command in the terminal → Git responds with the output.</text>
+<text x="1430" y="70" text-anchor="end" class="cyan label">04 / TERMINAL</text>
+
+<!-- single terminal -->
 <g>
- <rect x="70" y="150" width="820" height="520" rx="24" fill="#070A13" stroke="#3B4777" stroke-width="2"/>
- <rect x="70" y="150" width="820" height="48" rx="24" fill="#0E1326"/>
- <circle cx="100" cy="174" r="6" fill="#FF6B8A"/><circle cx="122" cy="174" r="6" fill="#FFD166"/><circle cx="144" cy="174" r="6" fill="#39F5B2"/>
- <text x="180" y="180" class="m mono small">Git Bash — configuration session</text>
- <text x="98" y="235" class="green mono small">pallavi@devbox</text><text x="205" y="235" class="m mono small">MINGW64 ~/GitVault</text>
+ <rect x="70" y="145" width="1360" height="575" rx="24" fill="#070A13" stroke="#3B4777" stroke-width="2"/>
+ <rect x="70" y="145" width="1360" height="52" rx="24" fill="#0E1326"/>
+ <circle cx="102" cy="171" r="7" fill="#FF6B8A"/><circle cx="126" cy="171" r="7" fill="#FFD166"/><circle cx="150" cy="171" r="7" fill="#39F5B2"/>
+ <text x="190" y="178" class="m mono small">Git Bash — Git Configuration</text>
 
- <!-- command 1 typing/reveal -->
- <g clip-path="url(#termClip)">
-  <rect x="70" y="198" width="820" height="472" fill="#070A13"/>
-  <text x="98" y="275" class="cyan mono cmd">$ git config --global user.name "Pallavi"</text>
-  <rect x="98" y="249" width="0" height="34" fill="#62F6FF" opacity=".16"><animate attributeName="width" values="0;440" dur="1.15s" fill="freeze"/></rect>
-  <text x="98" y="315" class="out mono" opacity="0">✓ name saved to global Git config<animate attributeName="opacity" begin="1.25s" dur=".35s" values="0;1" fill="freeze"/></text>
+ <text x="105" y="245" class="green mono small">pallavi@devbox</text>
+ <text x="250" y="245" class="m mono small">MINGW64 ~/GitVault</text>
 
-  <text x="98" y="365" class="cyan mono cmd" opacity="0">$ git config --global user.email "pallavi@example.com"<animate attributeName="opacity" begin="2s" dur=".25s" values="0;1" fill="freeze"/></text>
-  <text x="98" y="405" class="out mono" opacity="0">✓ email saved to global Git config<animate attributeName="opacity" begin="3.15s" dur=".35s" values="0;1" fill="freeze"/></text>
+ <!-- command 1 -->
+ <text x="105" y="305" class="cyan mono cmd">$ git config --global user.name "Pallavi"</text>
+ <rect x="105" y="279" width="0" height="34" fill="#62F6FF" opacity=".13">
+   <animate attributeName="width" values="0;570" dur="1.1s" fill="freeze"/>
+ </rect>
+ <text x="105" y="350" class="out mono" opacity="0">✓ name saved to global Git config
+   <animate attributeName="opacity" begin="1.2s" dur=".3s" values="0;1" fill="freeze"/>
+ </text>
 
-  <text x="98" y="455" class="cyan mono cmd" opacity="0">$ git config --global --list<animate attributeName="opacity" begin="3.85s" dur=".25s" values="0;1" fill="freeze"/></text>
-  <text x="98" y="495" class="out mono" opacity="0">user.name=Pallavi<animate attributeName="opacity" begin="4.35s" dur=".35s" values="0;1" fill="freeze"/></text>
-  <text x="98" y="530" class="out mono" opacity="0">user.email=pallavi@example.com<animate attributeName="opacity" begin="4.65s" dur=".35s" values="0;1" fill="freeze"/></text>
-  <text x="98" y="585" class="green mono small" opacity="0">✓ Git identity configured<animate attributeName="opacity" begin="5.15s" dur=".35s" values="0;1" fill="freeze"/></text>
-  <rect x="98" y="607" width="10" height="22" fill="#62F6FF" opacity="0"><animate attributeName="opacity" values="0;1;0" dur=".9s" repeatCount="indefinite" begin="1.2s"/></rect>
- </g>
+ <!-- command 2 -->
+ <text x="105" y="420" class="cyan mono cmd" opacity="0">$ git config --global user.email "pallavi@example.com"
+   <animate attributeName="opacity" begin="1.9s" dur=".25s" values="0;1" fill="freeze"/>
+ </text>
+ <text x="105" y="465" class="out mono" opacity="0">✓ email saved to global Git config
+   <animate attributeName="opacity" begin="3.05s" dur=".3s" values="0;1" fill="freeze"/>
+ </text>
+
+ <!-- command 3 -->
+ <text x="105" y="535" class="cyan mono cmd" opacity="0">$ git config --global --list
+   <animate attributeName="opacity" begin="3.7s" dur=".25s" values="0;1" fill="freeze"/>
+ </text>
+ <text x="105" y="580" class="out mono" opacity="0">user.name=Pallavi
+   <animate attributeName="opacity" begin="4.15s" dur=".3s" values="0;1" fill="freeze"/>
+ </text>
+ <text x="105" y="615" class="out mono" opacity="0">user.email=pallavi@example.com
+   <animate attributeName="opacity" begin="4.5s" dur=".3s" values="0;1" fill="freeze"/>
+ </text>
+ <text x="105" y="665" class="green mono small" opacity="0">✓ Git identity configured
+   <animate attributeName="opacity" begin="5s" dur=".3s" values="0;1" fill="freeze"/>
+ </text>
+
+ <!-- blinking cursor -->
+ <rect x="105" y="680" width="13" height="25" fill="#62F6FF" filter="url(#glow)">
+   <animate attributeName="opacity" values="0;1;0" dur=".9s" repeatCount="indefinite" begin="1s"/>
+ </rect>
 </g>
 
-<!-- identity result -->
-<g transform="translate(950 150)">
- <rect width="480" height="520" rx="24" fill="#0A0F24" stroke="#3B4777" stroke-width="2"/>
- <text x="32" y="42" class="cyan label">CONFIGURATION RESULT</text>
- <text x="32" y="82" class="t h">Your Git identity</text>
- <text x="32" y="112" class="m small">These values are used when Git creates commits.</text>
-
- <rect x="32" y="150" width="416" height="112" rx="16" fill="#0D1530" stroke="#2B3766"/>
- <text x="55" y="180" class="m label">USER.NAME</text>
- <text x="55" y="222" class="t mono" font-size="25">Pallavi</text>
- <circle cx="415" cy="205" r="8" fill="#39F5B2" filter="url(#glow)"><animate attributeName="r" values="6;10;6" dur="1.5s" repeatCount="indefinite"/></circle>
-
- <rect x="32" y="282" width="416" height="112" rx="16" fill="#0D1530" stroke="#2B3766"/>
- <text x="55" y="312" class="m label">USER.EMAIL</text>
- <text x="55" y="354" class="t mono" font-size="21">pallavi@example.com</text>
- <circle cx="415" cy="337" r="8" fill="#39F5B2" filter="url(#glow)"><animate attributeName="r" values="6;10;6" dur="1.5s" begin=".4s" repeatCount="indefinite"/></circle>
-
- <path d="M240 405V445" stroke="url(#line)" stroke-width="4" stroke-dasharray="8 10"><animate attributeName="stroke-dashoffset" values="0;36" dur="1s" repeatCount="indefinite"/></path>
- <rect x="32" y="452" width="416" height="48" rx="12" fill="#112B2B" stroke="#39F5B2"/>
- <text x="240" y="483" text-anchor="middle" class="green mono small">READY FOR YOUR NEXT COMMIT ✓</text>
-
- <text x="32" y="538" class="m small">--global</text><text x="102" y="538" class="t small">→ applies to your Git repositories</text>
- <text x="102" y="560" class="t small">on this computer.</text>
- </g>
-
-<!-- commit connection -->
-<g>
- <path d="M890 390 C920 390 920 390 950 390" stroke="#62F6FF" stroke-width="3" stroke-dasharray="10 12" fill="none"><animate attributeName="stroke-dashoffset" values="0;44" dur="1.1s" repeatCount="indefinite"/></path>
- <circle cx="920" cy="390" r="6" fill="#62F6FF" filter="url(#glow)"/>
- <text x="920" y="372" text-anchor="middle" class="cyan small">IDENTITY</text>
-</g>
-
-<!-- bottom memory -->
-<rect x="70" y="710" width="1360" height="70" rx="20" fill="#090D20" stroke="#313B6B"/>
-<text x="98" y="739" class="m label">REMEMBER</text>
-<text x="98" y="764" class="t small">Type command</text><text x="220" y="764" class="cyan">→</text><text x="248" y="764" class="t small">Git saves config</text><text x="390" y="764" class="cyan">→</text><text x="418" y="764" class="t small">run config --list</text><text x="575" y="764" class="cyan">→</text><text x="603" y="764" class="green small">see the output</text><text x="755" y="764" class="cyan">→</text><text x="783" y="764" class="t small">future commits carry your identity</text>
+<!-- small terminal footer -->
+<text x="750" y="765" text-anchor="middle" class="m small">Command → Output → Verification</text>
+<text x="750" y="790" text-anchor="middle" class="green small">Everything is shown directly inside the terminal.</text>
 </svg>
