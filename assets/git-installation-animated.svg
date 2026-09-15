@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070B1C"/><stop offset="0.55" stop-color="#111338"/><stop offset="1" stop-color="#090A20"/></linearGradient>
+  <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#62F6FF"/><stop offset="1" stop-color="#9B7CFF"/></linearGradient>
+  <linearGradient id="green" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#39F5B2"/><stop offset="1" stop-color="#62F6FF"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft"><feGaussianBlur stdDeviation="28"/></filter>
+  <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#7c83c8" stroke-opacity=".08"/></pattern>
+  <style>
+    .t{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#F4F7FF}.m{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#9EA8D5}.mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.cyan{fill:#62F6FF}.green{fill:#39F5B2}.purple{fill:#9B7CFF}.line{stroke:#6873B7;stroke-opacity:.34}.small{font-size:18px}.label{font-size:15px;letter-spacing:3px}.big{font-size:34px;font-weight:700}.title{font-size:56px;font-weight:750}.body{font-size:22px}
+  </style>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<rect width="1600" height="900" fill="url(#grid)"/>
+<circle cx="800" cy="450" r="310" fill="#5F5CFF" opacity=".10" filter="url(#soft)"/>
+
+<text x="90" y="82" class="t title">Git Installation &amp; Verification</text>
+<text x="90" y="122" class="m body">Before using Git commands, Git must exist on your computer — then verify the installation.</text>
+<text x="1510" y="82" text-anchor="end" class="cyan label">03 / VERIFY</text>
+
+<!-- left: computer -->
+<g transform="translate(90 225)">
+  <text x="0" y="0" class="cyan label">01 / YOUR COMPUTER</text>
+  <rect x="0" y="28" width="430" height="390" rx="28" fill="#0C1029" stroke="#39417A"/>
+  <rect x="34" y="65" width="362" height="235" rx="18" fill="#060914" stroke="#27305D"/>
+  <circle cx="58" cy="90" r="6" fill="#FF6F91"/><circle cx="80" cy="90" r="6" fill="#FFD36A"/><circle cx="102" cy="90" r="6" fill="#39F5B2"/>
+  <text x="56" y="140" class="mono small m">Windows / Linux / macOS</text>
+  <text x="56" y="180" class="mono small t">$ git --version</text>
+  <text x="56" y="220" class="mono small green">git version 2.x.x</text>
+  <rect x="56" y="250" width="240" height="3" rx="2" fill="#24305A"/>
+  <rect x="56" y="250" width="160" height="3" rx="2" fill="url(#green)">
+    <animate attributeName="width" values="20;240;20" dur="2.8s" repeatCount="indefinite"/>
+  </rect>
+  <text x="56" y="342" class="t big">Git is available</text>
+  <text x="56" y="375" class="m small">Terminal can execute Git commands.</text>
+</g>
+
+<!-- center: install pipeline -->
+<g transform="translate(590 205)">
+  <text x="0" y="0" class="purple label">02 / INSTALLATION PATH</text>
+  <rect x="0" y="28" width="430" height="430" rx="215" fill="#0A0D25" stroke="#343B78"/>
+  <circle cx="215" cy="245" r="148" fill="none" stroke="#2D356B" stroke-width="2" stroke-dasharray="5 12">
+    <animateTransform attributeName="transform" type="rotate" from="0 215 245" to="360 215 245" dur="18s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="215" cy="245" r="106" fill="#11163D" stroke="#5861B8" stroke-opacity=".6"/>
+  <path d="M215 170 L275 205 L275 275 L215 310 L155 275 L155 205 Z" fill="none" stroke="url(#cyan)" stroke-width="5" filter="url(#glow)"/>
+  <path d="M215 195 L252 216 L252 264 L215 285 L178 264 L178 216 Z" fill="#0B1230" stroke="#62F6FF" stroke-width="2"/>
+  <text x="215" y="238" text-anchor="middle" class="t big">GIT</text>
+  <text x="215" y="266" text-anchor="middle" class="m small">VERSION CONTROL</text>
+  <text x="215" y="370" text-anchor="middle" class="t body">Install Git</text>
+  <text x="215" y="401" text-anchor="middle" class="m small">Git becomes available in your terminal.</text>
+  <circle cx="74" cy="245" r="7" class="cyan"><animate attributeName="opacity" values=".2;1;.2" dur="1.4s" repeatCount="indefinite"/></circle>
+  <circle cx="356" cy="245" r="7" class="green"><animate attributeName="opacity" values="1;.2;1" dur="1.4s" repeatCount="indefinite"/></circle>
+</g>
+
+<!-- right: verification -->
+<g transform="translate(1090 225)">
+  <text x="0" y="0" class="green label">03 / VERIFY</text>
+  <rect x="0" y="28" width="420" height="390" rx="28" fill="#0C1029" stroke="#39417A"/>
+  <text x="34" y="76" class="m small">Run the verification command</text>
+  <rect x="34" y="102" width="352" height="66" rx="15" fill="#070A17" stroke="#293363"/>
+  <text x="56" y="143" class="mono body t">git --version</text>
+  <path d="M65 186 H350" class="line"/>
+  <circle cx="56" cy="186" r="5" class="green"/>
+  <text x="34" y="229" class="m small">Expected result</text>
+  <text x="34" y="267" class="mono small green">git version 2.x.x</text>
+  <text x="34" y="315" class="t big">✓ Installation verified</text>
+  <text x="34" y="351" class="m small">Now Git commands can be used locally.</text>
+  <rect x="34" y="375" width="352" height="3" rx="2" fill="#222B55"/>
+  <rect x="34" y="375" width="0" height="3" rx="2" fill="url(#green)">
+    <animate attributeName="width" values="0;352;0" dur="3.2s" repeatCount="indefinite"/>
+  </rect>
+</g>
+
+<!-- animated connectors -->
+<path d="M520 430 C550 430 555 430 590 430" fill="none" stroke="#62F6FF" stroke-width="3" stroke-opacity=".45"/>
+<path d="M1020 430 C1050 430 1060 430 1090 430" fill="none" stroke="#39F5B2" stroke-width="3" stroke-opacity=".45"/>
+<circle r="7" fill="#62F6FF" filter="url(#glow)"><animateMotion dur="2.1s" repeatCount="indefinite" path="M520 430 C550 430 555 430 590 430"/></circle>
+<circle r="7" fill="#39F5B2" filter="url(#glow)"><animateMotion dur="2.1s" repeatCount="indefinite" path="M1020 430 C1050 430 1060 430 1090 430"/></circle>
+
+<!-- bottom memory -->
+<rect x="90" y="705" width="1420" height="125" rx="30" fill="#0A0E28" stroke="#323A76"/>
+<text x="130" y="748" class="cyan label">THE CORE IDEA</text>
+<text x="130" y="790" class="t body">Install Git → open a terminal → run <tspan class="mono cyan">git --version</tspan> → confirm Git responds.</text>
+<text x="130" y="820" class="m small">Installation puts Git on the system. Verification proves the Git command is available.</text>
+<text x="1450" y="790" text-anchor="end" class="green big">READY</text>
+</svg>
