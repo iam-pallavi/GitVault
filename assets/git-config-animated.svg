@@ -3,7 +3,6 @@
  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050711"/><stop offset=".48" stop-color="#11152E"/><stop offset="1" stop-color="#070914"/></linearGradient>
  <linearGradient id="bar" x1="0" x2="1"><stop stop-color="#151B3B"/><stop offset=".5" stop-color="#0D1228"/><stop offset="1" stop-color="#171B3A"/></linearGradient>
  <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
- <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
  <style>
   .t{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#F7F8FF}.m{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#A5AED0}.mono{font-family:Consolas,Monaco,monospace}.cyan{fill:#61F5FF}.green{fill:#39F5B2}.purple{fill:#9B8CFF}.dim{fill:#667199}
   .title{font-size:48px;font-weight:800}.sub{font-size:18px}.tiny{font-size:13px;letter-spacing:2.5px}.cmd{font-size:22px}.out{font-size:19px}.note{font-size:15px}.big{font-size:26px;font-weight:700}
@@ -38,7 +37,6 @@
  <text x="145" y="658" class="out mono" opacity="0">user.email=your-email@example.com<animate attributeName="opacity" begin="4.35s" dur=".3s" values="0;1" fill="freeze"/></text>
  <rect x="145" y="676" width="520" height="42" rx="12" fill="#10271F" stroke="#39F5B2" opacity="0"><animate attributeName="opacity" begin="4.9s" dur=".4s" values="0;1" fill="freeze"/></rect>
  <text x="165" y="703" class="green mono note" opacity="0">✓ Git identity ready for commits<animate attributeName="opacity" begin="4.9s" dur=".4s" values="0;1" fill="freeze"/></text>
- <rect x="710" y="309" width="12" height="25" rx="2" fill="#61F5FF" filter="url(#glow)"><animate attributeName="x" values="145;835;145" dur="2.8s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur=".85s" repeatCount="indefinite"/></rect>
 </g>
 <g>
  <rect x="70" y="795" width="1460" height="65" rx="18" fill="#0B1022" stroke="#273153"/>
