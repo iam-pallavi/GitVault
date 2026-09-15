@@ -1,112 +1,131 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#020611"/><stop offset=".45" stop-color="#081126"/><stop offset="1" stop-color="#18091F"/></linearGradient>
-  <linearGradient id="git" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#FF553D"/><stop offset=".55" stop-color="#F9734F"/><stop offset="1" stop-color="#C026D3"/></linearGradient>
-  <linearGradient id="gh" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22D3EE"/><stop offset=".5" stop-color="#6366F1"/><stop offset="1" stop-color="#A855F7"/></linearGradient>
-  <linearGradient id="link" x1="0" x2="1"><stop stop-color="#FF7255"/><stop offset=".48" stop-color="#67E8F9"/><stop offset="1" stop-color="#C084FC"/></linearGradient>
-  <radialGradient id="halo"><stop stop-color="#8B5CF6" stop-opacity=".26"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#020611"/><stop offset=".48" stop-color="#09132A"/><stop offset="1" stop-color="#17091F"/></linearGradient>
+  <linearGradient id="git" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#FF4D35"/><stop offset=".55" stop-color="#F97350"/><stop offset="1" stop-color="#C026D3"/></linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22D3EE"/><stop offset=".5" stop-color="#6366F1"/><stop offset="1" stop-color="#A855F7"/></linearGradient>
+  <linearGradient id="wire" x1="0" x2="1"><stop stop-color="#FF7558"/><stop offset=".5" stop-color="#67E8F9"/><stop offset="1" stop-color="#C084FC"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#8B5CF6" stop-opacity=".34"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient>
   <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <filter id="shadow"><feGaussianBlur in="SourceAlpha" stdDeviation="12"/><feOffset dy="12"/><feComponentTransfer><feFuncA type="linear" slope=".5"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#9FB2D7" stroke-opacity=".045"/></pattern>
+  <filter id="soft"><feGaussianBlur stdDeviation="24"/></filter>
+  <filter id="shadow"><feGaussianBlur in="SourceAlpha" stdDeviation="10"/><feOffset dy="10"/><feComponentTransfer><feFuncA type="linear" slope=".5"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#A8B7D8" stroke-opacity=".045"/></pattern>
   <style>
-    .title{font:800 48px Inter,Segoe UI,sans-serif;fill:#F8FAFC}.sub{font:500 16px Inter,Segoe UI,sans-serif;fill:#93A4C2}.label{font:800 10px Inter,Segoe UI,sans-serif;fill:#8EA4C7;letter-spacing:2.5px}.head{font:800 27px Inter,Segoe UI,sans-serif;fill:#F8FAFC}.body{font:500 14px Inter,Segoe UI,sans-serif;fill:#A7B4CA}.code{font:650 14px ui-monospace,Consolas,monospace;fill:#DDFBFF}.tiny{font:700 10px ui-monospace,Consolas,monospace;fill:#71839F}
+   .title{font:800 48px Inter,Segoe UI,sans-serif;fill:#F8FAFC}.sub{font:500 16px Inter,Segoe UI,sans-serif;fill:#93A4C2}.label{font:800 10px Inter,Segoe UI,sans-serif;fill:#8EA4C7;letter-spacing:2.5px}.head{font:800 25px Inter,Segoe UI,sans-serif;fill:#F8FAFC}.body{font:500 14px Inter,Segoe UI,sans-serif;fill:#A7B4CA}.code{font:650 14px ui-monospace,Consolas,monospace;fill:#DDFBFF}.tiny{font:700 10px ui-monospace,Consolas,monospace;fill:#71839F}
   </style>
 </defs>
 
 <rect width="1600" height="900" rx="38" fill="url(#bg)"/>
 <rect width="1600" height="900" rx="38" fill="url(#grid)"/>
-<circle cx="800" cy="420" r="390" fill="url(#halo)"><animate attributeName="r" values="330;430;330" dur="8s" repeatCount="indefinite"/></circle>
+<circle cx="800" cy="405" r="390" fill="url(#halo)" filter="url(#soft)"><animate attributeName="r" values="310;430;310" dur="7s" repeatCount="indefinite"/></circle>
 
 <text x="68" y="55" class="label">GITVAULT / GIT BASICS / 02</text>
 <text x="68" y="105" class="title">Git vs GitHub</text>
-<text x="68" y="135" class="sub">Git manages version history. GitHub gives that Git repository a place to live, share and collaborate online.</text>
+<text x="68" y="135" class="sub">Git controls version history on your machine. GitHub hosts and shares that repository online.</text>
 
-<!-- LOCAL SIDE: floating desktop -->
-<g transform="translate(85 250)" filter="url(#shadow)">
-  <rect x="0" y="0" width="430" height="340" rx="28" fill="#07101D" stroke="#29415F" stroke-width="2"/>
-  <rect x="28" y="28" width="374" height="205" rx="20" fill="#02050B" stroke="#1E344C"/>
-  <rect x="28" y="28" width="374" height="30" rx="20" fill="#0C1727"/>
-  <circle cx="49" cy="43" r="5" fill="#FF6B57"/><circle cx="66" cy="43" r="5" fill="#FBBF24"/><circle cx="83" cy="43" r="5" fill="#34D399"/>
-  <text x="110" y="47" class="tiny">LOCAL MACHINE</text>
-  <text x="52" y="88" class="code">$ git status</text>
-  <text x="52" y="119" class="body">modified:  app.py</text>
-  <text x="52" y="146" class="body">modified:  README.md</text>
-  <text x="52" y="173" class="body">untracked: notes.txt</text>
-  <path d="M52 192H375" stroke="#20354C"/>
-  <text x="52" y="216" class="tiny">YOUR PROJECT FILES</text>
+<!-- LOCAL MACHINE -->
+<g transform="translate(70 220)" filter="url(#shadow)">
+ <rect width="430" height="405" rx="30" fill="#07101D" stroke="#29415F" stroke-width="2"/>
+ <text x="28" y="38" class="label">01 / LOCAL MACHINE</text>
+ <text x="28" y="70" class="head">Your project + Git</text>
 
-  <g transform="translate(35 270)">
-    <path d="M0 27L34 0L68 27V72L34 99L0 72Z" fill="url(#git)" stroke="#FFB39A" stroke-width="2"/>
-    <path d="M34 18L49 29V48L34 59L19 48V29Z" fill="none" stroke="#FFF5F0" stroke-width="3" opacity=".75"/>
-    <text x="34" y="47" text-anchor="middle" style="font:900 12px Inter,Segoe UI,sans-serif;fill:#fff">GIT</text>
-  </g>
-  <text x="125" y="294" class="head">Git</text>
-  <text x="125" y="319" class="body">Version control on your machine</text>
-  <text x="125" y="343" class="tiny">TRACK • COMMIT • BRANCH • HISTORY</text>
+ <!-- terminal -->
+ <rect x="28" y="94" width="374" height="185" rx="20" fill="#02050B" stroke="#1F354C"/>
+ <rect x="28" y="94" width="374" height="30" rx="20" fill="#0C1727"/>
+ <circle cx="50" cy="109" r="5" fill="#FF6B57"/><circle cx="67" cy="109" r="5" fill="#FBBF24"/><circle cx="84" cy="109" r="5" fill="#34D399"/>
+ <text x="108" y="113" class="tiny">PROJECT TERMINAL</text>
+ <text x="50" y="153" class="code">$ git status</text>
+ <text x="50" y="181" class="body">modified:  app.py</text>
+ <text x="50" y="207" class="body">modified:  README.md</text>
+ <text x="50" y="233" class="body">untracked: notes.txt</text>
+ <text x="50" y="260" class="tiny">FILES + HISTORY ARE LOCAL</text>
+
+ <!-- git badge -->
+ <g transform="translate(30 310)">
+  <path d="M0 30L38 0L76 30V80L38 110L0 80Z" fill="url(#git)" stroke="#FFB7A1" stroke-width="2"/>
+  <path d="M38 18L55 31V52L38 65L21 52V31Z" fill="none" stroke="#FFF8F5" stroke-width="3" opacity=".75"/>
+  <text x="38" y="50" text-anchor="middle" style="font:900 13px Inter,Segoe UI,sans-serif;fill:#fff">GIT</text>
+ </g>
+ <text x="135" y="337" class="head">Version control</text>
+ <text x="135" y="362" class="body">Track • commit • branch • recover</text>
+ <text x="135" y="388" class="tiny">THE TOOL RUNS ON YOUR COMPUTER</text>
 </g>
 
-<!-- LOCAL label -->
-<text x="300" y="625" text-anchor="middle" class="label">LOCAL • YOUR COMPUTER</text>
+<!-- GIT CORE / HISTORY -->
+<g transform="translate(800 410)">
+ <ellipse rx="280" ry="205" fill="none" stroke="#7180AE" stroke-opacity=".16" stroke-width="2" stroke-dasharray="5 13"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/></ellipse>
+ <ellipse rx="215" ry="155" fill="none" stroke="#22D3EE" stroke-opacity=".14" stroke-width="2" stroke-dasharray="3 12"><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="13s" repeatCount="indefinite"/></ellipse>
 
-<!-- CENTRAL 3D-ish GIT ENGINE -->
-<g transform="translate(800 415)">
-  <ellipse rx="275" ry="205" fill="none" stroke="#6B78A8" stroke-opacity=".15" stroke-width="2" stroke-dasharray="5 13"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/></ellipse>
-  <ellipse rx="205" ry="150" fill="none" stroke="#22D3EE" stroke-opacity=".12" stroke-width="2" stroke-dasharray="3 11"><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="13s" repeatCount="indefinite"/></ellipse>
+ <!-- left connection -->
+ <path d="M-300 0 C-220 -120 -125 -125 -78 -62" fill="none" stroke="#253751" stroke-width="15" stroke-linecap="round"/>
+ <path d="M-300 0 C-220 -120 -125 -125 -78 -62" fill="none" stroke="url(#wire)" stroke-width="4" stroke-linecap="round" stroke-dasharray="18 18"><animate attributeName="stroke-dashoffset" from="0" to="-72" dur="1.4s" repeatCount="indefinite"/></path>
 
-  <!-- left cable -->
-  <path d="M-285 0 C-215 -120 -125 -120 -75 -60" fill="none" stroke="#263752" stroke-width="16" stroke-linecap="round"/>
-  <path d="M-285 0 C-215 -120 -125 -120 -75 -60" fill="none" stroke="url(#link)" stroke-width="4" stroke-linecap="round" stroke-dasharray="20 18"><animate attributeName="stroke-dashoffset" from="0" to="-76" dur="1.6s" repeatCount="indefinite"/></path>
-  <!-- right cable -->
-  <path d="M75 60 C125 120 215 120 285 0" fill="none" stroke="#263752" stroke-width="16" stroke-linecap="round"/>
-  <path d="M75 60 C125 120 215 120 285 0" fill="none" stroke="url(#link)" stroke-width="4" stroke-linecap="round" stroke-dasharray="20 18"><animate attributeName="stroke-dashoffset" from="0" to="-76" dur="1.6s" repeatCount="indefinite"/></path>
+ <!-- right connection -->
+ <path d="M78 62 C125 125 220 120 300 0" fill="none" stroke="#253751" stroke-width="15" stroke-linecap="round"/>
+ <path d="M78 62 C125 125 220 120 300 0" fill="none" stroke="url(#wire)" stroke-width="4" stroke-linecap="round" stroke-dasharray="18 18"><animate attributeName="stroke-dashoffset" from="0" to="-72" dur="1.4s" repeatCount="indefinite"/></path>
 
-  <!-- rotating Git core -->
-  <g filter="url(#shadow)">
-    <path d="M0 -92L92 0L0 92L-92 0Z" fill="#0B1020" stroke="#6E5AA7" stroke-width="2"/>
-    <path d="M0 -65L65 0L0 65L-65 0Z" fill="url(#git)" stroke="#FFD1BF" stroke-width="2"/>
-    <path d="M-35 -5L0 -40L35 -5L0 30Z" fill="none" stroke="#FFF8F5" stroke-width="5" opacity=".72"/>
-    <text x="0" y="9" text-anchor="middle" style="font:900 22px Inter,Segoe UI,sans-serif;fill:#fff">GIT</text>
-  </g>
-  <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="24s" repeatCount="indefinite"/>
+ <!-- orbiting history nodes -->
+ <g>
+  <circle cx="-150" cy="-95" r="12" fill="#FF8060" stroke="#FFD0C4"/><text x="-150" y="-91" text-anchor="middle" style="font:800 8px Inter;fill:#fff">C1</text>
+  <circle cx="150" cy="-95" r="12" fill="#A78BFA" stroke="#E4D9FF"/><text x="150" y="-91" text-anchor="middle" style="font:800 8px Inter;fill:#fff">C2</text>
+  <circle cx="-155" cy="95" r="12" fill="#67E8F9" stroke="#D8FCFF"/><text x="-155" y="99" text-anchor="middle" style="font:800 8px Inter;fill:#06202A">C3</text>
+  <circle cx="155" cy="95" r="12" fill="#C084FC" stroke="#F1D8FF"/><text x="155" y="99" text-anchor="middle" style="font:800 8px Inter;fill:#fff">C4</text>
+  <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="16s" repeatCount="indefinite"/>
+ </g>
 
-  <text x="0" y="125" text-anchor="middle" class="label">VERSION CONTROL ENGINE</text>
-  <text x="0" y="151" text-anchor="middle" class="code">git commit</text>
-  <text x="0" y="176" text-anchor="middle" class="code">git push →</text>
+ <!-- fixed core -->
+ <g filter="url(#shadow)">
+  <circle r="96" fill="#080E1D" stroke="#5F4D91" stroke-width="2"/>
+  <circle r="78" fill="url(#git)" stroke="#FFD1BF" stroke-width="2"/>
+  <path d="M-38 -4L0 -42L38 -4L0 34Z" fill="none" stroke="#FFF9F5" stroke-width="5" opacity=".78"/>
+  <text y="9" text-anchor="middle" style="font:900 23px Inter,Segoe UI,sans-serif;fill:#fff">GIT</text>
+  <circle r="105" fill="none" stroke="#FF7757" stroke-opacity=".3" stroke-width="2" stroke-dasharray="4 14"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="9s" repeatCount="indefinite"/></circle>
+ </g>
+ <text x="0" y="130" text-anchor="middle" class="label">VERSION CONTROL SYSTEM</text>
+ <text x="0" y="156" text-anchor="middle" class="code">git commit</text>
+ <text x="0" y="181" text-anchor="middle" class="tiny">SAVES A SNAPSHOT INTO HISTORY</text>
 
-  <!-- moving packets -->
-  <circle r="7" fill="#FF8A68" filter="url(#glow)"><animateMotion dur="2.6s" repeatCount="indefinite" path="M-285 0 C-215 -120 -125 -120 -75 -60"/></circle>
-  <circle r="6" fill="#67E8F9" filter="url(#glow)"><animateMotion dur="2.6s" begin="1.3s" repeatCount="indefinite" path="M75 60 C125 120 215 120 285 0"/></circle>
+ <!-- packets -->
+ <circle r="7" fill="#FF896B" filter="url(#glow)"><animateMotion dur="2.5s" repeatCount="indefinite" path="M-300 0 C-220 -120 -125 -125 -78 -62"/></circle>
+ <circle r="6" fill="#67E8F9" filter="url(#glow)"><animateMotion dur="2.5s" begin="1.25s" repeatCount="indefinite" path="M78 62 C125 125 220 120 300 0"/></circle>
 </g>
 
-<!-- GITHUB CLOUD -->
-<g transform="translate(1090 235)" filter="url(#shadow)">
-  <rect width="425" height="370" rx="30" fill="#0B1024" stroke="#3F4778" stroke-width="2"/>
-  <text x="30" y="42" class="label">ONLINE • REMOTE</text>
-  <text x="30" y="78" class="head">GitHub</text>
-  <text x="30" y="104" class="body">A platform for hosting Git repositories.</text>
+<!-- GITHUB -->
+<g transform="translate(1100 220)" filter="url(#shadow)">
+ <rect width="430" height="405" rx="30" fill="#0B1025" stroke="#454B7E" stroke-width="2"/>
+ <text x="28" y="38" class="label">02 / ONLINE PLATFORM</text>
+ <text x="28" y="70" class="head">GitHub</text>
+ <text x="28" y="96" class="body">A place to host Git repositories.</text>
 
-  <!-- cloud / network -->
-  <g transform="translate(212 205)">
-    <ellipse rx="150" ry="110" fill="#10183B" stroke="#4F5EB0" stroke-opacity=".5"/>
-    <path d="M-88 55C-126 55-151 31-151-2C-151-38-123-66-88-66C-68-66-51-58-39-43C-25-76 4-94 37-94C82-94 116-60 116-17C116-12 116-7 115-2C141 5 158 25 158 49C158 82 131 105 97 105H-88C-124 105-151 84-151 55Z" fill="url(#gh)" opacity=".17" stroke="#67E8F9" stroke-width="3"/>
-    <circle cx="-62" cy="14" r="9" fill="#67E8F9" filter="url(#glow)"/><circle cx="0" cy="-34" r="9" fill="#A78BFA" filter="url(#glow)"/><circle cx="62" cy="14" r="9" fill="#C084FC" filter="url(#glow)"/>
-    <path d="M-54 10L-8 -25L54 10" fill="none" stroke="#E5FBFF" stroke-width="3"/>
-    <text x="0" y="135" text-anchor="middle" class="tiny">REMOTE REPOSITORY</text>
-  </g>
-  <text x="30" y="325" class="code">github.com / iam-pallavi</text>
-  <text x="30" y="350" class="tiny">HOST • SHARE • REVIEW • COLLABORATE</text>
+ <!-- cloud -->
+ <g transform="translate(215 205)">
+  <ellipse rx="150" ry="110" fill="#10183B" stroke="#4F5EB0" stroke-opacity=".55"/>
+  <path d="M-88 55C-126 55-151 31-151-2C-151-38-123-66-88-66C-68-66-51-58-39-43C-25-76 4-94 37-94C82-94 116-60 116-17C116-12 115-7 115-2C141 5 158 25 158 49C158 82 131 105 97 105H-88C-124 105-151 84-151 55Z" fill="url(#blue)" opacity=".18" stroke="#67E8F9" stroke-width="3"/>
+  <!-- collaboration network -->
+  <path d="M-63 12L0 -32L63 12M-63 12L0 53L63 12" fill="none" stroke="#DDFBFF" stroke-opacity=".75" stroke-width="3">
+   <animate attributeName="stroke-opacity" values=".35;.9;.35" dur="2.2s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="-63" cy="12" r="10" fill="#67E8F9" filter="url(#glow)"/><circle cx="0" cy="-32" r="10" fill="#A78BFA" filter="url(#glow)"/><circle cx="63" cy="12" r="10" fill="#C084FC" filter="url(#glow)"/><circle cx="0" cy="53" r="10" fill="#818CF8" filter="url(#glow)"/>
+  <text x="0" y="137" text-anchor="middle" class="tiny">REMOTE REPOSITORY</text>
+ </g>
+ <text x="28" y="335" class="code">github.com / iam-pallavi</text>
+ <text x="28" y="362" class="body">Host • share • review • collaborate</text>
+ <text x="28" y="389" class="tiny">PULL REQUESTS • ISSUES • TEAMWORK</text>
 </g>
 
-<text x="1300" y="635" text-anchor="middle" class="label">ONLINE • TEAM • SHARING</text>
+<!-- PUSH / PULL animated labels -->
+<g transform="translate(525 650)">
+ <rect width="550" height="54" rx="27" fill="#07101D" stroke="#314764"/>
+ <text x="275" y="34" text-anchor="middle" class="code">COMMIT → PUSH → GITHUB → PULL</text>
+ <circle cx="32" cy="27" r="5" fill="#FF8060" filter="url(#glow)"><animate attributeName="cx" values="32;518;32" dur="4s" repeatCount="indefinite"/></circle>
+</g>
 
-<!-- bottom memory strip -->
-<g transform="translate(85 700)">
-  <rect width="1430" height="112" rx="28" fill="#050A15" stroke="#263A57"/>
-  <text x="35" y="31" class="label">THE SIMPLE DIFFERENCE</text>
-  <text x="35" y="66" class="body" style="font-size:17px"><tspan fill="#FF8060" font-weight="800">GIT</tspan> = the version-control tool that tracks your project's history.</text>
-  <text x="760" y="66" class="body" style="font-size:17px"><tspan fill="#67E8F9" font-weight="800">GITHUB</tspan> = the online platform that hosts and shares Git repositories.</text>
-  <text x="35" y="92" class="tiny">LOCAL CHANGE → COMMIT → PUSH → REMOTE REPOSITORY</text>
-  <text x="760" y="92" class="tiny">GIT ≠ GITHUB</text>
+<!-- bottom memory -->
+<g transform="translate(70 740)">
+ <rect width="1460" height="92" rx="26" fill="#050A15" stroke="#263A57"/>
+ <text x="30" y="28" class="label">REMEMBER</text>
+ <text x="30" y="61" class="body" style="font-size:16px"><tspan fill="#FF8060" font-weight="800">GIT</tspan> = version control on your computer.</text>
+ <text x="520" y="61" class="body" style="font-size:16px"><tspan fill="#67E8F9" font-weight="800">GITHUB</tspan> = online hosting + collaboration for Git repositories.</text>
+ <text x="1260" y="61" class="tiny">GIT ≠ GITHUB</text>
 </g>
 
 <text x="1530" y="55" text-anchor="end" class="tiny">TOOL ≠ PLATFORM</text>
