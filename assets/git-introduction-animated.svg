@@ -1,121 +1,154 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 780" width="1400" height="780">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
 <defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#030712"/><stop offset=".48" stop-color="#0B1025"/><stop offset="1" stop-color="#190A2D"/></linearGradient>
-<linearGradient id="flow" x1="0" x2="1"><stop stop-color="#22D3EE"/><stop offset=".5" stop-color="#6366F1"/><stop offset="1" stop-color="#E879F9"/></linearGradient>
-<filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-<filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
-<style>
-.t{font-family:Inter,Segoe UI,sans-serif;fill:#F8FAFC}.muted{font-family:Inter,Segoe UI,sans-serif;fill:#8FA0BA}.label{font:700 12px Inter,Segoe UI,sans-serif;fill:#9CAAC2;letter-spacing:1.8px}.head{font:800 20px Inter,Segoe UI,sans-serif;fill:#F8FAFC}.code{font:600 14px ui-monospace,Consolas,monospace;fill:#E8F9FF}.tiny{font:600 10px ui-monospace,Consolas,monospace;fill:#8192AD}
-</style>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#030611"/><stop offset=".45" stop-color="#0A1022"/><stop offset="1" stop-color="#160A27"/></linearGradient>
+ <linearGradient id="neon" x1="0" x2="1"><stop stop-color="#21D4FD"/><stop offset=".5" stop-color="#6366F1"/><stop offset="1" stop-color="#E879F9"/></linearGradient>
+ <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#24334E"/><stop offset=".5" stop-color="#101A2E"/><stop offset="1" stop-color="#070C18"/></linearGradient>
+ <radialGradient id="orb"><stop stop-color="#67E8F9" stop-opacity=".8"/><stop offset=".35" stop-color="#6366F1" stop-opacity=".25"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <filter id="shadow"><feGaussianBlur in="SourceAlpha" stdDeviation="12"/><feOffset dy="12"/><feComponentTransfer><feFuncA type="linear" slope=".45"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <filter id="blur"><feGaussianBlur stdDeviation="35"/></filter>
+ <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#A8B7D8" stroke-opacity=".045"/></pattern>
+ <style>
+ .title{font:800 44px Inter,Segoe UI,sans-serif;fill:#F8FAFC}.sub{font:500 16px Inter,Segoe UI,sans-serif;fill:#91A0BA}.label{font:700 11px Inter,Segoe UI,sans-serif;fill:#91A4C2;letter-spacing:2px}.head{font:800 23px Inter,Segoe UI,sans-serif;fill:#F8FAFC}.body{font:500 14px Inter,Segoe UI,sans-serif;fill:#8EA0BC}.code{font:600 15px ui-monospace,Consolas,monospace;fill:#DFFBFF}.tiny{font:700 10px ui-monospace,Consolas,monospace;fill:#71839F}
+ </style>
 </defs>
 
-<rect width="1400" height="780" rx="32" fill="url(#bg)"/>
-<circle cx="230" cy="270" r="180" fill="#22D3EE" opacity=".055" filter="url(#blur)"><animate attributeName="cx" values="170;280;170" dur="7s" repeatCount="indefinite"/></circle>
-<circle cx="1140" cy="430" r="220" fill="#A855F7" opacity=".07" filter="url(#blur)"><animate attributeName="cy" values="350;470;350" dur="8s" repeatCount="indefinite"/></circle>
+<rect width="1600" height="900" rx="36" fill="url(#bg)"/>
+<rect width="1600" height="900" rx="36" fill="url(#grid)"/>
 
-<text x="60" y="58" class="label">GITVAULT / GIT BASICS / 01</text>
-<text x="60" y="104" class="t" style="font-size:38px;font-weight:800">What is Git?</text>
-<text x="60" y="134" class="muted" style="font-size:15px">Watch your code move through Git's version-control workflow.</text>
+<!-- ambient cinematic light -->
+<circle cx="260" cy="350" r="260" fill="url(#orb)" opacity=".22" filter="url(#blur)"><animate attributeName="cx" values="180;330;180" dur="8s" repeatCount="indefinite"/></circle>
+<circle cx="1330" cy="450" r="300" fill="url(#orb)" opacity=".16" filter="url(#blur)"><animate attributeName="cy" values="360;540;360" dur="9s" repeatCount="indefinite"/></circle>
 
-<!-- flowing backbone -->
-<path d="M120 400 H1280" stroke="#263653" stroke-width="3"/>
-<path d="M120 400 H1280" stroke="url(#flow)" stroke-width="3" stroke-dasharray="14 18">
-<animate attributeName="stroke-dashoffset" from="0" to="-32" dur="1.2s" repeatCount="indefinite"/>
-</path>
+<text x="70" y="62" class="label">GITVAULT / VISUAL EXPLAINER / 01</text>
+<text x="70" y="112" class="title">What is Git?</text>
+<text x="70" y="142" class="sub">Think of Git as a timeline for your code — every important change can become a recoverable checkpoint.</text>
 
-<!-- WORKING DIRECTORY -->
-<g transform="translate(55 185)">
-<rect width="285" height="375" rx="24" fill="#0D1729" stroke="#2B4567" stroke-width="2"/>
-<rect x="1" y="1" width="283" height="5" rx="3" fill="#22D3EE" opacity=".75"/>
-<text x="24" y="37" class="label">01 / WORKING DIRECTORY</text>
-<text x="24" y="69" class="head">Write &amp; change code</text>
-<text x="24" y="94" class="muted" style="font-size:13px">Your live project files.</text>
-<rect x="24" y="120" width="237" height="190" rx="16" fill="#050A15" stroke="#20314B"/>
-<text x="43" y="151" class="code">📁 my-project/</text>
-<g class="muted" style="font-size:13px;font-family:ui-monospace,monospace">
-<text x="43" y="188">├── app.py</text><text x="43" y="219">├── index.html</text><text x="43" y="250">├── style.css</text><text x="43" y="281">└── README.md</text></g>
-<rect x="24" y="330" width="237" height="28" rx="14" fill="#17263B"/>
-<circle cx="43" cy="344" r="5" fill="#FBBF24"><animate attributeName="r" values="4;7;4" dur="1.1s" repeatCount="indefinite"/></circle>
-<text x="56" y="348" class="tiny">CHANGE HAPPENS HERE</text>
-<!-- moving file pulse -->
-<circle cx="244" cy="188" r="4" fill="#22D3EE" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.4s" repeatCount="indefinite"/><animate attributeName="cy" values="188;281;188" dur="2.4s" repeatCount="indefinite"/></circle>
+<!-- cinematic stage -->
+<g transform="translate(70 190)" filter="url(#shadow)">
+ <rect width="1460" height="510" rx="30" fill="#060B17" stroke="#273753" stroke-width="2"/>
+ <rect x="1" y="1" width="1458" height="6" rx="3" fill="url(#neon)" opacity=".7"/>
+ 
+ <!-- perspective floor -->
+ <path d="M70 435 H1390" stroke="#1C2B45"/>
+ <path d="M110 470 L1490 470 M150 500 L1450 500" stroke="#18263E" stroke-opacity=".7"/>
+ <path d="M180 420L80 510M340 420L300 510M500 420L500 510M660 420L700 510M820 420L900 510M980 420L1100 510M1140 420L1300 510" stroke="#1C2A43" stroke-opacity=".55"/>
+ 
+ <!-- WORKSPACE monitor -->
+ <g transform="translate(65 70)">
+  <rect width="360" height="285" rx="22" fill="url(#metal)" stroke="#34506F" stroke-width="2"/>
+  <rect x="18" y="18" width="324" height="214" rx="15" fill="#030711" stroke="#1E304A"/>
+  <circle cx="35" cy="35" r="4" fill="#EF4444"/><circle cx="50" cy="35" r="4" fill="#F59E0B"/><circle cx="65" cy="35" r="4" fill="#22C55E"/>
+  <text x="35" y="70" class="code">$ cd my-project</text>
+  <text x="35" y="100" class="body">app.py</text>
+  <text x="35" y="127" class="body">index.html</text>
+  <text x="35" y="154" class="body">style.css</text>
+  <text x="35" y="181" class="body">README.md</text>
+  <rect x="35" y="199" width="90" height="3" fill="#22D3EE"><animate attributeName="width" values="20;190;20" dur="2.2s" repeatCount="indefinite"/></rect>
+  <text x="25" y="260" class="label">WORKING DIRECTORY</text>
+  <text x="25" y="281" class="tiny">YOUR LIVE FILES</text>
+  <!-- typing cursor -->
+  <rect x="205" y="67" width="7" height="18" fill="#67E8F9"><animate attributeName="opacity" values="1;0;1" dur=".8s" repeatCount="indefinite"/></rect>
+ </g>
+
+ <!-- TRACK scanner -->
+ <g transform="translate(500 70)">
+  <rect width="360" height="285" rx="22" fill="url(#metal)" stroke="#4A3F80" stroke-width="2"/>
+  <rect x="20" y="20" width="320" height="214" rx="15" fill="#050914" stroke="#30265B"/>
+  <text x="38" y="58" class="code">$ git status</text>
+  <g style="font:13px ui-monospace,Consolas,monospace">
+   <text x="38" y="92" class="body">modified: app.py</text>
+   <text x="38" y="122" class="body">untracked: index.html</text>
+   <text x="38" y="152" class="body">modified: style.css</text>
+  </g>
+  <rect x="38" y="176" width="270" height="2" fill="#352D62"/>
+  <rect x="38" y="176" width="270" height="2" fill="#A78BFA">
+   <animate attributeName="width" values="0;270;0" dur="2.4s" repeatCount="indefinite"/>
+  </rect>
+  <circle cx="308" cy="92" r="7" fill="#A78BFA" filter="url(#glow)"><animate attributeName="r" values="5;13;5" dur="1.4s" repeatCount="indefinite"/></circle>
+  <text x="25" y="260" class="label">GIT DETECTS CHANGE</text>
+  <text x="25" y="281" class="tiny">CURRENT STATE ≠ LAST CHECKPOINT</text>
+ </g>
+
+ <!-- STAGING tray -->
+ <g transform="translate(935 70)">
+  <rect width="360" height="285" rx="22" fill="url(#metal)" stroke="#28626D" stroke-width="2"/>
+  <rect x="20" y="20" width="320" height="214" rx="15" fill="#040C14" stroke="#22545D"/>
+  <text x="38" y="58" class="code">$ git add app.py</text>
+  <rect x="38" y="82" width="270" height="42" rx="10" fill="#0A2228" stroke="#28626D"/>
+  <text x="54" y="109" style="font:600 13px ui-monospace,monospace;fill:#67F5B1">✓ app.py selected</text>
+  <rect x="38" y="138" width="270" height="42" rx="10" fill="#101621" stroke="#26364C"/>
+  <text x="54" y="165" class="body">○ index.html waiting</text>
+  <circle cx="54" cy="103" r="6" fill="#67F5B1" filter="url(#glow)"><animate attributeName="cx" values="54;292;54" dur="2.1s" repeatCount="indefinite"/></circle>
+  <text x="25" y="260" class="label">STAGING AREA</text>
+  <text x="25" y="281" class="tiny">YOU CHOOSE WHAT GOES NEXT</text>
+ </g>
+
+ <!-- COMMIT timeline -->
+ <g transform="translate(1370 70)">
+  <rect width="25" height="285" rx="12" fill="#0A1020" opacity=".7"/>
+  <line x1="12" y1="40" x2="12" y2="245" stroke="#344762" stroke-width="3"/>
+  <circle cx="12" cy="65" r="11" fill="#22D3EE" filter="url(#glow)"><animate attributeName="r" values="8;15;8" dur="1.8s" repeatCount="indefinite"/></circle>
+  <circle cx="12" cy="145" r="9" fill="#8B5CF6"/>
+  <circle cx="12" cy="225" r="8" fill="#475569"/>
+ </g>
+
+ <!-- connecting light trails -->
+ <g fill="none" stroke-linecap="round">
+  <path d="M425 305 C455 305 470 305 500 305" stroke="#22D3EE55" stroke-width="5"/>
+  <path d="M860 305 C890 305 905 305 935 305" stroke="#8B5CF655" stroke-width="5"/>
+  <path d="M1295 305 C1320 305 1340 305 1370 305" stroke="#E879F955" stroke-width="5"/>
+  <circle r="8" fill="#67E8F9" filter="url(#glow)"><animateMotion dur="1.8s" repeatCount="indefinite" path="M425 305 C455 305 470 305 500 305"/></circle>
+  <circle r="8" fill="#C4B5FD" filter="url(#glow)"><animateMotion dur="1.8s" begin=".5s" repeatCount="indefinite" path="M860 305 C890 305 905 305 935 305"/></circle>
+  <circle r="8" fill="#F0ABFC" filter="url(#glow)"><animateMotion dur="1.8s" begin="1s" repeatCount="indefinite" path="M1295 305 C1320 305 1340 305 1370 305"/></circle>
+ </g>
+
+ <!-- floating commit cards -->
+ <g transform="translate(1040 390)">
+  <rect width="330" height="78" rx="18" fill="#0C1425" stroke="#3B4E70"/>
+  <circle cx="30" cy="39" r="13" fill="#6366F1" filter="url(#glow)"/>
+  <text x="58" y="32" class="code">a91f2c</text>
+  <text x="58" y="53" class="tiny">Update login page</text>
+  <animateTransform attributeName="transform" type="translate" values="1040 390;1040 378;1040 390" dur="3.5s" repeatCount="indefinite"/>
+ </g>
+ <g transform="translate(700 430)">
+  <rect width="300" height="70" rx="18" fill="#0C1425" stroke="#3B4E70"/>
+  <circle cx="29" cy="35" r="12" fill="#8B5CF6"/>
+  <text x="55" y="29" class="code">73bd11</text>
+  <text x="55" y="49" class="tiny">Add navigation</text>
+  <animateTransform attributeName="transform" type="translate" values="700 430;700 442;700 430" dur="4s" repeatCount="indefinite"/>
+ </g>
+ <g transform="translate(355 390)">
+  <rect width="285" height="70" rx="18" fill="#0C1425" stroke="#3B4E70"/>
+  <circle cx="29" cy="35" r="12" fill="#334155"/>
+  <text x="55" y="29" class="code">19e4aa</text>
+  <text x="55" y="49" class="tiny">Initial project</text>
+  <animateTransform attributeName="transform" type="translate" values="355 390;355 380;355 390" dur="4.5s" repeatCount="indefinite"/>
+ </g>
 </g>
 
-<!-- TRACK -->
-<g transform="translate(370 185)">
-<rect width="285" height="375" rx="24" fill="#12122B" stroke="#4C3B82" stroke-width="2"/>
-<rect x="1" y="1" width="283" height="5" rx="3" fill="#8B5CF6" opacity=".8"/>
-<text x="24" y="37" class="label">02 / TRACK</text>
-<text x="24" y="69" class="head">Git detects changes</text>
-<text x="24" y="94" class="muted" style="font-size:13px">It compares your current state.</text>
-<rect x="24" y="120" width="237" height="145" rx="16" fill="#050914" stroke="#30265B"/>
-<text x="43" y="153" class="code">$ git status</text>
-<text x="43" y="185" class="muted" style="font:13px ui-monospace,monospace">modified: app.py</text>
-<text x="43" y="213" class="muted" style="font:13px ui-monospace,monospace">untracked: index.html</text>
-<rect x="43" y="235" width="195" height="2" fill="#3B3261"/>
-<rect x="43" y="235" width="195" height="2" fill="#A78BFA">
-<animate attributeName="width" values="0;195;0" dur="2s" repeatCount="indefinite"/>
+<!-- bottom concept bar -->
+<g transform="translate(70 735)">
+ <rect width="1460" height="105" rx="24" fill="#070C18" stroke="#293D5D" stroke-width="2"/>
+ <text x="30" y="34" class="label">THE CORE IDEA</text>
+ <text x="30" y="68" class="t" style="font:800 22px Inter,Segoe UI,sans-serif">CODE → DETECT → SELECT → CHECKPOINT → HISTORY</text>
+ <text x="30" y="91" class="body">Git doesn't just store files — it gives your project a timeline you can inspect and return to.</text>
+ <g transform="translate(1215 27)">
+  <rect width="190" height="48" rx="24" fill="#101C31" stroke="#355477"/>
+  <text x="95" y="30" text-anchor="middle" style="font:700 13px Inter,Segoe UI,sans-serif;fill:#67E8F9">VERSION CONTROL</text>
+ </g>
+</g>
+
+<!-- cinematic scan -->
+<rect x="70" y="185" width="1460" height="2" fill="url(#neon)" opacity=".4">
+ <animate attributeName="y" values="185;700;185" dur="6s" repeatCount="indefinite"/>
 </rect>
-<text x="24" y="297" class="tiny">GIT SEES WHAT CHANGED</text>
-<text x="24" y="325" class="muted" style="font-size:13px">Current files ↔ saved state</text>
-<circle cx="244" cy="324" r="7" fill="#A78BFA" filter="url(#glow)"><animate attributeName="r" values="5;12;5" dur="1.5s" repeatCount="indefinite"/></circle>
-</g>
 
-<!-- STAGE -->
-<g transform="translate(685 185)">
-<rect width="285" height="375" rx="24" fill="#0D1B2A" stroke="#2C6973" stroke-width="2"/>
-<rect x="1" y="1" width="283" height="5" rx="3" fill="#22D3EE" opacity=".75"/>
-<text x="24" y="37" class="label">03 / STAGING AREA</text>
-<text x="24" y="69" class="head">Choose what to save</text>
-<text x="24" y="94" class="muted" style="font-size:13px">Select changes for the next snapshot.</text>
-<rect x="24" y="120" width="237" height="145" rx="16" fill="#050C15" stroke="#24545D"/>
-<text x="43" y="153" class="code">$ git add app.py</text>
-<text x="43" y="185" style="font:600 13px ui-monospace,monospace;fill:#67F5B1">✓ app.py staged</text>
-<text x="43" y="213" class="muted" style="font:13px ui-monospace,monospace">index.html not staged</text>
-<rect x="43" y="238" width="195" height="2" fill="#24545D"/>
-<circle cx="43" cy="239" r="6" fill="#67F5B1" filter="url(#glow)"><animate attributeName="cx" values="43;238;43" dur="2.2s" repeatCount="indefinite"/></circle>
-<rect x="24" y="294" width="237" height="65" rx="14" fill="#082126" stroke="#2C6973"/>
-<text x="43" y="321" class="tiny">YOUR SELECTION</text>
-<text x="43" y="343" class="muted" style="font-size:13px">controls the next commit</text>
+<!-- floating particles -->
+<g fill="#67E8F9" opacity=".65">
+ <circle cx="120" cy="165" r="2"><animate attributeName="cy" values="165;145;165" dur="3s" repeatCount="indefinite"/></circle>
+ <circle cx="480" cy="160" r="2"><animate attributeName="cy" values="160;180;160" dur="2.7s" repeatCount="indefinite"/></circle>
+ <circle cx="1110" cy="160" r="2"><animate attributeName="cy" values="160;140;160" dur="3.2s" repeatCount="indefinite"/></circle>
+ <circle cx="1500" cy="170" r="2"><animate attributeName="cy" values="170;150;170" dur="2.9s" repeatCount="indefinite"/></circle>
 </g>
-
-<!-- HISTORY -->
-<g transform="translate(1000 185)">
-<rect width="345" height="375" rx="24" fill="#11152A" stroke="#563A79" stroke-width="2"/>
-<rect x="1" y="1" width="343" height="5" rx="3" fill="#D946EF" opacity=".7"/>
-<text x="24" y="37" class="label">04 / COMMIT + HISTORY</text>
-<text x="24" y="69" class="head">Create a checkpoint</text>
-<text x="24" y="94" class="muted" style="font-size:13px">A commit records a version of your work.</text>
-<rect x="24" y="120" width="297" height="190" rx="16" fill="#050914" stroke="#30265B"/>
-<text x="43" y="151" class="code">$ git commit -m "Update"</text>
-<path d="M61 180V282" stroke="#405271" stroke-width="4"/>
-<circle cx="61" cy="188" r="10" fill="#22D3EE" filter="url(#glow)"><animate attributeName="r" values="8;14;8" dur="1.6s" repeatCount="indefinite"/></circle>
-<circle cx="61" cy="235" r="8" fill="#8B5CF6"/>
-<circle cx="61" cy="282" r="8" fill="#475569"/>
-<text x="88" y="194" class="code">v3  Current</text>
-<text x="88" y="241" class="muted" style="font-size:13px">v2  Previous</text>
-<text x="88" y="288" class="muted" style="font-size:13px">v1  Earlier</text>
-<circle r="6" fill="#E879F9" filter="url(#glow)"><animateMotion dur="2.4s" repeatCount="indefinite" path="M43 151 L275 151"/></circle>
-<rect x="24" y="330" width="297" height="29" rx="14" fill="#24132F"/>
-<text x="43" y="349" class="tiny" style="fill:#D8B4FE">CHECKPOINTS YOU CAN RETURN TO</text>
-</g>
-
-<!-- animated data packets -->
-<g fill="#67E8F9" filter="url(#glow)">
-<circle r="7"><animateMotion dur="2s" repeatCount="indefinite" path="M340 400 C355 400 360 400 370 400"/></circle>
-<circle r="7" fill="#C4B5FD"><animateMotion dur="2s" begin=".55s" repeatCount="indefinite" path="M655 400 C670 400 675 400 685 400"/></circle>
-<circle r="7" fill="#F0ABFC"><animateMotion dur="2s" begin="1.1s" repeatCount="indefinite" path="M970 400 C985 400 990 400 1000 400"/></circle>
-</g>
-
-<!-- bottom -->
-<g transform="translate(55 595)">
-<rect width="1290" height="125" rx="24" fill="#070C18" stroke="#293D5D" stroke-width="2"/>
-<text x="28" y="34" class="label">THE BIG PICTURE</text>
-<text x="28" y="70" class="t" style="font-size:22px;font-weight:800">WRITE → TRACK → STAGE → COMMIT → HISTORY</text>
-<text x="28" y="99" class="muted" style="font-size:13px">Git turns everyday edits into clear checkpoints you can inspect, compare, and recover.</text>
-<g transform="translate(1080 42)"><rect width="175" height="44" rx="22" fill="#101C31" stroke="#355477"/><text x="87" y="27" text-anchor="middle" style="font:700 14px Inter,Segoe UI,sans-serif;fill:#67E8F9">VERSION CONTROL</text></g>
-</g>
-
-<!-- scan highlight -->
-<rect x="55" y="180" width="1290" height="2" fill="url(#flow)" opacity=".35"><animate attributeName="y" values="180;555;180" dur="5s" repeatCount="indefinite"/></rect>
 </svg>
