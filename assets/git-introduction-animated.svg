@@ -14,27 +14,27 @@
 <circle cx="800" cy="430" r="420" fill="url(#halo)" filter="url(#blur)"><animate attributeName="r" values="360;440;360" dur="6s" repeatCount="indefinite"/></circle>
 <text x="70" y="60" class="label">GITVAULT / GIT BASICS / 01</text>
 <text x="70" y="110" class="title">Git — what is it?</text>
-<text x="70" y="140" class="sub">A 3D visual story of Git: track changes, keep versions, understand history and recover your work.</text>
+<text x="70" y="140" class="sub">Git is a distributed version control system that tracks changes and preserves project history.</text>
 
-<!-- LEFT: changing code -->
+<!-- LEFT: working directory -->
 <g transform="translate(65 255)" filter="url(#shadow)">
  <rect width="310" height="300" rx="26" fill="#0B1527" stroke="#2B4969" stroke-width="2"/><rect width="310" height="5" rx="2" fill="#22D3EE"/>
- <text x="25" y="38" class="label">YOUR PROJECT</text><text x="25" y="70" class="head">Files keep changing</text>
+ <text x="25" y="38" class="label">01 / WORKING DIRECTORY</text><text x="25" y="70" class="head">Your project files</text>
  <rect x="25" y="94" width="260" height="132" rx="16" fill="#030812" stroke="#20334D"/>
- <text x="44" y="124" class="code">📁 my-project</text><text x="44" y="153" class="body">app.py   → edited</text><text x="44" y="181" class="body">index.html → new</text><text x="44" y="209" class="body">README.md → changed</text>
+ <text x="44" y="124" class="code">📁 my-project</text><text x="44" y="153" class="body">app.py   → modified</text><text x="44" y="181" class="body">index.html → added</text><text x="44" y="209" class="body">README.md → modified</text>
  <circle cx="265" cy="153" r="6" fill="#FBBF24"><animate attributeName="cy" values="153;209;153" dur="1.8s" repeatCount="indefinite"/></circle>
- <text x="25" y="264" class="tiny">WITHOUT GIT: VERSIONS ARE EASY TO LOSE</text>
+ <text x="25" y="264" class="tiny">THIS IS WHERE YOU WRITE &amp; EDIT FILES</text>
 </g>
 
-<!-- RIGHT: version history -->
+<!-- RIGHT: Git repository and history -->
 <g transform="translate(1225 255)" filter="url(#shadow)">
  <rect width="310" height="300" rx="26" fill="#10142A" stroke="#563D79" stroke-width="2"/><rect width="310" height="5" rx="2" fill="#E879F9"/>
- <text x="25" y="38" class="label">WITH GIT</text><text x="25" y="70" class="head">History stays with you</text>
+ <text x="25" y="38" class="label">03 / GIT REPOSITORY</text><text x="25" y="70" class="head">Version history</text>
  <rect x="25" y="94" width="260" height="132" rx="16" fill="#030812" stroke="#30265B"/>
  <path d="M58 113V216" stroke="#40516D" stroke-width="4"/>
  <circle cx="58" cy="120" r="10" fill="#22D3EE" filter="url(#glow)"><animate attributeName="r" values="8;15;8" dur="1.7s" repeatCount="indefinite"/></circle>
  <circle cx="58" cy="166" r="8" fill="#8B5CF6"/><circle cx="58" cy="212" r="8" fill="#475569"/>
- <text x="83" y="126" class="code">v3  current</text><text x="83" y="172" class="body">v2  previous</text><text x="83" y="218" class="body">v1  earlier</text>
+ <text x="83" y="126" class="code">COMMIT 3 • CURRENT</text><text x="83" y="172" class="body">COMMIT 2 • PREVIOUS</text><text x="83" y="218" class="body">COMMIT 1 • EARLIER</text>
  <text x="25" y="264" class="tiny">COMPARE • RETURN • RECOVER</text>
 </g>
 
@@ -43,7 +43,6 @@
  <ellipse rx="465" ry="125" fill="none" stroke="url(#flow)" stroke-opacity=".2" stroke-width="2" transform="rotate(-12)"><animateTransform attributeName="transform" type="rotate" from="-12 0 0" to="348 0 0" dur="11s" repeatCount="indefinite"/></ellipse>
  <ellipse rx="370" ry="100" fill="none" stroke="#22D3EE" stroke-opacity=".13" stroke-width="2" transform="rotate(52)"><animateTransform attributeName="transform" type="rotate" from="52 0 0" to="412 0 0" dur="9s" repeatCount="indefinite"/></ellipse>
 
- <!-- 3D cube -->
  <g>
   <animateTransform attributeName="transform" type="rotate" values="-2 0 0;2 0 0;-2 0 0" dur="5s" repeatCount="indefinite"/>
   <polygon points="-145,-95 0,-180 145,-95 0,-10" fill="url(#git)" stroke="#FFC08A" stroke-width="2"/>
@@ -57,28 +56,32 @@
   <path d="M-42 22L0 95L42 22" fill="none" stroke="white" stroke-width="5" opacity=".8"/>
  </g>
 
- <!-- repository platform -->
  <g transform="translate(0 225)">
   <polygon points="-285,0 0,-82 285,0 0,82" fill="#0C172B" stroke="#3B506D" stroke-width="2"/>
   <polygon points="-285,0 0,82 0,112 -285,30" fill="#07101D" stroke="#243A58"/><polygon points="0,82 285,0 285,30 0,112" fill="#0A1425" stroke="#243A58"/>
-  <text x="0" y="14" text-anchor="middle" class="label">.GIT</text><text x="0" y="41" text-anchor="middle" class="code">PROJECT HISTORY</text>
+  <text x="0" y="14" text-anchor="middle" class="label">.GIT DIRECTORY</text><text x="0" y="41" text-anchor="middle" class="code">REPOSITORY DATA + HISTORY</text>
  </g>
 </g>
 
-<!-- animated idea: changes flow into Git -->
+<!-- EXPLICIT FLOW -->
 <g fill="none" stroke-linecap="round">
- <path d="M375 405 C505 395 570 350 645 325" stroke="#22D3EE44" stroke-width="5"/><path d="M1225 405 C1095 395 1030 350 955 325" stroke="#E879F944" stroke-width="5"/>
+ <path d="M375 405 C505 395 570 350 645 325" stroke="#22D3EE44" stroke-width="5"/>
+ <path d="M955 325 C1030 350 1095 395 1225 405" stroke="#E879F944" stroke-width="5"/>
  <circle r="8" fill="#67E8F9" filter="url(#glow)"><animateMotion dur="2.4s" repeatCount="indefinite" path="M375 405 C505 395 570 350 645 325"/></circle>
- <circle r="8" fill="#F0ABFC" filter="url(#glow)"><animateMotion dur="2.4s" begin=".8s" repeatCount="indefinite" path="M1225 405 C1095 395 1030 350 955 325"/></circle>
+ <circle r="8" fill="#F0ABFC" filter="url(#glow)"><animateMotion dur="2.4s" begin=".8s" repeatCount="indefinite" path="M955 325 C1030 350 1095 395 1225 405"/></circle>
+</g>
+<g>
+ <rect x="430" y="350" width="125" height="32" rx="16" fill="#0A1728" stroke="#29445F"/><text x="492" y="371" text-anchor="middle" class="tiny">FILE CHANGES</text>
+ <rect x="1045" y="350" width="125" height="32" rx="16" fill="#120D24" stroke="#49345D"/><text x="1107" y="371" text-anchor="middle" class="tiny">VERSION HISTORY</text>
 </g>
 
-<!-- simple definition -->
+<!-- SIMPLE DEFINITION + FLOW -->
 <g transform="translate(65 675)">
  <rect width="1470" height="150" rx="28" fill="#070C18" stroke="#293D5D" stroke-width="2"/>
  <text x="32" y="38" class="label">SO, WHAT IS GIT?</text>
  <text x="32" y="76" class="title" style="font-size:27px">Git is a distributed version control system.</text>
- <text x="32" y="107" class="body" style="font-size:15px">It tracks changes in your files and keeps project history, so you can understand, compare and recover versions.</text>
- <text x="32" y="134" class="code">TRACK CHANGES  •  SAVE VERSIONS  •  SEE HISTORY  •  RECOVER WORK</text>
+ <text x="32" y="107" class="body" style="font-size:15px">Your files change in the Working Directory → Git tracks those changes → commits preserve versions in the Repository.</text>
+ <text x="32" y="134" class="code">WORKING DIRECTORY → GIT → COMMITS → PROJECT HISTORY</text>
  <rect x="1245" y="45" width="190" height="48" rx="24" fill="#101C31" stroke="#355477"/><text x="1340" y="75" text-anchor="middle" style="font:800 13px Inter,Segoe UI,sans-serif;fill:#67E8F9">VERSION CONTROL</text>
 </g>
 
