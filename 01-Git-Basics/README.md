@@ -311,9 +311,13 @@ Git shows details such as the **commit ID, author, date, and commit message**.
 
 ### Compact history
 
-```bash
-git log --oneline
-```
+<div align="center">
+
+### ⚡ Quick History Command
+
+<code><strong>git log --oneline</strong></code>
+
+</div>
 
 Example:
 
