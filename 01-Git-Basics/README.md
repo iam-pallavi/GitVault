@@ -349,9 +349,13 @@ Earlier History
 
 `git diff` shows the differences between the working tree and the staging area for unstaged changes.
 
-```bash
-git diff
-```
+<div align="center">
+<img src="../assets/git-diff-animated.svg" width="100%" alt="Static terminal visual showing git diff and file changes"/>
+</div>
+
+### ⚡ Main Command
+
+<div align="center"><code><strong>git diff</strong></code></div>
 
 Common symbols:
 
@@ -360,11 +364,9 @@ Common symbols:
 - Removed line
 ```
 
-For staged changes, a commonly used form is:
+For staged changes:
 
-```bash
-git diff --staged
-```
+<div align="center"><code><strong>git diff --staged</strong></code></div>
 
 > Deeper Git diff concepts and comparison techniques will be covered separately in **06-Git-Diff**.
 
@@ -372,37 +374,35 @@ git diff --staged
 
 ## 11. ↩️ Discard Unstaged Changes — `git restore`
 
-`git restore` can be used to discard unstaged changes in a tracked file and restore it from the index.
+`git restore` can discard unstaged changes in a tracked file and restore the file from the index.
 
-```bash
-git restore README.md
-```
+<div align="center">
+<img src="../assets/git-restore-animated.svg" width="100%" alt="Static terminal visual showing git restore"/>
+</div>
 
-⚠️ **Be careful:** discarded changes may not be easily recoverable.
+### ⚡ Main Command
+
+<div align="center"><code><strong>git restore README.md</strong></code></div>
+
+⚠️ This can discard local unstaged changes.
 
 ---
 
 ## 12. 🗑️ Remove Files — `git rm`
 
-`git rm` removes a file from the working tree and stages that deletion.
+`git rm` removes a tracked file from the working tree and stages the deletion.
 
-```bash
-git rm test.txt
-git commit -m "Remove test file"
-```
+<div align="center">
+<img src="../assets/git-rm-animated.svg" width="100%" alt="Static terminal visual showing git rm"/>
+</div>
 
-### Remove from Git tracking but keep the local file
+### ⚡ Main Commands
 
-```bash
-git rm --cached filename
-```
+<div align="center"><code><strong>git rm test.txt</strong></code></div>
 
-### Difference
+<div align="center"><code><strong>git rm --cached filename</strong></code></div>
 
-| Command | Result |
-|---|---|
-| `git rm file.txt` | Removes the file and stages the deletion |
-| `git rm --cached file.txt` | Removes the file from Git tracking but keeps it locally |
+`git rm --cached` removes the file from Git tracking but keeps the local file.
 
 ---
 
