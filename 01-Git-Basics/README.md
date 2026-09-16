@@ -212,7 +212,7 @@ It can show information such as:
 ### Visual: What actually happens
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/iam-pallavi/GitVault/main/assets/git-add-animated.svg" width="100%" alt="Git add terminal visual showing a modified file being staged in the index"/>
+<img src="https://github.com/iam-pallavi/GitVault/raw/refs/heads/main/assets/git-add-animated.svg" width="100%" alt="Git add terminal visual showing a modified file being staged in the index"/>
 </div>
 
 ### Add one file
