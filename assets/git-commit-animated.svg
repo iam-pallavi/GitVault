@@ -1,47 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520">
-<defs>
- <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#03050d"/><stop offset=".5" stop-color="#0b1224"/><stop offset="1" stop-color="#21103d"/></linearGradient>
- <linearGradient id="flow"><stop stop-color="#54e6c0"/><stop offset=".5" stop-color="#55dfff"/><stop offset="1" stop-color="#b184ff"/></linearGradient>
- <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
- <filter id="blur"><feGaussianBlur stdDeviation="24"/></filter>
-</defs>
-<rect width="1200" height="520" rx="30" fill="url(#bg)"/>
-<circle cx="930" cy="190" r="145" fill="#8c5cff" opacity=".08" filter="url(#blur)"/><circle cx="270" cy="360" r="120" fill="#36e8d0" opacity=".05" filter="url(#blur)"/>
-<g opacity=".08" stroke="#aab6d5"><path d="M40 100H1160M40 150H1160M40 200H1160M40 250H1160M40 300H1160M40 350H1160M40 400H1160M40 450H1160"/><path d="M100 80V470M200 80V470M300 80V470M400 80V470M500 80V470M600 80V470M700 80V470M800 80V470M900 80V470M1000 80V470M1100 80V470"/></g>
-<text x="600" y="44" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="31" font-weight="800">git commit</text>
-<text x="600" y="70" text-anchor="middle" fill="#a5afd0" font-family="system-ui" font-size="13">Turn the staged files into a saved point in Git history</text>
-<!-- terminal -->
-<rect x="48" y="108" width="330" height="250" rx="18" fill="#060a14" stroke="#34415f"/>
-<rect x="48" y="108" width="330" height="38" rx="18" fill="#10182b"/>
-<circle cx="75" cy="127" r="5" fill="#ff657f"/><circle cx="93" cy="127" r="5" fill="#ffc75f"/><circle cx="111" cy="127" r="5" fill="#5ce1b0"/>
-<text x="135" y="131" fill="#8491af" font-family="monospace" font-size="10">terminal • GitVault</text>
-<g font-family="monospace" font-size="12"><text x="72" y="182" fill="#e0e6f6">$ git commit -m</text><text x="72" y="205" fill="#e0e6f6">  "save changes"</text><text x="72" y="244" fill="#55e5b5">[main saved]</text><text x="72" y="268" fill="#9ca8c4">2 files changed</text><text x="72" y="290" fill="#9ca8c4">new commit created</text></g>
-<rect x="72" y="313" width="0" height="3" rx="2" fill="#55dfff"><animate attributeName="width" values="0;245;0" dur="2.8s" repeatCount="indefinite"/></rect>
-<!-- commit object -->
-<path d="M378 232H420" stroke="#33405e" stroke-width="8"/><path d="M378 232H420" stroke="url(#flow)" stroke-width="2" stroke-dasharray="8 8"><animate attributeName="stroke-dashoffset" from="0" to="-32" dur=".6s" repeatCount="indefinite"/></path>
-<circle r="6" fill="#55eaff" filter="url(#glow)"><animateMotion dur="1.4s" repeatCount="indefinite" path="M378 232H420"/></circle>
-<g>
- <circle cx="590" cy="232" r="92" fill="#071524" stroke="#45e4ff" stroke-width="1.5"/>
- <circle cx="590" cy="232" r="72" fill="none" stroke="url(#flow)" stroke-width="2" stroke-dasharray="5 10"><animateTransform attributeName="transform" type="rotate" from="0 590 232" to="360 590 232" dur="6s" repeatCount="indefinite"/></circle>
- <circle cx="590" cy="232" r="52" fill="#0d1b2e" stroke="#55e5ff" opacity=".9"/>
- <text x="590" y="214" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="12" font-weight="800">NEW COMMIT</text>
- <text x="590" y="238" text-anchor="middle" fill="#55e5ff" font-family="monospace" font-size="12">Commit ID</text>
- <text x="590" y="259" text-anchor="middle" fill="#cbd3e7" font-family="monospace" font-size="11">abc1234</text>
- <circle cx="590" cy="232" r="105" fill="none" stroke="#55e5ff" opacity="0"><animate attributeName="r" values="92;120;92" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.5;0" dur="2.4s" repeatCount="indefinite"/></circle>
-</g>
-<!-- history -->
-<path d="M682 232H735" stroke="#33405e" stroke-width="8"/><path d="M682 232H735" stroke="url(#flow)" stroke-width="2" stroke-dasharray="8 8"><animate attributeName="stroke-dashoffset" from="0" to="-32" dur=".6s" repeatCount="indefinite"/></path>
-<circle r="6" fill="#55eaff" filter="url(#glow)"><animateMotion dur="1.6s" repeatCount="indefinite" path="M682 232H735"/></circle>
-<rect x="735" y="108" width="417" height="250" rx="18" fill="#060b17" stroke="#34415f"/>
-<text x="765" y="140" fill="#8b98b7" font-family="system-ui" font-size="11" font-weight="800">GIT HISTORY</text>
-<path d="M790 182V305" stroke="#33415e" stroke-width="3"/>
-<circle cx="790" cy="195" r="8" fill="#4ce9c0"/><circle cx="790" cy="260" r="8" fill="#55dfff"/><circle cx="790" cy="315" r="8" fill="#7a87a8"/>
-<text x="815" y="190" fill="#b9c3da" font-family="system-ui" font-size="12">Previous commit</text><text x="815" y="207" fill="#73809e" font-family="monospace" font-size="10">older saved point</text>
-<text x="815" y="255" fill="#fff" font-family="system-ui" font-size="12" font-weight="700">New commit</text><text x="815" y="272" fill="#55dfff" font-family="monospace" font-size="10">Commit ID: abc1234</text>
-<text x="815" y="310" fill="#73809e" font-family="system-ui" font-size="10">message: "save changes"</text>
-<circle cx="790" cy="260" r="18" fill="none" stroke="#4ce9c0" opacity="0"><animate attributeName="r" values="10;31;10" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.7;0" dur="2s" repeatCount="indefinite"/></circle>
-<!-- bottom -->
-<rect x="260" y="397" width="680" height="44" rx="22" fill="#070b16" stroke="#465276"/>
-<text x="600" y="425" text-anchor="middle" fill="#c7d0e3" font-family="monospace" font-size="12">staged files → commit → saved in history</text>
-<text x="600" y="482" text-anchor="middle" fill="#71809f" font-family="system-ui" font-size="11">A commit stores the snapshot plus message, author, time and links to previous history.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" rx="32" fill="#070b16"/>
+<rect x="24" y="24" width="1552" height="852" rx="28" fill="#0b1120" stroke="#263653" stroke-width="2"/>
+<text x="70" y="75" fill="#8da0bd" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3">GITVAULT / GIT BASICS / 08</text>
+<text x="70" y="125" fill="#ffffff" font-family="Arial,sans-serif" font-size="46" font-weight="800">git commit</text>
+<text x="70" y="158" fill="#9aa9c0" font-family="Arial,sans-serif" font-size="17">Save the staged changes as a new snapshot in local Git history.</text>
+
+<rect x="70" y="205" width="700" height="430" rx="24" fill="#03060c" stroke="#30435f" stroke-width="2"/>
+<rect x="70" y="205" width="700" height="52" rx="24" fill="#111a2c"/>
+<circle cx="103" cy="231" r="6" fill="#fb7185"/><circle cx="125" cy="231" r="6" fill="#fbbf24"/><circle cx="147" cy="231" r="6" fill="#34d399"/>
+<text x="180" y="236" fill="#8fa1ba" font-family="monospace" font-size="13">Git Bash — my-project</text>
+<text x="105" y="295" fill="#9aa9c0" font-family="monospace" font-size="14">pallavi@devbox ~/my-project</text>
+<text x="105" y="330" fill="#ffffff" font-family="monospace" font-size="15">$ git status</text>
+<text x="105" y="360" fill="#9aa9c0" font-family="monospace" font-size="13">Changes to be committed:</text>
+<text x="125" y="390" fill="#34d399" font-family="monospace" font-size="14">modified:   app.py</text>
+<text x="125" y="418" fill="#34d399" font-family="monospace" font-size="14">new file:   README.md</text>
+<line x1="105" y1="442" x2="735" y2="442" stroke="#202d43"/>
+<text x="105" y="478" fill="#9aa9c0" font-family="monospace" font-size="14">pallavi@devbox ~/my-project</text>
+<text x="105" y="512" fill="#ffffff" font-family="monospace" font-size="15">$ git commit -m "Add project files"</text>
+<text x="105" y="550" fill="#34d399" font-family="monospace" font-size="12">[main a1b2c3d] Add project files</text>
+<text x="105" y="576" fill="#9aa9c0" font-family="monospace" font-size="12">2 files changed, 18 insertions(+)</text>
+<text x="105" y="602" fill="#64748b" font-family="monospace" font-size="11">illustrative commit ID / output</text>
+
+<text x="815" y="215" fill="#67e8f9" font-family="monospace" font-size="12" font-weight="700" letter-spacing="2">WHAT ACTUALLY HAPPENS</text>
+<rect x="815" y="250" width="700" height="385" rx="24" fill="#080d19" stroke="#30435f" stroke-width="2"/>
+
+<rect x="850" y="300" width="180" height="150" rx="18" fill="#0b1820" stroke="#2dd4bf" stroke-width="2"/>
+<text x="940" y="335" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="700">Staging Area</text>
+<text x="875" y="375" fill="#34d399" font-family="monospace" font-size="13">app.py</text>
+<text x="875" y="402" fill="#34d399" font-family="monospace" font-size="13">README.md</text>
+<text x="875" y="430" fill="#67e8f9" font-family="monospace" font-size="10">READY</text>
+
+<rect x="1070" y="335" width="225" height="80" rx="18" fill="#101a2d" stroke="#8b5cf6" stroke-width="2"/>
+<text x="1182" y="363" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="11">COMMAND</text>
+<text x="1182" y="391" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="13">git commit -m "..."</text>
+
+<rect x="1335" y="300" width="145" height="150" rx="18" fill="#111127" stroke="#818cf8" stroke-width="2"/>
+<text x="1407" y="335" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="19" font-weight="700">Commit</text>
+<text x="1360" y="375" fill="#a78bfa" font-family="monospace" font-size="12">a1b2c3d</text>
+<text x="1360" y="402" fill="#9aa9c0" font-family="monospace" font-size="10">saved snapshot</text>
+<text x="1360" y="427" fill="#67e8f9" font-family="monospace" font-size="10">LOCAL HISTORY</text>
+
+<line x1="1030" y1="375" x2="1070" y2="375" stroke="#8b5cf6" stroke-width="4"/>
+<line x1="1295" y1="375" x2="1335" y2="375" stroke="#8b5cf6" stroke-width="4"/>
+<path d="M1058 365 L1070 375 L1058 385" fill="none" stroke="#8b5cf6" stroke-width="3"/>
+<path d="M1323 365 L1335 375 L1323 385" fill="none" stroke="#8b5cf6" stroke-width="3"/>
+
+<rect x="850" y="480" width="630" height="115" rx="18" fill="#0b101c" stroke="#293852"/>
+<text x="875" y="510" fill="#67e8f9" font-family="monospace" font-size="11" font-weight="700">A COMMIT REMEMBERS</text>
+<text x="875" y="545" fill="#ffffff" font-family="Arial,sans-serif" font-size="13">• staged snapshot</text>
+<text x="875" y="570" fill="#ffffff" font-family="Arial,sans-serif" font-size="13">• commit message</text>
+<text x="1110" y="545" fill="#ffffff" font-family="Arial,sans-serif" font-size="13">• author + time</text>
+<text x="1110" y="570" fill="#ffffff" font-family="Arial,sans-serif" font-size="13">• link to previous history</text>
+
+<rect x="70" y="680" width="1445" height="125" rx="22" fill="#050914" stroke="#2b3d5b" stroke-width="2"/>
+<text x="100" y="715" fill="#67e8f9" font-family="monospace" font-size="11" font-weight="700" letter-spacing="2">THE GIT WORKFLOW</text>
+<text x="100" y="758" fill="#9aa9c0" font-family="monospace" font-size="14">EDIT</text>
+<text x="180" y="758" fill="#ffffff" font-family="Arial,sans-serif" font-size="22">→</text>
+<text x="220" y="758" fill="#9aa9c0" font-family="monospace" font-size="14">git add</text>
+<text x="350" y="758" fill="#ffffff" font-family="Arial,sans-serif" font-size="22">→</text>
+<text x="390" y="758" fill="#34d399" font-family="monospace" font-size="14">STAGED</text>
+<text x="510" y="758" fill="#ffffff" font-family="Arial,sans-serif" font-size="22">→</text>
+<text x="550" y="758" fill="#ffffff" font-family="monospace" font-size="14">git commit</text>
+<text x="720" y="758" fill="#ffffff" font-family="Arial,sans-serif" font-size="22">→</text>
+<text x="760" y="758" fill="#a78bfa" font-family="monospace" font-size="14">LOCAL HISTORY</text>
+<text x="100" y="787" fill="#7f8da4" font-family="Arial,sans-serif" font-size="12">Commit records the staged snapshot. It does not upload the commit to GitHub.</text>
+<text x="1445" y="787" text-anchor="end" fill="#64748b" font-family="monospace" font-size="11">STATIC • NO MOVEMENT</text>
 </svg>
