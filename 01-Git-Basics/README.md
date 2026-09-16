@@ -212,7 +212,9 @@ It can show information such as:
 ### Visual: What actually happens
 
 <div align="center">
-![Git add — terminal workflow and staging area](../assets/git-add-animated.svg)
+<div align="center">
+<img src="../assets/git-add-animated.svg" width="100%" alt="Git add terminal workflow and staging area"/>
+</div>
 </div>
 
 ### Add one file
