@@ -295,19 +295,49 @@ A commit stores a snapshot of the staged changes together with information such 
 
 ## 9. 📜 View Commit History — `git log`
 
-`git log` displays the commit history of a repository.
+`git log` displays the commit history of the repository, with the newest commit first.
+
+<div align="center">
+<img src="../assets/git-log-animated.svg" width="100%" alt="Static terminal visual showing git log commit history"/>
+</div>
+
+### Actual command
 
 ```bash
 git log
 ```
 
-For a compact history:
+Git shows details such as the **commit ID, author, date, and commit message**.
+
+### Compact history
 
 ```bash
 git log --oneline
 ```
 
-The history helps me understand how the project changed over time.
+Example:
+
+```text
+a1b2c3d Add project files
+7f8e9d1 Initial project setup
+```
+
+The commit IDs and messages above are illustrative.
+
+### What does `git log` do?
+
+```text
+Current Commit
+      ↓
+Previous Commit
+      ↓
+Older Commit
+      ↓
+Earlier History
+```
+
+> **Remember:** `git log` only shows existing commit history. It does not create, modify, or upload commits.
+
 
 ---
 
