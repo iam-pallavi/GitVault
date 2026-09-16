@@ -249,15 +249,47 @@ The file should appear under **Changes to be committed**.
 
 ---
 
-## 8. 💾 Commit Changes — `git commit`
+## 8. 💾 Create a Snapshot — `git commit`
 
-`git commit` records the staged changes as a new snapshot in the local Git repository.
+`git commit` records the changes currently in the **staging area** as a new snapshot in the local Git repository.
+
+<div align="center">
+<img src="../assets/git-commit-animated.svg" width="100%" alt="Static terminal visual showing git commit creating a new snapshot in local Git history"/>
+</div>
+
+### Actual command
 
 ```bash
-git commit -m "Add index.html"
+git commit -m "Add project files"
 ```
 
-A good commit message should briefly describe what was changed.
+### Actual terminal idea
+
+```text
+$ git commit -m "Add project files"
+[main a1b2c3d] Add project files
+2 files changed, 18 insertions(+)
+```
+
+The exact commit ID and numbers depend on the repository, so the output above is **illustrative**.
+
+### What does `git commit` do?
+
+```text
+Staging Area
+     │
+     │ git commit -m "message"
+     ▼
+New Commit
+     │
+     ▼
+Local Git History
+```
+
+A commit stores a snapshot of the staged changes together with information such as the commit message, author, timestamp, and its relationship to previous commits.
+
+> **Important:** `git commit` saves the snapshot **locally**. It does not upload the commit to GitHub. Uploading is done later with `git push`.
+
 
 ---
 
