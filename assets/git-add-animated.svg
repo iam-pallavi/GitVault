@@ -1,93 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
-<defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#05070d"/><stop offset=".5" stop-color="#0c1020"/><stop offset="1" stop-color="#180e29"/></linearGradient>
-<linearGradient id="edge" x1="0" x2="1"><stop stop-color="#22d3ee"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
-<filter id="shadow"><feGaussianBlur in="SourceAlpha" stdDeviation="10"/><feOffset dy="8"/><feComponentTransfer><feFuncA type="linear" slope=".35"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-<style>
-.t{font-family:Inter,Segoe UI,sans-serif;fill:#f8fafc}.m{font-family:Inter,Segoe UI,sans-serif;fill:#9aa8c0}.c{font-family:Consolas,Monaco,monospace}.h{font-size:46px;font-weight:900}.label{font-size:11px;font-weight:800;letter-spacing:2px}.head{font-size:21px;font-weight:800}.small{font-size:13px}.tiny{font-size:11px}
-</style>
-</defs>
-<rect width="1600" height="900" rx="36" fill="url(#bg)"/>
-<g opacity=".06" stroke="#9aa8c0"><path d="M0 120H1600M0 240H1600M0 360H1600M0 480H1600M0 600H1600M0 720H1600M0 840H1600"/><path d="M160 0V900M320 0V900M480 0V900M640 0V900M800 0V900M960 0V900M1120 0V900M1280 0V900M1440 0V900"/></g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" rx="32" fill="#070b16"/>
+<rect x="24" y="24" width="1552" height="852" rx="28" fill="#0b1120" stroke="#263653" stroke-width="2"/>
+<text x="70" y="75" fill="#8da0bd" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3">GITVAULT / GIT BASICS / 07</text>
+<text x="70" y="125" fill="#ffffff" font-family="Arial,sans-serif" font-size="46" font-weight="800">git add</text>
+<text x="70" y="158" fill="#9aa9c0" font-family="Arial,sans-serif" font-size="17">Stage selected changes for the next commit.</text>
 
-<text x="65" y="62" class="m c label">GITVAULT / GIT BASICS / 07</text>
-<text x="65" y="112" class="t h">git add</text>
-<text x="65" y="145" class="m small">Select the exact version of a file that you want Git to include in the next commit.</text>
+<rect x="70" y="205" width="690" height="430" rx="24" fill="#03060c" stroke="#30435f" stroke-width="2"/>
+<rect x="70" y="205" width="690" height="52" rx="24" fill="#111a2c"/>
+<circle cx="103" cy="231" r="6" fill="#fb7185"/><circle cx="125" cy="231" r="6" fill="#fbbf24"/><circle cx="147" cy="231" r="6" fill="#34d399"/>
+<text x="180" y="236" fill="#8fa1ba" font-family="monospace" font-size="13">Git Bash — my-project</text>
+<text x="105" y="295" fill="#9aa9c0" font-family="monospace" font-size="14">pallavi@devbox ~/my-project</text>
+<text x="105" y="330" fill="#ffffff" font-family="monospace" font-size="15">$ git status</text>
+<text x="105" y="360" fill="#8fa1ba" font-family="monospace" font-size="13">Changes not staged for commit:</text>
+<text x="125" y="390" fill="#fb7185" font-family="monospace" font-size="14">modified:   app.py</text>
+<text x="125" y="418" fill="#fb7185" font-family="monospace" font-size="14">modified:   README.md</text>
+<line x1="105" y1="442" x2="720" y2="442" stroke="#202d43"/>
+<text x="105" y="478" fill="#9aa9c0" font-family="monospace" font-size="14">pallavi@devbox ~/my-project</text>
+<text x="105" y="512" fill="#ffffff" font-family="monospace" font-size="15">$ git add app.py</text>
+<text x="105" y="550" fill="#67e8f9" font-family="monospace" font-size="12">app.py is now in the staging area</text>
+<text x="105" y="585" fill="#64748b" font-family="monospace" font-size="11">No success message is printed by default.</text>
 
-<!-- Terminal command scene -->
-<g transform="translate(65 190)" filter="url(#shadow)">
-<rect width="700" height="450" rx="28" fill="#03060c" stroke="#283a56" stroke-width="2"/>
-<rect width="700" height="54" rx="28" fill="#0d1424"/><rect y="30" width="700" height="24" fill="#0d1424"/>
-<circle cx="30" cy="27" r="6" fill="#fb7185"/><circle cx="51" cy="27" r="6" fill="#fbbf24"/><circle cx="72" cy="27" r="6" fill="#34d399"/>
-<text x="105" y="32" class="m c tiny">Git Bash — my-project</text>
+<text x="815" y="215" fill="#67e8f9" font-family="monospace" font-size="12" font-weight="700" letter-spacing="2">WHAT ACTUALLY HAPPENS</text>
+<rect x="815" y="250" width="700" height="385" rx="24" fill="#080d19" stroke="#30435f" stroke-width="2"/>
 
-<text x="35" y="92" class="m c small">pallavi@devbox ~/my-project</text>
-<text x="35" y="125" class="t c small">$ git status</text>
-<text x="35" y="157" class="m c tiny">Changes not staged for commit:</text>
-<text x="55" y="185" fill="#fb7185" class="c small">modified:   app.py</text>
-<text x="55" y="211" fill="#fb7185" class="c small">modified:   README.md</text>
+<rect x="850" y="300" width="190" height="150" rx="18" fill="#141323" stroke="#7f3f63" stroke-width="2"/>
+<text x="945" y="335" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="700">Working Tree</text>
+<text x="875" y="375" fill="#fb7185" font-family="monospace" font-size="14">app.py</text>
+<text x="875" y="402" fill="#9aa9c0" font-family="monospace" font-size="11">edited file</text>
+<text x="875" y="425" fill="#9aa9c0" font-family="Arial,sans-serif" font-size="13">real file on disk</text>
 
-<line x1="35" y1="237" x2="665" y2="237" stroke="#202b40"/>
-<text x="35" y="273" class="m c small">pallavi@devbox ~/my-project</text>
-<text x="35" y="306" class="t c small">$ git add app.py</text>
-<text x="35" y="340" fill="#67e8f9" class="c tiny">[Git reads the current contents of app.py]</text>
-<text x="35" y="374" fill="#34d399" class="c small">✓ app.py added to the index</text>
+<rect x="1080" y="335" width="225" height="80" rx="18" fill="#101a2d" stroke="#22d3ee" stroke-width="2"/>
+<text x="1192" y="363" text-anchor="middle" fill="#67e8f9" font-family="monospace" font-size="11">COMMAND</text>
+<text x="1192" y="391" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="14">git add app.py</text>
 
-<line x1="35" y1="398" x2="665" y2="398" stroke="#202b40"/>
-<text x="35" y="427" fill="#64748b" class="c tiny">Note: git add produces no success output by default.</text>
-</g>
+<rect x="1345" y="300" width="135" height="150" rx="18" fill="#0b1820" stroke="#2dd4bf" stroke-width="2"/>
+<text x="1412" y="335" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="19" font-weight="700">Index</text>
+<text x="1370" y="375" fill="#34d399" font-family="monospace" font-size="13">app.py</text>
+<text x="1370" y="402" fill="#67e8f9" font-family="monospace" font-size="10">STAGED</text>
+<text x="1370" y="425" fill="#9aa9c0" font-family="Arial,sans-serif" font-size="12">next commit</text>
 
-<!-- The actual idea -->
-<g transform="translate(805 190)" filter="url(#shadow)">
-<rect width="730" height="450" rx="28" fill="#080c18" stroke="#38486a" stroke-width="2"/>
-<text x="35" y="40" fill="#67e8f9" class="c label">WHAT ACTUALLY HAPPENS</text>
+<line x1="1040" y1="375" x2="1080" y2="375" stroke="#8b5cf6" stroke-width="4"/>
+<line x1="1305" y1="375" x2="1345" y2="375" stroke="#ec4899" stroke-width="4"/>
+<path d="M1068 365 L1080 375 L1068 385" fill="none" stroke="#8b5cf6" stroke-width="3"/>
+<path d="M1333 365 L1345 375 L1333 385" fill="none" stroke="#ec4899" stroke-width="3"/>
 
-<!-- working tree -->
-<rect x="35" y="72" width="190" height="170" rx="20" fill="#111426" stroke="#553b55"/>
-<text x="130" y="105" text-anchor="middle" class="t head">Working Tree</text>
-<text x="60" y="140" fill="#fb7185" class="c small">app.py</text>
-<text x="60" y="166" class="m c tiny">edited version</text>
-<text x="60" y="203" class="m small">Your real file</text>
-<text x="60" y="222" class="m small">still lives here</text>
+<rect x="850" y="480" width="630" height="115" rx="18" fill="#0b101c" stroke="#293852"/>
+<text x="875" y="510" fill="#a78bfa" font-family="monospace" font-size="11" font-weight="700">SELECTIVE STAGING</text>
+<text x="875" y="545" fill="#34d399" font-family="monospace" font-size="14">app.py</text>
+<text x="1010" y="545" fill="#34d399" font-family="monospace" font-size="11">STAGED</text>
+<text x="875" y="575" fill="#fb7185" font-family="monospace" font-size="14">README.md</text>
+<text x="1010" y="575" fill="#fb7185" font-family="monospace" font-size="11">NOT STAGED</text>
+<text x="1190" y="558" fill="#9aa9c0" font-family="Arial,sans-serif" font-size="13">Only app.py enters the next commit.</text>
 
-<!-- command -->
-<rect x="260" y="125" width="210" height="70" rx="18" fill="#10182a" stroke="url(#edge)" stroke-width="2"/>
-<text x="365" y="153" text-anchor="middle" fill="#67e8f9" class="c tiny">COMMAND</text>
-<text x="365" y="178" text-anchor="middle" class="t c small">git add app.py</text>
-
-<!-- index -->
-<rect x="505" y="72" width="190" height="170" rx="20" fill="#0d1824" stroke="#275f67"/>
-<text x="600" y="105" text-anchor="middle" class="t head">Index</text>
-<text x="530" y="140" fill="#34d399" class="c small">app.py</text>
-<text x="530" y="166" class="m c tiny">selected snapshot</text>
-<text x="530" y="203" fill="#67e8f9" class="c tiny">READY FOR COMMIT</text>
-<text x="530" y="222" class="m tiny">staging area</text>
-
-<!-- static arrows -->
-<path d="M225 157H260" stroke="url(#edge)" stroke-width="4"/><path d="M470 157H505" stroke="url(#edge)" stroke-width="4"/>
-<path d="M251 150l10 7-10 7" fill="none" stroke="#8b5cf6" stroke-width="3"/><path d="M496 150l10 7-10 7" fill="none" stroke="#ec4899" stroke-width="3"/>
-
-<!-- second file stays out -->
-<rect x="35" y="285" width="660" height="115" rx="20" fill="#0b0e18" stroke="#2a3349"/>
-<text x="60" y="317" fill="#a78bfa" class="c tiny">IMPORTANT — SELECTIVE STAGING</text>
-<text x="60" y="350" fill="#34d399" class="c small">app.py</text><text x="160" y="350" fill="#34d399" class="c tiny">STAGED ✓</text>
-<text x="60" y="378" fill="#fb7185" class="c small">README.md</text><text x="160" y="378" fill="#fb7185" class="c tiny">NOT STAGED</text>
-<text x="350" y="363" class="m small">Only app.py will enter the next commit.</text>
-
-<!-- bottom workflow -->
-<rect x="65" y="680" width="1470" height="145" rx="28" fill="#070b14" stroke="#2b3d5d" stroke-width="2"/>
-<text x="95" y="714" fill="#67e8f9" class="c label">THE GIT WORKFLOW</text>
-<g class="c">
-<text x="95" y="760" fill="#9aa8c0" class="small">EDIT FILE</text>
-<text x="260" y="760" fill="#f8fafc" class="head">→</text>
-<text x="300" y="760" fill="#f8fafc" class="small">git add</text>
-<text x="430" y="760" fill="#f8fafc" class="head">→</text>
-<text x="470" y="760" fill="#34d399" class="small">STAGED</text>
-<text x="590" y="760" fill="#f8fafc" class="head">→</text>
-<text x="630" y="760" fill="#f8fafc" class="small">git commit</text>
-<text x="785" y="760" fill="#f8fafc" class="head">→</text>
-<text x="825" y="760" fill="#a78bfa" class="small">HISTORY</text>
-</g>
-<text x="95" y="795" class="m small">git add does NOT create a commit. It updates the index — the snapshot Git will use for the next commit.</text>
-<text x="1460" y="795" text-anchor="end" fill="#64748b" class="c tiny">NO MOVEMENT • STATIC VISUAL</text>
+<rect x="70" y="680" width="1445" height="125" rx="22" fill="#050914" stroke="#2b3d5b" stroke-width="2"/>
+<text x="100" y="715" fill="#67e8f9" font-family="monospace" font-size="11" font-weight="700" letter-spacing="2">THE GIT WORKFLOW</text>
+<text x="100" y="758" fill="#9aa9c0" font-family="monospace" font-size="14">EDIT FILE</text>
+<text x="245" y="758" fill="#ffffff" font-family="Arial,sans-serif" font-size="22">→</text>
+<text x="285" y="758" fill="#ffffff" font-family="monospace" font-size="14">git add</text>
+<text x="405" y="758" fill="#ffffff" font-family="Arial,sans-serif" font-size="22">→</text>
+<text x="445" y="758" fill="#34d399" font-family="monospace" font-size="14">STAGED</text>
+<text x="565" y="758" fill="#ffffff" font-family="Arial,sans-serif" font-size="22">→</text>
+<text x="605" y="758" fill="#ffffff" font-family="monospace" font-size="14">git commit</text>
+<text x="775" y="758" fill="#ffffff" font-family="Arial,sans-serif" font-size="22">→</text>
+<text x="815" y="758" fill="#a78bfa" font-family="monospace" font-size="14">HISTORY</text>
+<text x="100" y="787" fill="#7f8da4" font-family="Arial,sans-serif" font-size="12">git add does not create a commit. It updates the index with the version selected for the next commit.</text>
 </svg>
