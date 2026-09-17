@@ -1,5 +1,4 @@
 <div align="center">
-
 <img src="../assets/git-basics.png" width="100%" alt="Git Basics"/>
 
 # Git Basics
@@ -17,29 +16,7 @@ This section contains my practical notes for the **core Git concepts and command
 ### Learning Path
 
 ```text
-Git Introduction
-      ↓
-Git vs GitHub
-      ↓
-Git Configuration
-      ↓
-git init
-      ↓
-git status
-      ↓
-git add
-      ↓
-git commit
-      ↓
-git log
-      ↓
-git diff
-      ↓
-git restore / git rm
-      ↓
-Basic Git Workflow
-      ↓
-Hands-on Practice
+Git Introduction → Git vs GitHub → Git Installation → Git Configuration → git init → git status → git add → git commit → git log → git diff → git restore / git rm → Basic Git Workflow → Hands-on Practice
 ```
 
 ---
@@ -51,7 +28,6 @@ Hands-on Practice
 **Git is a distributed version control system (VCS)** used to track changes in files and maintain the history of a project.
 
 With Git, I can:
-
 - Track changes made to files
 - See what changed and when
 - Save different versions of my work
@@ -59,22 +35,16 @@ With Git, I can:
 - Go back to earlier versions when needed
 - Work with other developers
 
-### How Git works
-
 <div align="center">
 <img src="../assets/git-introduction-animated.svg" width="100%" alt="Animated Git Introduction — how Git tracks changes and maintains project history"/>
 </div>
-
-### Why do we use Git?
-
-Without version control, managing multiple changes manually can become difficult. Git gives the project a structured history and makes changes easier to track and manage.
 
 ---
 
 ## 2. 🔄 Git vs GitHub
 
 <div align="center">
-<img src="../assets/git-vs-github-animated.svg" width="100%" alt="Animated Git vs GitHub comparison — local Git and GitHub remote repository"/>
+<img src="../assets/git-vs-github-animated.svg" width="100%" alt="Animated Git vs GitHub comparison"/>
 </div>
 
 | Git | GitHub |
@@ -82,84 +52,37 @@ Without version control, managing multiple changes manually can become difficult
 | Version control system | Cloud-based Git hosting platform |
 | Runs locally on your computer | Used through the internet |
 | Tracks project history | Hosts and shares Git repositories |
-| Commands like `git add`, `git commit` | Provides collaboration, pull requests, issues, etc. |
-| Does not require GitHub | Uses Git repositories for collaboration |
-
-> **Simple way to remember:** Git manages version history. GitHub helps store and collaborate on Git repositories online.
+| Uses commands like `git add`, `git commit` | Provides collaboration, pull requests, issues, etc. |
 
 ---
 
 ## 3. ⚙️ Git Installation / Verification
 
-Git needs to be installed on the computer before Git commands can be used from the terminal.
-
-### Installation flow
+Git needs to be installed before Git commands can be used from the terminal.
 
 <div align="center">
 <img src="../assets/git-installation-animated.svg" width="100%" alt="Animated Git installation and verification flow"/>
 </div>
 
-### Verify Git installation
-
-If Git is already installed, I can verify it with:
-
 ```bash
 git --version
 ```
-
-Example output:
-
-```text
-git version 2.x.x
-```
-
-If the terminal returns a Git version, Git is available and ready for the next step.
 
 ---
 
 ## 4. 🔧 Git Configuration
 
-Before creating commits, Git should know the identity that will be associated with those commits.
-
-### Configure Git identity
+Before creating commits, Git should know the identity associated with those commits.
 
 <div align="center">
-<img src="../assets/git-config-animated.svg" width="100%" alt="Animated Git configuration terminal flow showing commands and output"/>
+<img src="../assets/git-config-animated.svg" width="100%" alt="Git configuration terminal flow"/>
 </div>
-
-### Set username
 
 ```bash
 git config --global user.name "Your Name"
-```
-
-### Set email
-
-```bash
 git config --global user.email "your-email@example.com"
-```
-
-### View all global settings
-
-```bash
 git config --global --list
 ```
-
-### Check username
-
-```bash
-git config --global user.name
-```
-
-### Check email
-
-```bash
-git config --global user.email
-```
-
-`--global` means the configuration applies to Git repositories for the current user on the computer.
-
-> **Note:** Git configuration identifies the author of commits. It is separate from GitHub authentication.
 
 ---
 
@@ -168,16 +91,14 @@ git config --global user.email
 `git init` initializes the current directory as a Git repository.
 
 <div align="center">
-<img src="../assets/git-init-animated.svg" width="100%" alt="Animated git init flow — initialize a local Git repository and create the .git directory"/>
+<img src="../assets/git-init-animated.svg" width="100%" alt="git init flow"/>
 </div>
 
 ```bash
 git init
 ```
 
-Git creates a hidden `.git` directory that stores repository metadata and history.
-
-> `git init` creates a local repository. It does **not** automatically connect the project to GitHub.
+Git creates the hidden `.git` directory containing repository metadata. It does not automatically connect the project to GitHub.
 
 ---
 
@@ -186,22 +107,12 @@ Git creates a hidden `.git` directory that stores repository metadata and histor
 `git status` shows the current state of the working tree and staging area.
 
 <div align="center">
-<img src="../assets/git-status-animated.svg" width="100%" alt="Animated git status flow — inspect the working tree, staging area and HEAD"/>
+<img src="../assets/git-status-animated.svg" width="100%" alt="git status inspection visual"/>
 </div>
 
 ```bash
 git status
 ```
-
-It can show information such as:
-
-- Current branch
-- Modified files
-- Untracked files
-- Staged changes
-- Changes that are not yet staged
-
-`git status` is one of the safest and most useful commands to run frequently.
 
 ---
 
@@ -209,115 +120,51 @@ It can show information such as:
 
 `git add` stages the current version of selected changes so they can be included in the **next commit**.
 
-### Visual: What actually happens
-
 <div align="center">
-<div align="center">
-<img src="../assets/git-add-animated.svg" width="100%" alt="Git add terminal workflow and staging area"/>
-</div>
+<img src="../assets/git-add-animated.svg" width="100%" alt="Git add terminal visual showing a modified file being staged in the index"/>
 </div>
 
-### Add one file
+### Actual command
 
-```bash
-git add app.py
-```
+<div align="center"><code><strong>git add app.py</strong></code></div>
 
-### Add all changes
+`git add .` can stage all changes under the current directory.
 
-```bash
-git add .
-```
-
-### Actual terminal behavior
-
-```text
-$ git add app.py
-
-# No success message is normally printed.
-```
-
-Then verify the result:
-
-```bash
-git status
-```
-
-The file should appear under **Changes to be committed**.
-
-> **Remember:** `git add` does not create a commit or push to GitHub. It updates the **index / staging area** with the version you want in the next commit.
+> `git add` normally produces no success message. Run `git status` to verify that the file is staged.
 
 ---
 
 ## 8. 💾 Create a Snapshot — `git commit`
 
-`git commit` records the changes currently in the **staging area** as a new snapshot in the local Git repository.
+`git commit` records the staged changes as a new snapshot in the local Git repository.
 
 <div align="center">
-<img src="../assets/git-commit-animated.svg" width="100%" alt="Static terminal visual showing git commit creating a new snapshot in local Git history"/>
+<img src="../assets/git-commit-animated.svg" width="100%" alt="git commit terminal workflow"/>
 </div>
 
 ### Actual command
 
-```bash
-git commit -m "Add project files"
-```
+<div align="center"><code><strong>git commit -m "Add project files"</strong></code></div>
 
-### Actual terminal idea
-
-```text
-$ git commit -m "Add project files"
-[main a1b2c3d] Add project files
-2 files changed, 18 insertions(+)
-```
-
-The exact commit ID and numbers depend on the repository, so the output above is **illustrative**.
-
-### What does `git commit` do?
-
-```text
-Staging Area
-     │
-     │ git commit -m "message"
-     ▼
-New Commit
-     │
-     ▼
-Local Git History
-```
-
-A commit stores a snapshot of the staged changes together with information such as the commit message, author, timestamp, and its relationship to previous commits.
-
-> **Important:** `git commit` saves the snapshot **locally**. It does not upload the commit to GitHub. Uploading is done later with `git push`.
-
+A commit saves the staged snapshot locally. It does not upload the commit to GitHub.
 
 ---
 
 ## 9. 📜 View Commit History — `git log`
 
-`git log` displays the commit history of the repository, with the newest commit first.
+`git log` displays the commit history, with the newest commit first.
 
 <div align="center">
-<img src="../assets/git-log-animated.svg" width="100%" alt="Static terminal visual showing git log commit history"/>
+<img src="../assets/git-log-animated.svg" width="100%" alt="git log commit history"/>
 </div>
 
-### Actual command
+### ⚡ Main Command
 
-```bash
-git log
-```
-
-Git shows details such as the **commit ID, author, date, and commit message**.
-
-### Compact history
-
-<div align="center">
+<div align="center"><code><strong>git log</strong></code></div>
 
 ### ⚡ Quick History Command
 
-<code><strong>git log --oneline</strong></code>
-
-</div>
+<div align="center"><code><strong>git log --oneline</strong></code></div>
 
 Example:
 
@@ -326,49 +173,25 @@ a1b2c3d Add project files
 7f8e9d1 Initial project setup
 ```
 
-The commit IDs and messages above are illustrative.
-
-### What does `git log` do?
-
-```text
-Current Commit
-      ↓
-Previous Commit
-      ↓
-Older Commit
-      ↓
-Earlier History
-```
-
-> **Remember:** `git log` only shows existing commit history. It does not create, modify, or upload commits.
-
+> `git log` only displays existing history. It does not create, modify, or upload commits.
 
 ---
 
 ## 10. 🔎 View Changes — `git diff`
 
-`git diff` shows the differences between the working tree and the staging area for unstaged changes.
+`git diff` shows differences between the working tree and staging area for unstaged changes.
 
 <div align="center">
-<img src="../assets/git-diff-animated.svg" width="100%" alt="Static terminal visual showing git diff and file changes"/>
+<img src="../assets/git-diff-animated.svg" width="100%" alt="git diff visual"/>
 </div>
 
 ### ⚡ Main Command
 
 <div align="center"><code><strong>git diff</strong></code></div>
 
-Common symbols:
-
-```text
-+ Added line
-- Removed line
-```
-
 For staged changes:
 
 <div align="center"><code><strong>git diff --staged</strong></code></div>
-
-> Deeper Git diff concepts and comparison techniques will be covered separately in **06-Git-Diff**.
 
 ---
 
@@ -377,7 +200,7 @@ For staged changes:
 `git restore` can discard unstaged changes in a tracked file and restore the file from the index.
 
 <div align="center">
-<img src="../assets/git-restore-animated.svg" width="100%" alt="Static terminal visual showing git restore"/>
+<img src="../assets/git-restore-animated.svg" width="100%" alt="git restore visual"/>
 </div>
 
 ### ⚡ Main Command
@@ -393,7 +216,7 @@ For staged changes:
 `git rm` removes a tracked file from the working tree and stages the deletion.
 
 <div align="center">
-<img src="../assets/git-rm-animated.svg" width="100%" alt="Static terminal visual showing git rm"/>
+<img src="../assets/git-rm-animated.svg" width="100%" alt="git rm visual"/>
 </div>
 
 ### ⚡ Main Commands
@@ -408,7 +231,15 @@ For staged changes:
 
 ## 13. 🔁 Basic Git Workflow
 
-The basic workflow I want to remember is:
+The basic workflow is:
+
+<div align="center">
+<img src="../assets/git-workflow-animated.svg" width="100%" alt="Static Basic Git Workflow visual"/>
+</div>
+
+### ⚡ Complete Workflow
+
+<div align="center"><code><strong>git status → git add → git commit → git push</strong></code></div>
 
 ```text
 Working Directory
@@ -430,7 +261,7 @@ Working Directory
 
 ### 🧠 Easy Memory Trick
 
-**Check → Review → Stage → Commit → History**
+**Edit → Check → Stage → Commit → Push**
 
 ---
 
@@ -489,39 +320,6 @@ git commit -m "Add hello.txt"
 git log --oneline
 ```
 
-### Step 9 — Modify the file
-
-```bash
-echo "Learning Git step by step" >> hello.txt
-```
-
-### Step 10 — Inspect the change
-
-```bash
-git diff
-```
-
-### Step 11 — Stage and commit again
-
-```bash
-git add hello.txt
-git commit -m "Update hello.txt"
-```
-
-### Step 12 — Check the history
-
-```bash
-git log --oneline
-```
-
-### 🎯 Practice Goal
-
-After completing this exercise, I should be able to explain the complete Git cycle:
-
-```text
-Modify → Check → Stage → Commit → Check History
-```
-
 ---
 
 ## 15. 📝 Practice / Interview Q&A
@@ -544,7 +342,7 @@ It shows the current state of the working tree and staging area, including untra
 
 ### Q5. What is the difference between `git add` and `git commit`?
 
-`git add` stages changes. `git commit` records the staged changes in the repository history.
+`git add` stages changes. `git commit` records the staged changes in repository history.
 
 ### Q6. What does `git log` do?
 
@@ -552,7 +350,7 @@ It displays the commit history of the repository.
 
 ### Q7. What does `git diff` do?
 
-It shows the differences between the working tree and the staging area for unstaged changes.
+It shows differences between the working tree and staging area for unstaged changes.
 
 ### Q8. What does `git restore` do?
 
@@ -560,12 +358,12 @@ It can discard unstaged changes in a tracked file and restore the file from the 
 
 ### Q9. What is the difference between `git rm` and `git rm --cached`?
 
-`git rm` removes the file and stages its deletion. `git rm --cached` removes the file from Git tracking while keeping the file in the working directory.
+`git rm` removes the file and stages its deletion. `git rm --cached` removes the file from Git tracking while keeping it locally.
 
 ### Q10. What is the basic Git workflow?
 
 ```text
-Modify → Check → Review → Stage → Commit → Check History
+Edit → Check → Stage → Commit → Push
 ```
 
 ---
@@ -578,16 +376,16 @@ Modify → Check → Review → Stage → Commit → Check History
 - [x] Configure Git identity
 - [x] Initialize a repository with `git init`
 - [x] Check repository state with `git status`
-- [ ] Stage changes with `git add`
-- [ ] Create commits with `git commit`
-- [ ] View history with `git log`
-- [ ] Inspect changes with `git diff`
-- [ ] Discard unstaged changes with `git restore`
-- [ ] Remove files with `git rm`
-- [ ] Understand the basic Git workflow
+- [x] Stage changes with `git add`
+- [x] Create commits with `git commit`
+- [x] View history with `git log`
+- [x] Inspect changes with `git diff`
+- [x] Discard unstaged changes with `git restore`
+- [x] Remove files with `git rm`
+- [x] Understand the basic Git workflow
 - [ ] Practice the complete local Git cycle
 
-> **Folder status: 🟡 In progress — git status completed**
+> **Folder status: 🟡 In progress — core Git commands covered**
 
 ---
 
