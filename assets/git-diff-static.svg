@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520">
+<rect width="1200" height="520" rx="30" fill="#070b18"/>
+<rect x="28" y="28" width="1144" height="464" rx="24" fill="#0d1328" stroke="#34405e" stroke-width="2"/>
+<g opacity="0.08" stroke="#aab5d4"><path d="M55 105H1145M55 155H1145M55 205H1145M55 255H1145M55 305H1145M55 355H1145M55 405H1145"/><path d="M105 80V450M205 80V450M305 80V450M405 80V450M505 80V450M605 80V450M705 80V450M805 80V450M905 80V450M1005 80V450M1105 80V450"/></g>
+<text x="600" y="58" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="31" font-weight="800">git diff</text>
+<text x="600" y="84" text-anchor="middle" fill="#9da9c7" font-family="system-ui,sans-serif" font-size="13">Compare your current file with the last staged version</text>
+<rect x="58" y="108" width="1084" height="330" rx="18" fill="#060a14" stroke="#263451"/>
+<circle cx="84" cy="133" r="5" fill="#ff7897"/><circle cx="101" cy="133" r="5" fill="#f6c85f"/><circle cx="118" cy="133" r="5" fill="#62e6b1"/>
+<text x="145" y="137" fill="#7785a4" font-family="monospace" font-size="10">pallavi@devbox ~/my-project</text>
+<text x="85" y="170" fill="#ffffff" font-family="monospace" font-size="12">$ git diff</text>
+<text x="85" y="196" fill="#74819f" font-family="monospace" font-size="10">diff --git a/app.py b/app.py</text>
+<text x="85" y="220" fill="#8b97b4" font-family="monospace" font-size="11">@@ function deploy()</text>
+<rect x="78" y="232" width="1044" height="30" rx="5" fill="#1b111c"/>
+<text x="92" y="252" fill="#ff7897" font-family="monospace" font-size="12">- print("deploying old config")</text>
+<rect x="78" y="267" width="1044" height="30" rx="5" fill="#0d211d"/>
+<text x="92" y="287" fill="#62e6b1" font-family="monospace" font-size="12">+ print("deploying current config")</text>
+<text x="92" y="317" fill="#8b97b4" font-family="monospace" font-size="12">  return release_id</text>
+<line x1="78" y1="337" x2="1122" y2="337" stroke="#2a3550"/>
+<text x="85" y="362" fill="#596984" font-family="monospace" font-size="10">- = deleted line     + = added line     space = unchanged context</text>
+<text x="85" y="389" fill="#596984" font-family="monospace" font-size="10">Working Tree → compared against Index / HEAD</text>
+<text x="600" y="468" text-anchor="middle" fill="#55eaff" font-family="monospace" font-size="13">git diff  =  see unstaged changes</text>
+</svg>
