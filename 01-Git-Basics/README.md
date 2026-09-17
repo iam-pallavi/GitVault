@@ -182,7 +182,7 @@ a1b2c3d Add project files
 `git diff` shows differences between the working tree and staging area for unstaged changes.
 
 <div align="center">
-<img src="../assets/git-diff-animated.svg" width="100%" alt="git diff visual"/>
+<img src="../assets/git-diff-static.svg" width="100%" alt="Static git diff visual"/>
 </div>
 
 ### ⚡ Main Command
